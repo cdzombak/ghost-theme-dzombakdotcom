@@ -49,6 +49,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
+.gh-tag-label {
+    font-size: 1.3rem;
+}
+
 .gh-tag-name.gh-pagehead-title {
     font-family: "IBM Plex Serif", Charter, Times, serif;
 }

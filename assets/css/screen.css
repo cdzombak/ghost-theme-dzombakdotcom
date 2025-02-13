@@ -515,8 +515,6 @@
 }
 
 .gh-tag-label {
-    margin-bottom: 1.2rem;
-    font-size: 1.2rem;
     font-weight: 500;
     color: var(--ghost-accent-color);
     text-transform: uppercase;

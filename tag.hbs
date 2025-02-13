@@ -4,9 +4,20 @@
     {{#tag}}
         <section class="gh-pagehead">
             <header class="gh-pagehead-content">
-                <div class="gh-tag-label">Topic</div>
+                <div class="gh-tag-label" id="-cdz-target-tag-label">Topic:</div>
+                <h1 class="gh-tag-name gh-pagehead-title" id="-cdz-target-tag-name">{{name}}</h1>
 
-                <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
+                <script type="text/javascript">
+                const cdzProjectStr = "Project: ";
+                const cdzSeriesStr = "Series: ";
+                if ("{{name}}".startsWith(cdzProjectStr)) {
+                    document.getElementById("-cdz-target-tag-label").textContent = "Project:";
+                    document.getElementById("-cdz-target-tag-name").textContent = "{{name}}".slice(cdzProjectStr.length);
+                } else if ("{{name}}".startsWith(cdzSeriesStr)) {
+                    document.getElementById("-cdz-target-tag-label").textContent = "Series:";
+                    document.getElementById("-cdz-target-tag-name").textContent = "{{name}}".slice(cdzSeriesStr.length);
+                }
+                </script>
 
                 <div class="gh-tag-description gh-pagehead-description">
                     {{#if description}}
