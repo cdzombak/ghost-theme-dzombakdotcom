@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sura:wght@400;700&display=swap');
-/* https://fonts.google.com/share?selection.family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|IBM+Plex+Sans:ital,wght@0,100..700;1,100..700|IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|Sura:wght@400;700 */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+/* https://fonts.google.com/share?selection.family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|IBM+Plex+Sans:ital,wght@0,100..700;1,100..700|IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|Rosario:ital,wght@0,300..700;1,300..700 */
 
 /* Specific Applications */
 
 .gh-head-logo {
-    font-family: "Sura", var(--gh-font-heading, var(--font-serif));
-    font-size: 3.6rem;
-    font-weight: 400;
-    letter-spacing: 0em;
+    font-family: "Rosario", var(--gh-font-heading, var(--font-serif));
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5rem;
+    letter-spacing: -0.01em;
 }
 
 .gh-head-menu,
@@ -32,22 +34,23 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 450;
 }
 
+.gh-topic-name {
+    font-size: 1.7rem;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
 /* Typography Classes */
-
-.sura-regular {
-    font-family: "Sura", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.sura-bold {
-    font-family: "Sura", serif;
-    font-weight: 700;
-    font-style: normal;
-}
 
 /* <weight>: Use a value from 100 to 700
    <uniquifier>: Use a unique and descriptive class name */
+
+.rosario-<uniquifier> {
+  font-family: "Rosario", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 
 .ibm-plex-sans-100 {
   font-weight: 100;

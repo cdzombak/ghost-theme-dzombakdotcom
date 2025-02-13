@@ -232,16 +232,6 @@
     margin-top: 1.6rem;
 }
 
-.gh-topic-name {
-    font-size: 1.7rem;
-    font-weight: 600;
-    letter-spacing: 0;
-}
-
-.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-topic-name {
-    font-family: var(--gh-font-heading, var(--font-serif));
-}
-
 .gh-topic-count {
     padding: 0.4rem 0.8rem;
     font-size: 1.3rem;
