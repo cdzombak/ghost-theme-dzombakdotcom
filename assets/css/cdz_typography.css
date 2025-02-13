@@ -5,9 +5,17 @@
 
 .gh-head-logo {
     font-family: "Sura", var(--gh-font-heading, var(--font-serif));
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 400;
     letter-spacing: .01em;
+}
+
+.gh-head-menu,
+.gh-head-actions {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
 }
 
 .gh-article-title {
