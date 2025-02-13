@@ -1,5 +1,6 @@
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
 @import "cdz_accents.css";
+@import "cdz_layout.css";
 @import "cdz_linkstyle.css";
 @import "cdz_typography.css";
 @import "cdz_nav.css";
@@ -412,8 +413,6 @@
 
 .gh-article-meta {
     margin-bottom: 1.8rem;
-    font-size: 1.2rem;
-    font-weight: 500;
     line-height: 1.5;
     color: var(--color-secondary-text);
     text-transform: uppercase;

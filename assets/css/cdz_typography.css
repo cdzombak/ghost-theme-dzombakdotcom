@@ -26,6 +26,15 @@
     font-style: italic;
 }
 
+.gh-article-meta {
+    font-weight: 400;
+    font-size: 1.35rem;
+}
+
+.gh-article-meta time {
+    font-weight: 600;
+}
+
 .gh-article-title {
     font-weight: 450;
 }
@@ -38,6 +47,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.7rem;
     letter-spacing: 0;
     font-weight: 500;
+}
+
+.gh-tag-name.gh-pagehead-title {
+    font-family: "IBM Plex Serif", Charter, Times, serif;
 }
 
 /* Typography Classes */

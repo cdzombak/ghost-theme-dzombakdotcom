@@ -11,17 +11,37 @@
                 <div class="gh-tag-description gh-pagehead-description">
                     {{#if description}}
                         {{description}}
-                    {{else}}
-                        A collection of {{plural ../pagination.total empty="0 posts" singular="% post" plural="% posts"}}
                     {{/if}}
+                    {{plural ../pagination.total empty="0 posts" singular="% post" plural="% posts"}}
+                    <br />
+                    {{#get "posts" limit="1" order="published_at ASC" filter="tags:{{slug}}" as |post|}}
+                        {{#post}}
+                            {{date published_at format="MMM YYYY"}} –
+                        {{/post}}
+                    {{/get}}
+                    {{#get "posts" limit="1" order="published_at DESC" filter="tags:{{slug}}" as |post|}}
+                        {{#post}}
+                            {{date published_at format="MMM YYYY"}}
+                        {{/post}}
+                    {{/get}}
                 </div>
             </header>
         </section>
+
+        {{#get "posts" limit="all" filter="tags:hash-tag-content+tags:{{slug}}" as |post|}}
+            {{#post}}
+                <div class="gh-content cdz-tag-content">
+                {{content}}
+                </div>
+            {{/post}}
+        {{/get}}
     {{/tag}}
 
     <div class="gh-feed">
         {{#foreach posts}}
-            {{> loop}}
+            {{^has tag="#tag-content"}}
+                {{> loop}}
+            {{/has}}
         {{/foreach}}
     </div>
 
