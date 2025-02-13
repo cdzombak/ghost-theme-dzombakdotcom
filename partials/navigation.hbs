@@ -1,0 +1,14 @@
+{{!-- https://github.com/TryGhost/Ghost/blob/3d989eba2371235d41468f7699a08e46fc2b1e87/ghost/core/core/frontend/helpers/tpl/navigation.hbs on 2025-02-13 --}}
+<ul class="nav">
+    {{#unless isSecondary}}
+    {{#foreach navigation}}
+    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+    {{/unless}}
+
+    {{#if isSecondary}}
+    {{#foreach navigation}}
+    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{url absolute="true"}}" target="_blank">{{label}}</a></li>
+    {{/foreach}}
+    {{/if}}
+</ul>
