@@ -21,8 +21,10 @@
 
                 <div class="gh-tag-description gh-pagehead-description">
                     {{#if description}}
-                        {{description}}
+                        <p>{{description}}</p>
                     {{/if}}
+                </div>
+                <div class="gh-tag-description gh-pagehead-description">
                     {{plural ../pagination.total empty="0 posts" singular="% post" plural="% posts"}}
                     <br />
                     {{#get "posts" limit="1" order="published_at ASC" filter="tags:{{slug}}" as |post|}}
