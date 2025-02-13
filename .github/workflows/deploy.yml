@@ -7,14 +7,57 @@ name: Deploy
       - main
 
 jobs:
-  deploy:
+
+  deploy-theme:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy to dzombak.com
+      - name: Deploy Theme
         uses: TryGhost/action-deploy-theme@v1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
           exclude: "gulpfile.js LICENSE README.md"
           theme-name: "dzombakdotcom"
+
+  deploy-routes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Routes
+        run: |
+          mkdir -p ${{ runner.temp }}/ghost
+
+          curl -c ${{ runner.temp }}/ghost/cookie.txt \
+            -d 'username=${{ secrets.GHOST_CI_USER }}' \
+            -d 'password=${{ secrets.GHOST_CI_PASSWORD }}' \
+            -H "Origin: ${{ secrets.GHOST_ADMIN_API_URL }}" \
+            -H "Accept-Version: v3.0" \
+            ${{ secrets.GHOST_ADMIN_API_URL }}/ghost/api/admin/session/
+
+          curl -b ${{ runner.temp }}/ghost/cookie.txt \
+            -F "routes=@./routes.yaml" \
+            -H "Accept-Version: v3.0" \
+            -H "Origin: ${{ secrets.GHOST_ADMIN_API_URL }}" \
+            ${{ secrets.GHOST_ADMIN_API_URL }}/ghost/api/admin/settings/routes/yaml/
+
+  deploy-redirects:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Redirects
+        run: |
+          mkdir -p ${{ runner.temp }}/ghost
+
+          curl -c ${{ runner.temp }}/ghost/cookie.txt \
+            -d 'username=${{ secrets.GHOST_CI_USER }}' \
+            -d 'password=${{ secrets.GHOST_CI_PASSWORD }}' \
+            -H "Origin: ${{ secrets.GHOST_ADMIN_API_URL }}" \
+            -H "Accept-Version: v3.0" \
+            ${{ secrets.GHOST_ADMIN_API_URL }}/ghost/api/admin/session/
+
+          curl -b ${{ runner.temp }}/ghost/cookie.txt \
+            -F "redirects=@./redirects.yaml" \
+            -H "Accept-Version: v3.0" \
+            -H "Origin: ${{ secrets.GHOST_ADMIN_API_URL }}" \
+            ${{ secrets.GHOST_ADMIN_API_URL }}/ghost/api/admin/redirects/upload/
