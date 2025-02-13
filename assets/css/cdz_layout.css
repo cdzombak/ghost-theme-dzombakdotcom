@@ -1,4 +1,8 @@
 
+.gh-site {
+	min-height: 0 !important;
+}
+
 .gh-head {
 	margin-top: 2em;
 }
@@ -9,4 +13,13 @@
 
 .gh-tag-label {
     margin-bottom: 0.7rem;
+}
+
+.gh-article-footer {
+	margin-top: 12rem;
+}
+
+.cdz-foot-nonpost {
+	margin-top: 12rem;
+	padding-top: 3rem;
 }
