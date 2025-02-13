@@ -11,6 +11,7 @@
     --font-mono: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; /* stylelint-disable-line value-keyword-case */
 
     --color-primary-text: var(--color-black);
+    --color-secondary-text: #444;
 
     --head-nav-gap: 4rem;
 }
