@@ -8,8 +8,9 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 600;
-    font-size: 3.5rem;
+    font-size: 3.6rem;
     letter-spacing: -0.01em;
+    text-transform: lowercase;
 }
 
 .gh-head-menu,

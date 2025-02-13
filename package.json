@@ -41,7 +41,12 @@
             }
         },
         "card_assets": true,
-        "custom": {}
+        "custom": {
+            "logo_subtitle": {
+                "type": "text",
+                "default": "… has too many hobbies."
+            }
+        }
     },
     "scripts": {
         "dev": "gulp",

@@ -31,7 +31,7 @@
 
         <div class="gh-wrapper">
             <section class="gh-section">
-                <h2 class="gh-section-title">More posts</h2>
+                <h2 class="gh-section-title">Posts</h2>
 
                 <div class="gh-feed">
                     {{^is "paged"}}
@@ -44,10 +44,6 @@
                         {{/foreach}}
                     {{/is}}
                 </div>
-
-                {{#match posts.length "=" 1}}
-                    Additional posts will be published soon.
-                {{/match}}
 
                 <button class="gh-loadmore gh-btn">Load more posts</button>
             </section>
