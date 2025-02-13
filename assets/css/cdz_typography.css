@@ -5,17 +5,23 @@
 
 .gh-head-logo {
     font-family: "Sura", var(--gh-font-heading, var(--font-serif));
-    font-size: 3.5rem;
+    font-size: 3.6rem;
     font-weight: 400;
-    letter-spacing: .01em;
+    letter-spacing: 0em;
 }
 
 .gh-head-menu,
 .gh-head-actions {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.01em;
+}
+
+.cdz-head-logo-subtitle {
+    font-family: "IBM Plex Sans Condensed", serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .gh-article-title {

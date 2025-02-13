@@ -10,7 +10,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} has-serif-title is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}">
+<body class="{{body_class}} has-serif-title is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -18,12 +18,9 @@
             <div class="gh-head-brand">
                 <div class="gh-head-brand-wrapper">
                     <a class="gh-head-logo" href="{{@site.url}}">
-                        {{#if @site.logo}}
-                            <img src="{{@site.logo}}" alt="{{@site.title}}">
-                        {{else}}
-                            {{@site.title}}
-                        {{/if}}
+                        {{@site.title}}
                     </a>
+                    <div class="cdz-head-logo-subtitle">… has too many hobbies</div>
                 </div>
                 <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
                 <button class="gh-burger"></button>

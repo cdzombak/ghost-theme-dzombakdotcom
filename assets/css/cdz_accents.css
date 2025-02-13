@@ -1,4 +1,11 @@
+.gh-head {
+	margin-top: 2em;
+}
+
 .gh-head-inner {
 	border-bottom: 1px solid #444;
 }
 
+.cdz-head-logo-subtitle {
+	color: #444;
+}
