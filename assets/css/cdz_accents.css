@@ -9,3 +9,8 @@
 .cdz-head-logo-subtitle {
 	color: #444;
 }
+
+.cdz-foot-right {
+	text-align: right;
+	font-size: 1.8rem;
+}
