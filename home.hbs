@@ -3,35 +3,36 @@
 <main id="gh-main" class="gh-main gh-outer">
     <div class="gh-inner">
         {{#page}}
-            {{content}} <!-- TODO -->
-        {{/page}}
 
-        {{^is "paged"}}
-            {{#foreach posts limit="1"}}
-                <article class="gh-latest gh-card {{post_class}}">
-                    <a class="gh-card-link" href="{{url}}">
-                        <header class="gh-card-header">
-                            <div class="gh-article-meta">
-                                <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time></span>
-                            </div>
-                            <h2 class="gh-article-title gh-card-title">{{title}}</h2>
-                        </header>
+        <div class="gh-latest gh-card {{post_class}}">
+            <header class="gh-card-header">
+                <div class="gh-article-meta">
+                    <span class="gh-card-date cdz-card-supertitle">Introductions</span>
+                </div>
+                <h2 class="gh-article-title gh-card-title">Hi there. I'm Chris.</h2>
+            </header>
 
-                        <p class="gh-article-excerpt">{{excerpt}}</p>
-
-                        <footer class="gh-card-meta">
-                            <span class="gh-card-duration">{{reading_time}}</span>
-                            {{#if @site.comments_enabled}}
-                                {{comment_count class="gh-card-comments"}}
-                            {{/if}}
-                            {{^has visibility="public"}}
-                                {{> icons/star}}
-                            {{/has}}
-                        </footer>
-                    </a>
-                </article>
-            {{/foreach}}
-        {{/is}}
+            <div class="gh-content cdz-home-introduction">
+                <div class="gh-content">{{content}}</div>
+                {{#if feature_image}}
+                <figure class="cdz-home-introduction-feature-image">
+                    <img
+                        srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 720w,
+                                {{img_url feature_image size="l"}} 960w,
+                                {{img_url feature_image size="xl"}} 1200w,
+                                {{img_url feature_image size="xxl"}} 2000w"
+                        sizes="(max-width: 1200px) 100vw, 1200px"
+                        src="{{img_url feature_image size="xl"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    >
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+                {{/if}}
+            </div>
+        </div>
 
         <div class="gh-wrapper">
             <section class="gh-section">
@@ -55,6 +56,8 @@
 
                 <button class="gh-loadmore gh-btn">Load more posts</button>
             </section>
+
+        {{/page}}
 
             <aside class="gh-sidebar">
                 {{#get "posts" filter="featured:true" limit="all" as |featured|}}

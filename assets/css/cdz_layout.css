@@ -28,3 +28,9 @@
 	margin-top: 12rem;
 	padding-top: 3rem;
 }
+
+.cdz-home-introduction {
+	display: flex;
+	flex-direction: row-reverse;
+	column-gap: 8rem;
+}
