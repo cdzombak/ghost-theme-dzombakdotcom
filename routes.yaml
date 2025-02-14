@@ -11,5 +11,10 @@ collections:
     template: index
     filter: 'tags:-hash-tag-content'
 
+  /p/:
+    permalink: /r/{slug}/
+    template: post
+    filter: 'tags:hash-tag-content'
+
 taxonomies:
   tag: /tag/{slug}/
