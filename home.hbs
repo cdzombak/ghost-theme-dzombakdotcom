@@ -2,6 +2,10 @@
 
 <main id="gh-main" class="gh-main gh-outer">
     <div class="gh-inner">
+        {{#page}}
+            {{content}} <!-- TODO -->
+        {{/page}}
+
         {{^is "paged"}}
             {{#foreach posts limit="1"}}
                 <article class="gh-latest gh-card {{post_class}}">
@@ -69,7 +73,7 @@
 
                 {{#get "tags" include="count.posts" limit="all" as |topic|}}
                     <section class="gh-section">
-                        <h3 class="gh-section-title">Topics</h3>
+                        <h3 class="gh-section-title">Microblog</h3>
 
                         <div class="gh-topic">
                             {{#foreach topic}}
@@ -83,6 +87,21 @@
                         </div>
                     </section>
                 {{/get}}
+
+                <section class="gh-section">
+                    <h3 class="gh-section-title">Recent Posts</h3>
+
+                    <div class="gh-topic">
+                        {{#foreach topic}}
+                            <a class="gh-topic-item" href="{{url}}">
+                                <h3 class="gh-topic-name">{{name}}</h3>
+                                <span class="gh-topic-count">
+                                    foo
+                                </span>
+                            </a>
+                        {{/foreach}}
+                    </div>
+                </section>
 
                 {{#if @site.recommendations_enabled}}
                     <section class="gh-section">
