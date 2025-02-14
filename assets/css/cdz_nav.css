@@ -1,5 +1,9 @@
 nav.gh-head-menu {
-	justify-content: right;
+    justify-content: right;
+}
+
+.gh-head-actions {
+    gap: 1.5rem !important;
 }
 
 @media (min-width: 992px) {
@@ -9,14 +13,20 @@ nav.gh-head-menu {
     }
 }
 
+@media (max-width: 768px) {
+    .is-head-open .gh-head-inner {
+        height: auto;
+    }
+}
+
 /* Logo Subtitle */
 
 .gh-head-brand-wrapper {
-	flex-direction: column;
-	align-items: baseline;
-	gap: 0.25em;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.25em;
 }
 
 .gh-head-brand-wrapper .cdz-head-logo-subtitle {
-	padding-left: 1em;
+    padding-left: 1em;
 }
