@@ -20,7 +20,9 @@
                 <p class="gh-article-excerpt">{{custom_excerpt}}</p>
             {{/if}}
 
+            {{^has tag="#hide-feature-image"}}
             {{> "feature-image"}}
+            {{/has}}
         </header>
 
         <div class="gh-content gh-canvas">
