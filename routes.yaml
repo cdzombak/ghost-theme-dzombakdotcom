@@ -2,6 +2,7 @@
 
 routes:
   /: home
+  data: page.home
 
 collections:
   /blog/:
