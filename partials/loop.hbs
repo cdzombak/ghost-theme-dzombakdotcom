@@ -1,4 +1,18 @@
 <article class="gh-card {{post_class}}">
+    {{#has tag="#micropost"}}
+
+    <div class="gh-card-excerpt">{{content}}</div>
+
+    <footer class="gh-card-meta">
+        <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+        <span class="gh-card-duration">{{title}}</span>
+        {{^has visibility="public"}}
+            {{> icons/star}}
+        {{/has}}
+    </footer>
+
+    {{else}}
+
     <a class="gh-card-link" href="{{url}}">
         <header class="gh-card-header">
             <h2 class="gh-card-title">{{title}}</h2>
@@ -17,4 +31,6 @@
             {{/has}}
         </footer>
     </a>
+
+    {{/has}}
 </article>
