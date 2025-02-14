@@ -1,8 +1,9 @@
 ---
 
 routes:
-  /: home
-  data: page.home
+  /:
+    data: page.home
+    template: home
 
 collections:
   /blog/:
