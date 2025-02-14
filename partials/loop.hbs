@@ -1,7 +1,12 @@
 <article class="gh-card {{post_class}}">
     {{#has tag="#micropost"}}
 
-    <div class="gh-card-excerpt">{{content}}</div>
+    <div class="gh-card-excerpt">
+        {{#if custom_excerpt}}
+            <p class="cdz-micropost-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+        {{content}}
+    </div>
 
     <footer class="gh-card-meta">
         <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
