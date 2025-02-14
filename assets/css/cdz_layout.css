@@ -32,5 +32,30 @@
 .cdz-home-introduction {
 	display: flex;
 	flex-direction: row-reverse;
-	column-gap: 8rem;
+	column-gap: 6rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+@media(max-width: 1100px) {
+	.cdz-home-introduction {
+		column-gap: 4rem;
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
+	}
+
+	.cdz-home-introduction-feature-image {
+		max-width: 400px;
+	}
+}
+
+@media(max-width: 767px) {
+	.cdz-home-introduction {
+		flex-direction: column-reverse;
+		column-gap: 4rem;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

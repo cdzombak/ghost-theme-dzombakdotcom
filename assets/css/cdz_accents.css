@@ -12,7 +12,7 @@
 }
 
 .cdz-home-introduction-feature-image {
-	filter: drop-shadow(3px 3px 6px #ccc);
+	filter: drop-shadow(0 3px 6px #ccc);
 }
 
 :not(pre) > code {
