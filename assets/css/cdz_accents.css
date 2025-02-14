@@ -1,10 +1,10 @@
 
 .gh-head-inner {
-	border-bottom: 1px solid #444;
+	border-bottom: 1px solid var(--color-dark-gray);
 }
 
 .cdz-head-logo-subtitle {
-	color: #444;
+	color: var(--color-secondary-text);
 }
 
 .cdz-foot-nonpost {
