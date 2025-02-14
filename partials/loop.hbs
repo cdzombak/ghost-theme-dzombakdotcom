@@ -7,9 +7,8 @@
         {{/if}}
         {{content}}
     </div>
-
     <footer class="gh-card-meta">
-        <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+        <a href="{{url}}"><time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time></a>
         <span class="gh-card-duration">{{title}}</span>
         {{^has visibility="public"}}
             {{> icons/star}}
