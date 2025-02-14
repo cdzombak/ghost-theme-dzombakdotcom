@@ -50,12 +50,24 @@
 	}
 }
 
-@media(max-width: 767px) {
+@media(max-width: 992px) {
 	.cdz-home-introduction {
 		flex-direction: column-reverse;
 		column-gap: 4rem;
 		align-items: center;
+		margin-top: ;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.cdz-home-introduction-feature-image {
+		margin-top: 0;
+		max-width: 600px;
+	}
+}
+
+@media(max-width: 767px) {
+	.cdz-home-introduction-feature-image {
+		max-width: 400px;
 	}
 }
