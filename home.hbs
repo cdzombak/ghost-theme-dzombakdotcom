@@ -2,12 +2,12 @@
 
 <main id="gh-main" class="gh-main gh-outer">
     <div class="gh-inner">
-        {{#page}}
 
+        {{#page}}
         <div class="gh-latest gh-card {{post_class}}">
             <header class="gh-card-header">
                 <div class="gh-article-meta">
-                    <span class="gh-card-date cdz-card-supertitle">Introductions</span>
+                    <span class="gh-card-date cdz-card-supertitle">An Introduction —</span>
                 </div>
                 <h2 class="gh-article-title gh-card-title">Hi there. I'm Chris.</h2>
             </header>
@@ -33,6 +33,7 @@
                 {{/if}}
             </div>
         </div>
+        {{/page}}
 
         <div class="gh-wrapper">
             <section class="gh-section">
@@ -56,8 +57,6 @@
 
                 <button class="gh-loadmore gh-btn">Load more posts</button>
             </section>
-
-        {{/page}}
 
             <aside class="gh-sidebar">
                 {{#get "posts" filter="featured:true" limit="all" as |featured|}}
