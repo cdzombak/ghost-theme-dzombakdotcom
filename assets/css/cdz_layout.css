@@ -115,9 +115,29 @@
 	flex-basis: 49%;
 }
 
+@media(max-width: 767px) {
+	.gh-feed.cdz-small-cards {
+		flex-direction: column;
+	}
+}
+
 .gh-feed.cdz-small-cards .gh-card a.gh-card-link {
 	border: 1px solid rgb(124 139 154/25%);
 	border-radius: 0.25em;
 	padding: 1.15em;
 	height: 100%;
+}
+
+.cdz-pictures-feed {
+	display: flex;
+	overflow-x: auto;
+	gap: 2rem;
+}
+
+.cdz-pictures-feed a {
+	flex-basis: 33.33%;
+}
+
+.cdz-pictures-feed img {
+/*	max-width: 200px;*/
 }

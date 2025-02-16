@@ -21,10 +21,8 @@ window.addEventListener('DOMContentLoaded', function() {
         }
 
         var items = [];
-        var i = 0;
         feed.items.forEach(function(entry) {
-            i++;
-            if (i > 3) {
+            if (items.length >= 3) {
                 return;
             }
 
@@ -110,75 +108,65 @@ window.addEventListener('DOMContentLoaded', function() {
         }
 
         var items = [];
+        var birdbuddyItems = [];
         feed.items.forEach(function(entry) {
             var item = {
                 pubDate: new Date(Date.parse(entry.pubDate)),
                 link: entry.link,
-                content: entry.content
+                title: entry.title,
+                category: null,
+                encType: entry.enclosure.type,
+                encURL: entry.enclosure.url
             };
-
-            if (entry.enclosure) {
-                item.encType = entry.enclosure.type;
-                item.encURL = entry.enclosure.url;
+            if (entry.categories.length) {
+                item.category = entry.categories[0];
             }
 
-            items.push(item);
+            if (item.category && item.category === 'Bird Buddy' && birdbuddyItems.length < 3) {
+                birdbuddyItems.push(item);
+            } else if (item.category !== 'Bird Buddy' && items.length < 3) {
+                items.push(item);
+            }
         });
 
         window.localStorage.setItem('cdz_pictures_feed', JSON.stringify({
-            exp: new Date(new Date().getTime() + 5*60*1000),
+            exp: new Date(new Date().getTime() + 15*60*1000),
             items: items
+        }));
+        window.localStorage.setItem('cdz_birdbuddy_feed', JSON.stringify({
+            exp: new Date(new Date().getTime() + 15*60*1000),
+            items: birdbuddyItems
         }));
     });
 
-    const feedItems = JSON.parse(window.localStorage.getItem('cdz_pictures_feed')).items;
-    const microblogFeed = document.getElementById("-cdz-pictures-feed");
+    const pictureItems = JSON.parse(window.localStorage.getItem('cdz_pictures_feed')).items;
+    const picturesFeed = document.getElementById("-cdz-pictures-feed");
+    const bbItems = JSON.parse(window.localStorage.getItem('cdz_birdbuddy_feed')).items;
+    const bbFeed = document.getElementById("-cdz-birdbuddy-feed");
 
-    feedItems.forEach(function(item) {
-        // const article = document.createElement("article");
-        // article.setAttribute("class", "gh-card post");
+    const addImage = function(el, item) {
+        const itemTs = new Date(Date.parse(item.pubDate));
+        const altTxt = item.title + " (Posted " + itemTs.toLocaleDateString() + " in “" + item.category + "”)";
 
-        // const a = document.createElement("a");
-        // a.setAttribute("class", "gh-card-link");
-        // a.setAttribute("href", item.link);
-        // a.setAttribute("target", "_blank");
-        // article.appendChild(a);
+        const img = document.createElement("img");
+        img.setAttribute("src", item.encURL);
+        img.setAttribute("alt", altTxt);
 
-        // const containerDiv = document.createElement("div");
-        // containerDiv.setAttribute("class", "gh-card-excerpt cdz-microblog-container");
-        // a.appendChild(containerDiv);
+        const a = document.createElement("a");
+        a.setAttribute("class", "gh-card-link");
+        a.setAttribute("href", item.link);
+        a.setAttribute("target", "_blank");
+        a.setAttribute("title", altTxt);
 
-        // const contentDiv = document.createElement("div");
-        // contentDiv.setAttribute("class", "cdz-microblog-content");
-        // containerDiv.appendChild(contentDiv);
+        a.appendChild(img);
+        el.appendChild(a);
+    }
 
-        // const textContentDiv = document.createElement("div");
-        // textContentDiv.setAttribute("class", "cdz-microblog-text-content");
-        // textContentDiv.innerHTML = item.content;
-        // contentDiv.appendChild(textContentDiv);
-
-        // if (item.encType) {
-        //     if (item.encType.startsWith("image/") && !!item.encURL) {
-        //         const img = document.createElement("img");
-        //         img.setAttribute("src", item.encURL);
-        //         contentDiv.appendChild(img);
-        //     } else {
-        //         console.warn("microblog item has unsuported enclosure type:", item);
-        //     }
-        // }
-
-        // const footer = document.createElement("footer");
-        // footer.setAttribute("class", "gh-card-meta");
-        // textContentDiv.appendChild(footer);
-
-        // const itemTs = new Date(Date.parse(item.pubDate));
-        // const time = document.createElement("time");
-        // time.setAttribute("class", "gh-card-date");
-        // time.setAttribute("datetime", item.pubDate);
-        // time.appendChild(document.createTextNode(itemTs.toLocaleString()));
-        // footer.appendChild(time);
-
-        // microblogFeed.appendChild(article);
+    pictureItems.forEach(function(item) {
+        addImage(picturesFeed, item);
+    });
+    bbItems.forEach(function(item) {
+        addImage(bbFeed, item);
     });
 });
 
