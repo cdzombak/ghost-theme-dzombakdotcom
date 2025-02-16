@@ -1,7 +1,3 @@
-(function () {
-    pagination(false);
-})();
-
 function isOverflownX(element) {
     return element.scrollWidth > element.clientWidth;
 }
@@ -102,3 +98,7 @@ window.addEventListener('DOMContentLoaded', function() {
         microblogFeed.appendChild(article);
     });
 });
+
+(function () {
+    pagination(false);
+})();
