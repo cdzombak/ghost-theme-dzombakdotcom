@@ -11,6 +11,10 @@ a.gh-card-link:hover .gh-card-header, a.gh-card-link:hover .gh-card-date {
 	text-decoration: underline;
 }
 
+a.kg-bookmark-container:hover .kg-bookmark-title, a.kg-bookmark-container:hover .kg-bookmark-author, a.kg-bookmark-container:hover .kg-bookmark-publisher {
+	text-decoration: underline;
+}
+
 .tag-hash-micropost .gh-card-meta .gh-card-duration a {
 	color: var(--color-secondary-text);
 }

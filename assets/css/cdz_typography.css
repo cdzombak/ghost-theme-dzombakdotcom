@@ -74,6 +74,19 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 460;
 }
 
+.kg-bookmark-content {
+    font-weight: 400;
+    font-family: var(--font-sans) !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.kg-bookmark-card .kg-bookmark-title {
+    font-size: 1em !important;
+}
+
 /* Typography Classes */
 
 /* <weight>: Use a value from 100 to 700

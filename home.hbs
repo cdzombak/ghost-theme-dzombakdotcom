@@ -1,6 +1,6 @@
 {{!< default}}
 
-<main id="gh-main" class="gh-main gh-outer">
+<main id="gh-main" class="gh-main gh-outer cdz-home">
     <div class="gh-inner">
 
         {{#page}}
@@ -36,34 +36,40 @@
         {{/page}}
 
         <div class="gh-wrapper">
-            <section class="gh-section">
-                <h2 class="gh-section-title">Interesting or Otherwise Notable</h2>
+            <div>
+                <section class="gh-section">
+                    <h2 class="gh-section-title">Interesting or Otherwise Notable</h2>
 
-                {{#get "posts" filter="featured:true" limit="3" as |featured|}}
-                    {{#if featured}}
-                        <div class="gh-featured gh-feed">
+                    <div class="gh-featured gh-feed cdz-small-cards">
+                        {{#get "posts" filter="featured:true" limit="3" as |featured|}}
                             {{#foreach featured}}
                                 {{> loop}}
                             {{/foreach}}
-                        </div>
-                    {{/if}}
-                {{/get}}
+                        {{/get}}
 
-                <div class="gh-feed">
-                    {{#get "pages" slug="home-featured-links" as |featuredlinks|}}
-                    {{#featuredlinks}}
-                       {{content}}
-                    {{/featuredlinks}}
-                    {{/get}}
-                </div>
-            </section>
+                        {{#get "pages" slug="home-featured-links" as |featuredlinks|}}
+                        {{#featuredlinks}}
+                           {{content}}
+                        {{/featuredlinks}}
+                        {{/get}}
+                    </div>
+                </section>
+
+                <section class="gh-section">
+                    <h2 class="gh-section-title"><a href="https://pictures.dzombak.com/gallery/recent" target="_blank" rel="me">Recently Posted Pictures</a></h2>
+
+                    <div class="gh-featured gh-feed" id="-cdz-pictures-feed">
+                        <noscript>Embedded pictures feed requires JavaScript; please visit <a href="https://pictures.dzombak.com">pictures.dzombak.com</a>.</noscript>
+                    </div>
+                </section>
+            </div>
 
             <aside class="gh-sidebar">
                 <section class="gh-section">
                     <h3 class="gh-section-title"><a href="https://micro.dzombak.com" target="_blank" rel="me">Microblog</a></h3>
 
                     <div class="gh-featured gh-feed" id="-cdz-microblog-feed">
-                    <!-- TODO(cdzombak): LOADER -->
+                        <noscript>Embedded microblog feed requires JavaScript; please visit my microblog at <a href="https://micro.dzombak.com">micro.dzombak.com</a>.</noscript>
                     </div>
                 </section>
 

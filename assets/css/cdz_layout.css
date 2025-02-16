@@ -12,29 +12,17 @@
 	margin-bottom: 6rem;
 }
 
+/* TODO(cdzombak): does this break anything?? */
+.gh-wrapper .gh-section + .gh-section {
+	margin-top: 8rem;
+}
+
 .gh-tag-label {
     margin-bottom: 0.7rem;
 }
 
 .cdz-micropost-excerpt {
 	margin-bottom: 1rem;
-}
-
-.gh-article-footer {
-	margin-top: 12rem;
-}
-
-.cdz-foot-nonpost {
-	margin-top: 12rem;
-	padding-top: 3rem;
-}
-
-.cdz-home-introduction {
-	display: flex;
-	flex-direction: row-reverse;
-	column-gap: 6rem;
-	margin-left: 1rem;
-	margin-right: 1rem;
 }
 
 .cdz-microblog-content {
@@ -57,6 +45,23 @@
 
 .cdz-microblog-container footer.gh-card-meta {
 	margin-top: 0.4rem;
+}
+
+.gh-article-footer {
+	margin-top: 12rem;
+}
+
+.cdz-foot-nonpost {
+	margin-top: 12rem;
+	padding-top: 3rem;
+}
+
+.cdz-home-introduction {
+	display: flex;
+	flex-direction: row-reverse;
+	column-gap: 6rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 @media(max-width: 1100px) {
@@ -92,4 +97,27 @@
 	.cdz-home-introduction-feature-image {
 		max-width: 400px;
 	}
+}
+
+.gh-feed.cdz-small-cards {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: stretch;
+	row-gap: 2rem;
+}
+
+.gh-feed.cdz-small-cards .cdz-small-card {
+	flex-basis: 30%;
+}
+
+.gh-feed.cdz-small-cards .gh-card, .gh-feed.cdz-small-cards .kg-card {
+	flex-basis: 49%;
+}
+
+.gh-feed.cdz-small-cards .gh-card a.gh-card-link {
+	border: 1px solid rgb(124 139 154/25%);
+	border-radius: 0.25em;
+	padding: 1.15em;
+	height: 100%;
 }
