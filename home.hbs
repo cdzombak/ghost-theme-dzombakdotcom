@@ -9,7 +9,7 @@
                 <div class="gh-article-meta">
                     <span class="gh-card-date cdz-card-supertitle">An Introduction —</span>
                 </div>
-                <h2 class="gh-article-title gh-card-title">Hi there. I'm Chris.</h2>
+                <h2 class="gh-article-title gh-card-title">{{title}}</h2>
             </header>
 
             <div class="gh-content cdz-home-introduction">
@@ -37,7 +37,19 @@
 
         <div class="gh-wrapper">
             <section class="gh-section">
-                <h2 class="gh-section-title">TK</h2>
+                <h2 class="gh-section-title">Interesting or Otherwise Notable</h2>
+
+                <!-- TODO: cards go here -->
+
+                {{#get "posts" filter="featured:true" limit="3" as |featured|}}
+                    {{#if featured}}
+                        <div class="gh-featured gh-feed">
+                            {{#foreach featured}}
+                                {{> loop}}
+                            {{/foreach}}
+                        </div>
+                    {{/if}}
+                {{/get}}
 
                 <div class="gh-feed">
                     {{^is "paged"}}
@@ -66,20 +78,6 @@
                     <!-- TODO(cdzombak): LOADER -->
                     </div>
                 </section>
-
-                {{#get "posts" filter="featured:true" limit="3" as |featured|}}
-                    {{#if featured}}
-                        <section class="gh-section">
-                            <h3 class="gh-section-title">Featured</h3>
-
-                            <div class="gh-featured gh-feed">
-                                {{#foreach featured}}
-                                    {{> loop}}
-                                {{/foreach}}
-                            </div>
-                        </section>
-                    {{/if}}
-                {{/get}}
 
                 {{#get "posts" limit="3" filter="tags:-hash-tag-content" as |recent|}}
                     <section class="gh-section">
