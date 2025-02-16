@@ -11,8 +11,8 @@ collections:
     template: index
     filter: 'tags:-hash-tag-content'
 
-  /p/:
-    permalink: /r/{slug}/
+  /_stub/:
+    permalink: /_stub/{slug}/
     template: post
     filter: 'tags:hash-tag-content'
 

@@ -2,7 +2,7 @@
 <ul class="nav">
     {{#unless isSecondary}}
     {{#foreach navigation}}
-    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{url absolute="true"}}" {{#has slug="microblog" slug="pictures"}}target="_blank"{{/has}}>{{label}}</a></li>
     {{/foreach}}
     {{/unless}}
 

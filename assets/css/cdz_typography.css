@@ -62,6 +62,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "IBM Plex Serif", Charter, Times, serif;
 }
 
+.cdz-microblog-text-content {
+    font-size: 1.1em;
+}
+
+.cdz-microblog-text-content p:first-child {
+    font-weight: 460;
+}
+
 /* Typography Classes */
 
 /* <weight>: Use a value from 100 to 700

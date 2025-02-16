@@ -37,6 +37,28 @@
 	margin-right: 1rem;
 }
 
+.cdz-microblog-content {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.cdz-microblog-text-content {
+	flex-grow: 1;
+}
+
+.cdz-microblog-text-content p {
+    margin-bottom: 0.15rem;
+}
+
+.cdz-microblog-content img {
+	max-width: 30%;
+}
+
+.cdz-microblog-container footer.gh-card-meta {
+	margin-top: 0.4rem;
+}
+
 @media(max-width: 1100px) {
 	.cdz-home-introduction {
 		column-gap: 4rem;

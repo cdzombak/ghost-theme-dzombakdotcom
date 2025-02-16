@@ -37,7 +37,7 @@
 
         <div class="gh-wrapper">
             <section class="gh-section">
-                <h2 class="gh-section-title">More posts</h2>
+                <h2 class="gh-section-title">TK</h2>
 
                 <div class="gh-feed">
                     {{^is "paged"}}
@@ -59,7 +59,15 @@
             </section>
 
             <aside class="gh-sidebar">
-                {{#get "posts" filter="featured:true" limit="all" as |featured|}}
+                <section class="gh-section">
+                    <h3 class="gh-section-title"><a href="https://micro.dzombak.com" target="_blank" rel="me">Microblog</a></h3>
+
+                    <div class="gh-featured gh-feed" id="-cdz-microblog-feed">
+                    <!-- TODO(cdzombak): LOADER -->
+                    </div>
+                </section>
+
+                {{#get "posts" filter="featured:true" limit="3" as |featured|}}
                     {{#if featured}}
                         <section class="gh-section">
                             <h3 class="gh-section-title">Featured</h3>
@@ -73,37 +81,17 @@
                     {{/if}}
                 {{/get}}
 
-                {{#get "tags" include="count.posts" limit="all" as |topic|}}
+                {{#get "posts" limit="3" filter="tags:-hash-tag-content" as |recent|}}
                     <section class="gh-section">
-                        <h3 class="gh-section-title">Microblog</h3>
+                        <h3 class="gh-section-title"><a href="/blog/">Recent Posts</a></h3>
 
-                        <div class="gh-topic">
-                            {{#foreach topic}}
-                                <a class="gh-topic-item" href="{{url}}">
-                                    <h3 class="gh-topic-name">{{name}}</h3>
-                                    <span class="gh-topic-count">
-                                        {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
-                                    </span>
-                                </a>
+                        <div class="gh-featured gh-feed">
+                            {{#foreach recent}}
+                                {{> loop}}
                             {{/foreach}}
                         </div>
                     </section>
                 {{/get}}
-
-                <section class="gh-section">
-                    <h3 class="gh-section-title">Recent Posts</h3>
-
-                    <div class="gh-topic">
-                        {{#foreach topic}}
-                            <a class="gh-topic-item" href="{{url}}">
-                                <h3 class="gh-topic-name">{{name}}</h3>
-                                <span class="gh-topic-count">
-                                    foo
-                                </span>
-                            </a>
-                        {{/foreach}}
-                    </div>
-                </section>
 
                 {{#if @site.recommendations_enabled}}
                     <section class="gh-section">
