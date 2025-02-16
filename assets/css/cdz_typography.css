@@ -40,6 +40,10 @@ body {
     font-weight: 600;
 }
 
+.gh-article-meta .cdz-card-supertitle {
+  font-weight: 500;
+}
+
 .gh-article-title {
     font-weight: 450;
 }

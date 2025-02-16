@@ -39,8 +39,6 @@
             <section class="gh-section">
                 <h2 class="gh-section-title">Interesting or Otherwise Notable</h2>
 
-                <!-- TODO: cards go here -->
-
                 {{#get "posts" filter="featured:true" limit="3" as |featured|}}
                     {{#if featured}}
                         <div class="gh-featured gh-feed">
@@ -52,22 +50,12 @@
                 {{/get}}
 
                 <div class="gh-feed">
-                    {{^is "paged"}}
-                        {{#foreach posts from="2"}}
-                            {{> loop}}
-                        {{/foreach}}
-                    {{else}}
-                        {{#foreach posts}}
-                            {{> loop}}
-                        {{/foreach}}
-                    {{/is}}
+                    {{#get "pages" slug="home-featured-links" as |featuredlinks|}}
+                    {{#featuredlinks}}
+                       {{content}}
+                    {{/featuredlinks}}
+                    {{/get}}
                 </div>
-
-                {{#match posts.length "=" 1}}
-                    Additional posts will be published soon.
-                {{/match}}
-
-                <button class="gh-loadmore gh-btn">Load more posts</button>
             </section>
 
             <aside class="gh-sidebar">
