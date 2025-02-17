@@ -37,3 +37,8 @@
 	margin-right: -0.5rem;
 	border-radius: 0.25em;
 }
+
+#-cdz-pictures-feed a:hover img, #-cdz-birdbuddy-feed a:hover img {
+	filter: drop-shadow(0 3px 6px #ccc);
+	transition: 0.05s;
+}

@@ -56,6 +56,20 @@
 	padding-top: 3rem;
 }
 
+.cdz-home .gh-latest {
+	margin-bottom: 14rem;
+}
+
+@media(max-width: 767px) {
+	.gh-head {
+		margin-top: 1em;
+	}
+
+	.cdz-home .gh-latest {
+		margin-bottom: 7rem;
+	}
+}
+
 .cdz-home-introduction {
 	display: flex;
 	flex-direction: row-reverse;
@@ -90,6 +104,10 @@
 	.cdz-home-introduction-feature-image {
 		margin-top: 0;
 		max-width: 600px;
+	}
+
+	.cdz-home .gh-latest {
+		margin-bottom: 10rem;
 	}
 }
 
@@ -136,8 +154,4 @@
 
 .cdz-pictures-feed a {
 	flex-basis: 33.33%;
-}
-
-.cdz-pictures-feed img {
-/*	max-width: 200px;*/
 }

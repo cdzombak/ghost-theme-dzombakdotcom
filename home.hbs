@@ -4,7 +4,7 @@
     <div class="gh-inner">
 
         {{#page}}
-        <div class="gh-latest gh-card {{post_class}}" style="margin-bottom:14rem;">
+        <div class="gh-latest gh-card {{post_class}}">
             <header class="gh-card-header">
                 <div class="gh-article-meta">
                     <span class="gh-card-date cdz-card-supertitle">An Introduction —</span>
@@ -41,7 +41,7 @@
                     <h2 class="gh-section-title">Interesting or Otherwise Notable</h2>
 
                     <div class="gh-featured gh-feed cdz-small-cards">
-                        {{#get "posts" filter="featured:true" limit="3" as |featured|}}
+                        {{#get "posts" filter="featured:true" limit="2" as |featured|}}
                             {{#foreach featured}}
                                 {{> loop}}
                             {{/foreach}}
