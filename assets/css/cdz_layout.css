@@ -141,6 +141,15 @@
 	.gh-feed.cdz-cards {
 		flex-direction: column;
 	}
+	.gh-feed.cdz-cards.cdz-cards-xs {
+		flex-direction: row;
+	}
+}
+
+@media (max-width: 600px) {
+  .gh-feed.cdz-cards.cdz-cards-xs {
+    flex-direction: column;
+  }
 }
 
 .gh-feed.cdz-cards .gh-card a.gh-card-link {

@@ -21,13 +21,34 @@
   opacity: .9;
 }
 
-.cdz-card.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata .cdz-bookmark-meta-1 {
+.cdz-card.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(1) {
 	text-decoration: underline;
 }
 
 .cdz-card.kg-bookmark-card .kg-bookmark-thumbnail {
 	min-width: 32%;
 	max-width: 36%;
+}
+
+.cdz-link-card .kg-bookmark-content {
+	padding: 0.9em;
+}
+
+.cdz-link-card .kg-bookmark-title {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 0;
+	gap: 0.5rem;
+}
+
+.cdz-link-card .kg-bookmark-title > span:nth-of-type(2) {
+	font-weight: 400;
+}
+
+.cdz-link-card .kg-bookmark-title > span:last-of-type {
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(2) {
