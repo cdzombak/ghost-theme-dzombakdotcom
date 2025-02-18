@@ -20,8 +20,13 @@ window.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        const feedItems = feed.items;
+        feedItems.sort(function(a, b){
+            return new Date(Date.parse(b.pubDate)) - new Date(Date.parse(a.pubDate));
+        });
+
         var items = [];
-        feed.items.forEach(function(entry) {
+        feedItems.forEach(function(entry) {
             if (items.length >= 3) {
                 return;
             }
@@ -46,10 +51,10 @@ window.addEventListener('DOMContentLoaded', function() {
         }));
     });
 
-    const feedItems = JSON.parse(window.localStorage.getItem('cdz_microblog_feed')).items;
+    const microblogItems = JSON.parse(window.localStorage.getItem('cdz_microblog_feed')).items;
     const microblogFeed = document.getElementById("-cdz-microblog-feed");
 
-    feedItems.forEach(function(item) {
+    microblogItems.forEach(function(item) {
         const article = document.createElement("article");
         article.setAttribute("class", "gh-card post");
 
@@ -107,9 +112,14 @@ window.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        const feedItems = feed.items;
+        feedItems.sort(function(a, b){
+            return new Date(Date.parse(b.pubDate)) - new Date(Date.parse(a.pubDate));
+        });
+
         var items = [];
         var birdbuddyItems = [];
-        feed.items.forEach(function(entry) {
+        feedItems.forEach(function(entry) {
             var item = {
                 pubDate: new Date(Date.parse(entry.pubDate)),
                 link: entry.link,
