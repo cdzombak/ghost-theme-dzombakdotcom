@@ -139,16 +139,16 @@
 
 @media(max-width: 767px) {
 	.gh-feed.cdz-cards {
-		flex-direction: column;
+		flex-flow: column;
 	}
 	.gh-feed.cdz-cards.cdz-cards-xs {
-		flex-direction: row;
+		flex-direction: row wrap;
 	}
 }
 
 @media (max-width: 600px) {
   .gh-feed.cdz-cards.cdz-cards-xs {
-    flex-direction: column;
+    flex-flow: column;
   }
 }
 
