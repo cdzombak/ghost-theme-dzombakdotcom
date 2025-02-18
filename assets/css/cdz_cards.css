@@ -70,6 +70,6 @@
 	text-decoration: none;
 }
 
-.cdz-cards .gh-card + .gh-card {
-	margin-top: 0;
+.gh-feed.gh-featured.cdz-cards .gh-card + .gh-card {
+	margin-top: 0 !important;
 }
