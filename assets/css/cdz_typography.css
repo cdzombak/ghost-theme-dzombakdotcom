@@ -87,12 +87,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em !important;
 }
 
+.cdz-monospace {
+  font-family: "IBM Plex Mono", monospace;
+}
+
 /* Typography Classes */
 
 /* <weight>: Use a value from 100 to 700
    <uniquifier>: Use a unique and descriptive class name */
 
-.rosario-<uniquifier> {
+.rosario-500 {
   font-family: "Rosario", serif;
   font-optical-sizing: auto;
   font-weight: 500;

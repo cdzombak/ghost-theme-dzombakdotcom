@@ -1,0 +1,35 @@
+.cdz-card.kg-bookmark-card .kg-bookmark-title {
+	word-break: break-word;
+	font-size: 1.8rem !important;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.cdz-card.kg-bookmark-card .kg-bookmark-description {
+	color: var(--color-secondary-text);
+	font-family: var(--font-sans);
+	font-size: 0.95em;
+	letter-spacing: 0;
+	line-height: 1.55;
+	margin-top: .8rem;
+	word-break: break-word;
+	opacity: 1;
+	-webkit-line-clamp: none;
+}
+
+.cdz-card.kg-bookmark-card .kg-bookmark-metadata > :not(img) {
+  opacity: .9;
+}
+
+.cdz-card.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata .cdz-bookmark-meta-1 {
+	text-decoration: underline;
+}
+
+.cdz-card.kg-bookmark-card .kg-bookmark-thumbnail {
+	min-width: 32%;
+	max-width: 36%;
+}
+
+.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(2) {
+	text-decoration: none;
+}
