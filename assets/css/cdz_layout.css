@@ -133,6 +133,10 @@
 	flex-basis: 49%;
 }
 
+.gh-feed.cdz-cards .gh-card.cdz-card-xs, .gh-feed.cdz-cards .kg-card.cdz-card-xs {
+	flex-basis: 30%;
+}
+
 @media(max-width: 767px) {
 	.gh-feed.cdz-cards {
 		flex-direction: column;
