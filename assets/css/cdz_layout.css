@@ -122,11 +122,11 @@
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-content: stretch;
-	row-gap: 2rem;
+	row-gap: 1.5rem;
 }
 
 .gh-feed.cdz-cards .cdz-card {
-	flex-basis: 30%;
+	flex-basis: 32%;
 }
 
 .gh-feed.cdz-cards .gh-card, .gh-feed.cdz-cards .kg-card {
@@ -134,7 +134,7 @@
 }
 
 .gh-feed.cdz-cards .gh-card.cdz-card-xs, .gh-feed.cdz-cards .kg-card.cdz-card-xs {
-	flex-basis: 30%;
+	flex-basis: 32%;
 }
 
 @media(max-width: 767px) {
