@@ -69,3 +69,7 @@
 .kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(2) {
 	text-decoration: none;
 }
+
+.cdz-cards .gh-card + .gh-card {
+	margin-top: 0;
+}
