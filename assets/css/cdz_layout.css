@@ -155,3 +155,9 @@
 .cdz-pictures-feed a {
 	flex-basis: 33.33%;
 }
+
+@media(max-width: 767px) {
+	.page-template .gh-article-header {
+		margin-top: 0;
+	}
+}
