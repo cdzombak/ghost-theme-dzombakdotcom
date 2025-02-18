@@ -3,7 +3,7 @@
 {{#post}}
 
 <main id="gh-main" class="gh-main">
-    <article class="gh-article {{post_class}}">
+    <article class="gh-article {{post_class}} {{#has tag="#hide-feature-image"}}no-image{{/has}}">
 
         {{#match @page.show_title_and_feature_image}}
             <header class="gh-article-header gh-canvas">
@@ -13,7 +13,9 @@
                     <p class="gh-article-excerpt">{{custom_excerpt}}</p>
                 {{/if}}
 
+                {{^has tag="#hide-feature-image"}}
                 {{> "feature-image"}}
+                {{/has}}
             </header>
         {{/match}}
 
