@@ -174,3 +174,13 @@
 		margin-top: 0;
 	}
 }
+
+/* fix: prevent <pre> from expanding sidebar's width (for microblog, in particular) */
+
+.gh-sidebar {
+	min-width: 0;
+}
+
+.gh-sidebar .cdz-microblog-text-content {
+	width: 100%;
+}
