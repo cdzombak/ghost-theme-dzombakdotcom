@@ -30,39 +30,38 @@
         {{/is}}
 
         <div class="gh-wrapper">
-            <section class="gh-section">
-                <h2 class="gh-section-title">Recent Posts</h2>
+            <div>
+                <section class="gh-section">
+                    <h2 class="gh-section-title">Featured Posts</h2>
 
-                <div class="gh-feed">
-                    {{^is "paged"}}
-                        {{#foreach posts from="2"}}
-                            {{> loop}}
-                        {{/foreach}}
-                    {{else}}
-                        {{#foreach posts}}
-                            {{> loop}}
-                        {{/foreach}}
-                    {{/is}}
-                </div>
+                    <div class="gh-featured gh-feed cdz-cards">
+                        {{#get "posts" filter="featured:true" limit="4" as |featured|}}
+                            {{#foreach featured}}
+                                {{> loop}}
+                            {{/foreach}}
+                        {{/get}}
+                    </div>
+                </section>
+                <section class="gh-section">
+                    <h2 class="gh-section-title">Recent Posts</h2>
 
-                <button class="gh-loadmore gh-btn">Load more posts</button>
-            </section>
+                    <div class="gh-feed">
+                        {{^is "paged"}}
+                            {{#foreach posts from="2"}}
+                                {{> loop}}
+                            {{/foreach}}
+                        {{else}}
+                            {{#foreach posts}}
+                                {{> loop}}
+                            {{/foreach}}
+                        {{/is}}
+                    </div>
+
+                    <button class="gh-loadmore gh-btn">Load more posts</button>
+                </section>
+            </div>
 
             <aside class="gh-sidebar">
-                {{#get "posts" filter="featured:true" limit="all" as |featured|}}
-                    {{#if featured}}
-                        <section class="gh-section">
-                            <h3 class="gh-section-title">Featured</h3>
-
-                            <div class="gh-featured gh-feed">
-                                {{#foreach featured}}
-                                    {{> loop}}
-                                {{/foreach}}
-                            </div>
-                        </section>
-                    {{/if}}
-                {{/get}}
-
                 {{#get "tags" include="count.posts" limit="all" filter="name:~^'Project: '" as |topic|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title">Projects</h3>
