@@ -21,6 +21,13 @@
   opacity: .9;
 }
 
+.cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-content {
+	padding-top: 0.9em;
+}
+.cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-description {
+	margin-top: 0;
+}
+
 .cdz-card.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(1) {
 	text-decoration: underline;
 }
