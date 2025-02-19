@@ -73,3 +73,7 @@
 .gh-feed.gh-featured.cdz-cards .gh-card + .gh-card {
 	margin-top: 0 !important;
 }
+
+.cdz-card-xs .kg-bookmark-metadata {
+	margin-top: 1rem;
+}
