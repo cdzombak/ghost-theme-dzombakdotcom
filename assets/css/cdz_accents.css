@@ -1,4 +1,8 @@
 
+.accent {
+	color: var(--ghost-accent-color);
+}
+
 .gh-head-inner {
 	border-bottom: 1px solid var(--color-dark-gray);
 }
