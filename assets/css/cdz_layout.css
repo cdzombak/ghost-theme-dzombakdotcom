@@ -184,3 +184,7 @@
 .gh-sidebar .cdz-microblog-text-content {
 	width: 100%;
 }
+
+.gh-sidebar pre {
+	padding: 1rem;
+}
