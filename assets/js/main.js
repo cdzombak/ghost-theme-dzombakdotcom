@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function() {
             var item = {
                 pubDate: new Date(Date.parse(entry.pubDate)),
                 link: entry.link,
-                content: entry.content.replace("<br>", "")
+                content: entry.content.replaceAll("<br>", "")
             };
 
             if (entry.enclosure) {

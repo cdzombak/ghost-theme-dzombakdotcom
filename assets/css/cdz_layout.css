@@ -36,7 +36,7 @@
 }
 
 .cdz-microblog-text-content p {
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.2rem;
 }
 
 .cdz-microblog-content img {
@@ -142,7 +142,7 @@
 		flex-flow: column;
 	}
 	.gh-feed.cdz-cards.cdz-cards-xs {
-		flex-direction: row wrap;
+		flex-direction: row wrap !important;
 	}
 }
 
