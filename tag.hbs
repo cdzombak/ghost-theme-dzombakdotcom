@@ -10,12 +10,16 @@
                 <script type="text/javascript">
                     const cdzProjectStr = "Project: ";
                     const cdzSeriesStr = "Series: ";
+                    const cdzLicenseStr = "License: ";
                     if ("{{name}}".startsWith(cdzProjectStr)) {
                         document.getElementById("-cdz-target-tag-label").textContent = "Project:";
                         document.getElementById("-cdz-target-tag-name").textContent = "{{name}}".slice(cdzProjectStr.length);
                     } else if ("{{name}}".startsWith(cdzSeriesStr)) {
                         document.getElementById("-cdz-target-tag-label").textContent = "Series:";
                         document.getElementById("-cdz-target-tag-name").textContent = "{{name}}".slice(cdzSeriesStr.length);
+                    } else if ("{{name}}".startsWith(cdzLicenseStr)) {
+                        document.getElementById("-cdz-target-tag-label").textContent = "License:";
+                        document.getElementById("-cdz-target-tag-name").textContent = "{{name}}".slice(cdzLicenseStr.length);
                     }
                 </script>
 
