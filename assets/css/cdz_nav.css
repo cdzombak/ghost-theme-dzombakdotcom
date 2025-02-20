@@ -30,3 +30,21 @@ nav.gh-head-menu {
 .gh-head-brand-wrapper .cdz-head-logo-subtitle {
     padding-left: 1em;
 }
+
+/* subnav */
+
+.cdz-subnav-container {
+    display: none;
+}
+
+body:has(* > .cdz-is-blog) .cdz-subnav-container.cdz-subnav-container-blog {
+    display: flex;
+}
+
+body:has(* > .cdz-is-etc) .cdz-subnav-container.cdz-subnav-container-etc {
+    display: flex;
+}
+
+body:has(* > .cdz-is-blog) nav.gh-head-menu, body:has(* > .cdz-is-etc) nav.gh-head-menu {
+    margin-top: 10px;
+}

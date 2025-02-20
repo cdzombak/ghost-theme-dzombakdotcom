@@ -17,6 +17,7 @@
     --color-tertiary-text: #999;
 
     --head-nav-gap: 4rem;
+    --head-subnav-gap: 1.5rem;
 }
 
 .tag-template .gh-main,

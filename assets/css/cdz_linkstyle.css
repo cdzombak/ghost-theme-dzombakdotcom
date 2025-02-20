@@ -18,3 +18,7 @@ a.kg-bookmark-container:hover .kg-bookmark-title, a.kg-bookmark-container:hover 
 .tag-hash-micropost .gh-card-meta .gh-card-duration a {
 	color: var(--color-secondary-text);
 }
+
+li.nav-current a, li.nav-current-parent a {
+	text-decoration: underline;
+}

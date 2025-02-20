@@ -189,6 +189,27 @@
 	padding: 1rem;
 }
 
+/* header nav */
+
+.cdz-nav-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.8rem;
+	align-items: end;
+}
+
+.cdz-subnav-container {
+	display: flex;
+	flex-direction: row;
+	gap: var(--head-subnav-gap);
+}
+
+.gh-head ul.nav.cdz-subnav {
+	gap: var(--head-subnav-gap);
+}
+
+/* footer & nav */
+
 .gh-foot-inner {
 	grid-template-columns: 0.3fr 1fr;
 	gap: 3rem;

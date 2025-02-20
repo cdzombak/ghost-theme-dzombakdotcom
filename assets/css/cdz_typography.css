@@ -91,6 +91,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Mono", monospace;
 }
 
+.cdz-subnav-container {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.gh-head ul.nav.cdz-subnav {
+  font-weight: 500;
+}
+
 /* Typography Classes */
 
 /* <weight>: Use a value from 100 to 700
