@@ -5,7 +5,7 @@ routes:
     data: page.home
     template: home
 
-  /etc/published-elsewhere:
+  /etc/published-elsewhere/:
     data: page.published-elsewhere
     template: page
 
