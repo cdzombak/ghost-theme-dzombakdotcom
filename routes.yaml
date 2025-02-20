@@ -5,6 +5,10 @@ routes:
     data: page.home
     template: home
 
+  /etc/published-elsewhere:
+    data: page.published-elsewhere
+    template: page
+
 collections:
   /blog/:
     permalink: /blog/{year}/{month}/{slug}/
@@ -20,11 +24,11 @@ taxonomies:
   tag: /blog/tag/{slug}/
 
 
+# TODO(cdzombak): /blog/all
 # TODO(cdzombak): /blog/tags
 # TODO(cdzombak): /blog/projects
 # TODO(cdzombak): /blog/series
 
-# TODO(cdzombak): /etc/published-elsewhere
 # TODO(cdzombak): /etc/clips
 # TODO(cdzombak): /etc/adsb
 # TODO(cdzombak): /etc/published-elsewhere/3d-printing/
