@@ -17,4 +17,13 @@ collections:
     filter: 'tags:hash-tag-content'
 
 taxonomies:
-  tag: /tag/{slug}/
+  tag: /blog/tag/{slug}/
+
+
+# TODO(cdzombak): /blog/tags
+# TODO(cdzombak): /blog/projects
+# TODO(cdzombak): /blog/series
+
+# TODO(cdzombak): /etc/published-elsewhere
+# TODO(cdzombak): /etc/clips
+# TODO(cdzombak): /etc/adsb

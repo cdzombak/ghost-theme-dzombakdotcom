@@ -23,16 +23,9 @@
 	border-top: 1px solid var(--color-light-gray);
 }
 
-.cdz-foot-last {
-	text-align: right;
+.cdz-stuff-i-like-emoji {
 	font-size: 1.8rem;
-	margin-top: -3px;
-}
-
-@media (max-width: 767px) {
-	.cdz-foot-last {
-		text-align: center;
-	}
+	margin-bottom: 0.75rem;
 }
 
 .cdz-microblog-container {
@@ -46,4 +39,13 @@
 #-cdz-pictures-feed a:hover img, #-cdz-birdbuddy-feed a:hover img {
 	filter: drop-shadow(0 3px 6px #ccc);
 	transition: 0.05s;
+}
+
+.cdz-secondary-section-title {
+	color: var(--color-secondary-text);
+}
+
+.cdz-terms-notice {
+	color: var(--color-tertiary-text);
+	font-style: italic;
 }

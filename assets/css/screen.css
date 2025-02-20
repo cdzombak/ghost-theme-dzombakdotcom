@@ -14,6 +14,7 @@
 
     --color-primary-text: var(--color-black);
     --color-secondary-text: #444;
+    --color-tertiary-text: #999;
 
     --head-nav-gap: 4rem;
 }

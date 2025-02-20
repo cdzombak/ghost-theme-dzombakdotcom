@@ -43,15 +43,60 @@
     <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer {{^is "post"}}cdz-foot-nonpost{{/is}}">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
-                © {{date format="YYYY"}} {{@site.title}}
+                <div class="cdz-stuff-i-like-emoji" title="some stuff I like">💻️ 🚵🏻‍♀️ 🏕️ 🐦 📸 🥾 ☕ 🌩️ 📻 🛶</div>
+                <div class="cdz-copyright">
+                    © {{date format="YYYY"}} <a href="/contact">{{@site.title}}</a>
+                    <span class="cdz-terms-notice"><p>All rights reserved unless otherwise noted.<br />Use for AI training prohibited.</p></span>
+                </div>
             </div>
-            {{#if @site.secondary_navigation}}
-                <nav class="gh-foot-menu">
-                    {{navigation type="secondary"}}
-                </nav>
-            {{/if}}
-            <div class="cdz-foot-last" title="some stuff I like">
-                💻️ 🚵🏻‍♀️ 🏕️ 🐦 📸 🥾 ☕ 🌩️ 📻 🛶
+            <div class="cdz-foot-nav-container">
+                <div class="cdz-foot-nav">
+                    <h3 class="gh-section-title">Site Navigation</h3>
+                    <ul class="nav">
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/etc">/etc</a></li>
+                        <li><a href="https://pictures.dzombak.com">Pictures</a></li>
+                        <li><a href="https://micro.dzombak.com">Microblog</a></li>
+                        <li><a href="/feeds">Feeds</a></li>
+                    </ul>
+                </div>
+                <div class="cdz-foot-nav">
+                    <h3 class="gh-section-title cdz-secondary-section-title">Within <a href="/blog">/blog</a>:</h3>
+                    <ul class="nav">
+                        <li><a href="/blog/projects">Projects</a></li>
+                        <li><a href="/blog/series">Series</a></li>
+                        <li><a href="/blog/tags">Topics</a></li>
+                    </ul>
+                </div>
+                <div class="cdz-foot-nav">
+                    <h3 class="gh-section-title cdz-secondary-section-title">Within <a href="/etc">/etc</a>:</h3>
+                    <ul class="nav">
+                        <li><a href="/etc/adsb">ADS-B</a></li>
+                        <li><a href="/etc/published-elsewhere">Published Elsewhere</a></li>
+                        <li><a href="/etc/clips">Clips</a></li>
+                    </ul>
+                </div>
+                <div class="cdz-foot-nav">
+                    <h3 class="gh-section-title">Elsewhere</h3>
+                    <ul class="nav">
+                        <li><a href="https://www.github.com/cdzombak">GitHub</a></li>
+                        <li><a href="https://a2mi.social/@dzombak">Mastodon</a></li>
+                        <li><a href="https://bookwyrm.social/user/dzombak/">BookWyrm</a></li>
+                        <li><a href="https://www.flickr.com/photos/chrisdzombak/">Flickr</a></li>
+                        <li><a href="https://www.linkedin.com/in/chris-dzombak">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="cdz-foot-nav">
+                    <h3 class="gh-section-title">Shop</h3>
+                    <ul class="nav">
+                        <li><a href="">TK: Photography</a></li>
+                        <li><a href="">TK: Design</a></li>
+                        <li><a href="https://chrishats.com">Chris Hats</a></li>
+                        <li><a href="">TK: Hobbyist Electronics</a></li>
+                        <li><a href="">TK: Software</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
