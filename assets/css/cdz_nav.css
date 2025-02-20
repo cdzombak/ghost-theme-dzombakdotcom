@@ -45,6 +45,6 @@ body:has(* > .cdz-is-etc) .cdz-subnav-container.cdz-subnav-container-etc {
     display: flex;
 }
 
-body:has(* > .cdz-is-blog) nav.gh-head-menu, body:has(* > .cdz-is-etc) nav.gh-head-menu {
+/*body:has(* > .cdz-is-blog) nav.gh-head-menu, body:has(* > .cdz-is-etc) nav.gh-head-menu {
     margin-top: 10px;
-}
+}*/
