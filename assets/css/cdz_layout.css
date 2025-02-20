@@ -208,6 +208,12 @@
 	gap: var(--head-subnav-gap);
 }
 
+@media(max-width: 767px) {
+	.cdz-subnav-container {
+		display: none !important;
+	}
+}
+
 /* footer & nav */
 
 .gh-foot-inner {
