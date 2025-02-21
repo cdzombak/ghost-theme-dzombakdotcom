@@ -5,8 +5,29 @@ routes:
     data: page.home
     template: home
 
+  /blog/all/:
+    controller: channel
+    template: all_posts
+    filter: 'tags:-hash-tag-content'
+
+  /blog/tags/:
+    template: list_topics
+  /blog/projects/:
+    template: list_projects
+  /blog/series/:
+    template: list_series
+
+  /etc/adsb/:
+    data: page.etc-adsb
+    template: page
+  /etc/clips/:
+    data: page.etc-clips
+    template: page
   /etc/published-elsewhere/:
     data: page.published-elsewhere
+    template: page
+  /etc/published-elsewhere/3d-printing/:
+    data: page.published-elsewhere-3d-printing
     template: page
 
 collections:
@@ -22,13 +43,3 @@ collections:
 
 taxonomies:
   tag: /blog/tag/{slug}/
-
-
-# TODO(cdzombak): /blog/all
-# TODO(cdzombak): /blog/tags
-# TODO(cdzombak): /blog/projects
-# TODO(cdzombak): /blog/series
-
-# TODO(cdzombak): /etc/clips
-# TODO(cdzombak): /etc/adsb
-# TODO(cdzombak): /etc/published-elsewhere/3d-printing/

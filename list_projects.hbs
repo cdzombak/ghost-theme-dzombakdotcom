@@ -1,0 +1,47 @@
+{{!< default}}
+
+<main id="gh-main" class="gh-main cdz-is-blog">
+    <article class="gh-article {{post_class}} no-image">
+
+        <header class="gh-article-header gh-canvas">
+            <h1 class="gh-article-title">Blog: Projects</h1>
+        </header>
+
+        <div class="gh-content gh-canvas">
+            <table class="cdz-content-list" style="margin-top: 2rem;">
+                <thead>
+                    <tr>
+                        <td>Post Count</td>
+                        <td>Topic</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#get "tags" include="count.posts" limit="all" filter="name:~^'Project: '" as |topic|}}
+                        {{#foreach topic}}
+                        <tr>
+                            <td class="gh-topic-count">
+                                {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
+                            </td>
+                            <td>
+                                <a href="{{url}}" class="gh-topic-name">{{name}}</a>
+                                {{#if description}}
+                                    <br /><span class="cdz-topic-meta">{{description}}</span>
+                                {{/if}}
+                            </td>
+                        </tr>
+                        {{/foreach}}
+                    {{/get}}
+                </tbody>
+            </table>
+        </div>
+
+        <script type="text/javascript">
+            const cdzProjectStr = "Project: ";
+            const els = document.getElementsByClassName('gh-topic-name');
+            for (let i = 0; i < els.length; i++) {
+                els[i].textContent = els[i].textContent.slice(cdzProjectStr.length);
+            }
+        </script>
+
+    </article>
+</main>

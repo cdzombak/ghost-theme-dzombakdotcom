@@ -1,0 +1,39 @@
+{{!< default}}
+
+<main id="gh-main" class="gh-main cdz-is-blog">
+    <article class="gh-article {{post_class}} no-image">
+
+        <header class="gh-article-header gh-canvas">
+            <h1 class="gh-article-title">All Blog Posts</h1>
+        </header>
+
+        <div class="gh-content gh-canvas">
+            <table class="cdz-content-list" style="margin-top: 2rem;">
+                <thead>
+                    <tr>
+                        <td>Date</td>
+                        <td>Title</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#foreach posts}}
+                        <tr>
+                            <td class="gh-card-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time></td>
+                            <td>
+                                {{^has visibility="public"}}
+                                    {{> icons/star}}
+                                {{/has}}
+                                <a href="{{url}}" class="gh-card-title">{{title}}</a>
+                                {{#if primary_tag}}
+                                    <span class="gh-article-meta"><br />in
+                                    <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a></span>
+                                {{/if}}
+                            </td>
+                        </tr>
+                    {{/foreach}}
+                </tbody>
+            </table>
+        </div>
+
+    </article>
+</main>

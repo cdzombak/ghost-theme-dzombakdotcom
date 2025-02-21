@@ -20,7 +20,7 @@
 }
 
 .cdz-home-introduction-feature-image {
-	filter: drop-shadow(0 3px 6px #ccc);
+	filter: drop-shadow(0 3px 6px var(--color-cdz-dropshadow));
 }
 
 :not(pre) > code {
@@ -45,7 +45,7 @@
 }
 
 #-cdz-pictures-feed a:hover img, #-cdz-birdbuddy-feed a:hover img {
-	filter: drop-shadow(0 3px 6px #ccc);
+	filter: drop-shadow(0 3px 6px var(--color-cdz-dropshadow));
 	transition: 0.05s;
 }
 
