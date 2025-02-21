@@ -104,10 +104,6 @@
     word-break: break-word;
 }
 
-.gh-card-link:hover .gh-card-title {
-    opacity: 0.8;
-}
-
 .gh-card-excerpt {
     margin-top: 1.2rem;
     font-size: 1.8rem;
