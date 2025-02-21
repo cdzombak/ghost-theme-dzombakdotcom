@@ -24,9 +24,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    /* TODO:
-    - table shadows
-    */
   :root {
     --color-secondary-text: #cccccc;
     --color-tertiary-text: #777777;
@@ -43,6 +40,27 @@
     --ghost-accent-color: #809FCC !important;
   }
 }
+
+/* dark mode table shadow fix */
+
+.gh-content table:not(.gist table) td:first-child {
+    background-image: linear-gradient(90deg,var(--color-white) 50%,hsla(0,0%,100%,0));
+}
+
+.gh-content table:not(.gist table) td:last-child {
+    background-image: linear-gradient(270deg,var(--color-white) 50%,hsla(0,0%,100%,0));
+}
+
+@media (prefers-color-scheme: dark) {
+    .gh-content table:not(.gist table) {
+        background: radial-gradient(ellipse at left, rgba(255,255,255,.2) 0, transparent 75%) 0, radial-gradient(ellipse at right, rgba(255,255,255,.2) 0, transparent 75%) 100%;
+        background-attachment: scroll,scroll;
+        background-repeat: no-repeat;
+        background-size: 10px 100%,10px 100%;
+    }
+}
+
+/* end: dark mode table shadow fix */
 
 .tag-template .gh-main,
 .author-template .gh-main {
