@@ -28,8 +28,8 @@
     - table shadows
     */
   :root {
-    --color-secondary-text: #bbbbbb;
-    --color-tertiary-text: #666666;
+    --color-secondary-text: #cccccc;
+    --color-tertiary-text: #777777;
     --color-cdz-dropshadow: #444;
 
     --color-white: #040404;
@@ -40,7 +40,7 @@
     --color-darker-gray: #eae8e5;
     --color-black: #fff;
 
-    --ghost-accent-color: #809FCC;
+    --ghost-accent-color: #809FCC !important;
   }
 }
 
