@@ -17,6 +17,7 @@ table.cdz-content-list tr td:first-child {
 	padding-top: 0;
 	padding-left: 0;
 	padding-right: 0;
+	white-space: nowrap;
 }
 
 table.cdz-content-list tr td:first-child time {

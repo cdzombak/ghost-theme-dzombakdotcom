@@ -16,6 +16,8 @@ routes:
     template: list_projects
   /blog/series/:
     template: list_series
+  /blog/damnarbor/:
+    template: list_damnarbor
 
   /etc/adsb/:
     data: page.etc-adsb
@@ -25,9 +27,6 @@ routes:
     template: page
   /etc/published-elsewhere/:
     data: page.published-elsewhere
-    template: page
-  /etc/published-elsewhere/3d-printing/:
-    data: page.published-elsewhere-3d-printing
     template: page
 
 collections:
