@@ -12,12 +12,33 @@
     --font-sans-condensed: "IBM Plex Sans Condensed", Avenir Next Condensed, Arial Narrow, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --font-mono: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; /* stylelint-disable-line value-keyword-case */
 
+    --background-color: var(--color-white);
     --color-primary-text: var(--color-black);
+    --color-cdz-dropshadow: #ccc;
     --color-secondary-text: #444;
     --color-tertiary-text: #999;
 
     --head-nav-gap: 4rem;
     --head-subnav-gap: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* TODO:
+    - table shadows
+    */
+  :root {
+    --color-secondary-text: #bbbbbb;
+    --color-tertiary-text: #666666;
+    --color-cdz-dropshadow: #444;
+
+    --color-white: #040404;
+    --color-lighter-gray: #222;
+    --color-light-gray: #333;
+    --color-mid-gray: #555;
+    --color-dark-gray: #bbbbbb;
+    --color-darker-gray: #eae8e5;
+    --color-black: #fff;
+  }
 }
 
 .tag-template .gh-main,
