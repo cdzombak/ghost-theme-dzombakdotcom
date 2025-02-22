@@ -37,6 +37,10 @@
 	max-width: 36%;
 }
 
+img.kg-bookmark-icon {
+	border-radius: 2px;
+}
+
 .cdz-link-card .kg-bookmark-content {
 	padding: 0.9em;
 }
