@@ -1,6 +1,7 @@
 {{!< default}}
 
 {{#post}}
+{{#contentFor "title"}}{{title}} • {{@site.title}}{{/contentFor}}
 
 <main id="gh-main" class="gh-main">
     <article class="gh-article {{post_class}} {{#has tag="#hide-feature-image"}}no-image{{/has}} {{#has tag="#section-etc"}}cdz-is-etc{{/has}}">
