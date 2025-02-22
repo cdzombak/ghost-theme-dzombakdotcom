@@ -39,6 +39,11 @@
 
     --ghost-accent-color: #809FCC !important;
   }
+
+  .cdz-darkmode-invert {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
 }
 
 /* dark mode table shadow fix */
