@@ -10,7 +10,8 @@
   "license": "MIT",
   "author": {
     "name": "Chris Dzombak",
-    "url": "https://www.dzombak.com"
+    "url": "https://www.dzombak.com",
+    "email": "chris@dzombak.com"
   },
   "docs": "https://github.com/cdzombak/ghost-theme-dzombakdotcom",
   "config": {
