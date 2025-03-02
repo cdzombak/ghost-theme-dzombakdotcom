@@ -120,9 +120,8 @@
 .gh-feed.cdz-cards {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
 	align-content: stretch;
-	row-gap: 1.5rem;
+	gap: 1.5rem;
 }
 
 .gh-feed.cdz-cards .cdz-card {
