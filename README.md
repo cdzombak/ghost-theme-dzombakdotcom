@@ -36,3 +36,5 @@ This repo is synced automatically with [TryGhost/Themes](https://github.com/TryG
 # Copyright & License
 
 Copyright (c) 2013-2025 Ghost Foundation - Released under the [MIT license](LICENSE).
+
+Modifications by [@cdzombak](https://github.com/cdzombak) are (c) [Chris Dzombak](https://www.dzombak.com) and are likewise distributed under the MIT license.
