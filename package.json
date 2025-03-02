@@ -5,7 +5,7 @@
   "private": true,
   "engines": {
     "ghost": ">=5.0.0",
-    "node" : "^20.0.0"
+    "node": "^20.0.0"
   },
   "license": "MIT",
   "author": {
@@ -52,17 +52,17 @@
   "devDependencies": {
     "@tryghost/shared-theme-assets": "2.5.0",
     "autoprefixer": "10.4.20",
-    "beeper": "2.1.0",
+    "beeper": "3.0.0",
     "cssnano": "7.0.6",
-    "gscan": "4.46.0",
+    "gscan": "4.47.0",
     "gulp": "5.0.0",
     "gulp-concat": "2.6.1",
     "gulp-livereload": "4.0.2",
     "gulp-postcss": "10.0.0",
     "gulp-uglify": "3.0.2",
-    "gulp-zip": "5.1.0",
+    "gulp-zip": "6.1.0",
     "ordered-read-streams": "2.0.0",
-    "postcss": "8.5.2",
+    "postcss": "8.5.3",
     "postcss-easy-import": "4.0.0",
     "prettier": "3.5.2",
     "pump": "3.0.2"
