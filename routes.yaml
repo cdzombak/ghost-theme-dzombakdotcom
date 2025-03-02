@@ -1,5 +1,4 @@
 ---
-
 routes:
   /:
     data: page.home
@@ -8,7 +7,7 @@ routes:
   /blog/all/:
     controller: channel
     template: all_posts
-    filter: 'tags:-hash-tag-content'
+    filter: "tags:-hash-tag-content"
 
   /blog/tags/:
     template: list_topics
@@ -33,12 +32,12 @@ collections:
   /blog/:
     permalink: /blog/{year}/{month}/{slug}/
     template: index
-    filter: 'tags:-hash-tag-content'
+    filter: "tags:-hash-tag-content"
 
   /_stub/:
     permalink: /_stub/{slug}/
     template: post
-    filter: 'tags:hash-tag-content'
+    filter: "tags:hash-tag-content"
 
 taxonomies:
   tag: /blog/tag/{slug}/

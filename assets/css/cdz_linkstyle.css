@@ -1,28 +1,32 @@
 a:hover {
-	opacity: 1.0 !important;
-	text-decoration: underline;
+  opacity: 1 !important;
+  text-decoration: underline;
 }
 
 .gh-content a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a.gh-card-link:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
-a.gh-card-link:hover .gh-card-header, a.gh-card-link:hover .gh-card-date {
-	text-decoration: underline;
+a.gh-card-link:hover .gh-card-header,
+a.gh-card-link:hover .gh-card-date {
+  text-decoration: underline;
 }
 
-a.kg-bookmark-container:hover .kg-bookmark-title, a.kg-bookmark-container:hover .kg-bookmark-author, a.kg-bookmark-container:hover .kg-bookmark-publisher {
-	text-decoration: underline;
+a.kg-bookmark-container:hover .kg-bookmark-title,
+a.kg-bookmark-container:hover .kg-bookmark-author,
+a.kg-bookmark-container:hover .kg-bookmark-publisher {
+  text-decoration: underline;
 }
 
 .tag-hash-micropost .gh-card-meta .gh-card-duration a {
-	color: var(--color-secondary-text);
+  color: var(--color-secondary-text);
 }
 
-li.nav-current a, li.nav-current-parent a {
-	text-decoration: underline;
+li.nav-current a,
+li.nav-current-parent a {
+  text-decoration: underline;
 }

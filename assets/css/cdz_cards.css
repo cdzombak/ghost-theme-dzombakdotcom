@@ -1,90 +1,90 @@
 .cdz-card.kg-bookmark-card .kg-bookmark-title {
-	word-break: break-word;
-	font-size: 1.8rem !important;
-	font-weight: 600;
-	line-height: 1.25;
+  word-break: break-word;
+  font-size: 1.8rem !important;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .cdz-card.kg-bookmark-card .kg-bookmark-description {
-	color: var(--color-secondary-text);
-	font-family: var(--font-sans);
-	font-size: 0.95em;
-	letter-spacing: 0;
-	line-height: 1.55;
-	margin-top: .8rem;
-	word-break: break-word;
-	opacity: 1;
-	-webkit-line-clamp: none;
+  color: var(--color-secondary-text);
+  font-family: var(--font-sans);
+  font-size: 0.95em;
+  letter-spacing: 0;
+  line-height: 1.55;
+  margin-top: 0.8rem;
+  word-break: break-word;
+  opacity: 1;
+  -webkit-line-clamp: none;
 }
 
 .cdz-card.kg-bookmark-card .kg-bookmark-metadata > :not(img) {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-content {
-	padding-top: 0.9em;
+  padding-top: 0.9em;
 }
 .cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-description {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 .cdz-card.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(1) {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .cdz-card.kg-bookmark-card .kg-bookmark-thumbnail {
-	min-width: 32%;
-	max-width: 36%;
+  min-width: 32%;
+  max-width: 36%;
 }
 
 img.kg-bookmark-icon {
-	border-radius: 2px;
+  border-radius: 2px;
 }
 
 .cdz-link-card .kg-bookmark-content {
-	padding: 0.9em;
+  padding: 0.9em;
 }
 
 .cdz-link-card .kg-bookmark-title {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	margin-top: 0;
-	gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 0;
+  gap: 0.5rem;
 }
 
 .cdz-link-card .kg-bookmark-title > span {
-	-webkit-line-clamp: 1;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .cdz-link-card .kg-bookmark-title > span:nth-of-type(2) {
-	font-weight: 400;
-	font-size: 0.95em;
-	opacity: 0.85;
+  font-weight: 400;
+  font-size: 0.95em;
+  opacity: 0.85;
 }
 
 .cdz-link-card .kg-bookmark-title > span:last-of-type {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
 }
 
 .cdz-link-card .kg-bookmark-description {
-	margin-left: 30px;
-	margin-top: 0.25em !important;
-	font-size: .9em;
+  margin-left: 30px;
+  margin-top: 0.25em !important;
+  font-size: 0.9em;
 }
 
 .kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(2) {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .gh-feed.gh-featured.cdz-cards .gh-card + .gh-card {
-	margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .cdz-card-xs .kg-bookmark-metadata {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }

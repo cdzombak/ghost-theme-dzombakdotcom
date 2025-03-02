@@ -1,70 +1,75 @@
 table.cdz-content-list thead {
-	display: none;
+  display: none;
 }
 
 table.cdz-content-list {
-	white-space: normal !important;
+  white-space: normal !important;
 }
 
 table.cdz-content-list td {
-	vertical-align: text-bottom;
-	border: none !important;
-	padding-bottom: 2rem !important;
+  vertical-align: text-bottom;
+  border: none !important;
+  padding-bottom: 2rem !important;
 }
 
 table.cdz-content-list tr td:first-child {
-	text-align: right;
-	padding-top: 0;
-	padding-left: 0;
-	padding-right: 0;
-	white-space: nowrap;
+  text-align: right;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  white-space: nowrap;
 }
 
 table.cdz-content-list tr td:first-child time {
-	margin-top: -3px;
+  margin-top: -3px;
 }
 
 table.cdz-content-list tr td:last-of-type {
-	padding-top: 0;
-	padding-left: 2rem;
-	padding-right: 0;
+  padding-top: 0;
+  padding-left: 2rem;
+  padding-right: 0;
 }
 
-table.cdz-content-list .gh-card-title, table.cdz-content-list .gh-topic-name {
-	font-size: 2rem;
+table.cdz-content-list .gh-card-title,
+table.cdz-content-list .gh-topic-name {
+  font-size: 2rem;
 }
 
-table.cdz-content-list a.gh-card-title, table.cdz-content-list a.gh-topic-name {
-	color: var(--color-primary-text);
-	text-decoration: none;
+table.cdz-content-list a.gh-card-title,
+table.cdz-content-list a.gh-topic-name {
+  color: var(--color-primary-text);
+  text-decoration: none;
 }
 
-table.cdz-content-list a.gh-card-title:hover, table.cdz-content-list a.gh-topic-name:hover {
-	text-decoration: underline;
+table.cdz-content-list a.gh-card-title:hover,
+table.cdz-content-list a.gh-topic-name:hover {
+  text-decoration: underline;
 }
 
-table.cdz-content-list .gh-article-meta, table.cdz-content-list .cdz-topic-meta {
-	line-height: 1.5;
-	margin-bottom: 1.8rem;
+table.cdz-content-list .gh-article-meta,
+table.cdz-content-list .cdz-topic-meta {
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
 }
 
 table.cdz-content-list .gh-article-meta {
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 table.cdz-content-list .cdz-topic-meta {
-	font-size: 1.5rem;
-	color: var(--color-secondary-text);
+  font-size: 1.5rem;
+  color: var(--color-secondary-text);
 }
 
 table.cdz-content-list .gh-article-tag {
-	font-weight: 450;
+  font-weight: 450;
 }
 
-table.cdz-content-list .gh-card-date, table.cdz-content-list .gh-topic-count {
-	color: var(--ghost-accent-color);
-	font-weight: 500;
-	font-size: 1.35rem;
-	line-height: 1.5;
-	text-transform: uppercase;
+table.cdz-content-list .gh-card-date,
+table.cdz-content-list .gh-topic-count {
+  color: var(--ghost-accent-color);
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  text-transform: uppercase;
 }

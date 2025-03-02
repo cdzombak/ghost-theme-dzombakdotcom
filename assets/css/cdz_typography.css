@@ -1,43 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap");
 /* https://fonts.google.com/share?selection.family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|IBM+Plex+Sans:ital,wght@0,100..700;1,100..700|IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|Rosario:ital,wght@0,300..700;1,300..700 */
 
 body {
-    text-rendering: optimizeLegibility !important;
+  text-rendering: optimizeLegibility !important;
 }
 
 /* Specific Applications */
 
 .gh-head-logo {
-    font-family: "Rosario", var(--gh-font-heading, var(--font-serif));
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3.7rem;
-    letter-spacing: -0.01em;
-    text-transform: lowercase;
+  font-family: "Rosario", var(--gh-font-heading, var(--font-serif));
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.7rem;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
 }
 
 .gh-head-menu,
 .gh-head-actions {
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 .cdz-head-logo-subtitle {
-    font-family: "IBM Plex Sans Condensed", serif;
-    font-weight: 400;
-    font-style: italic;
+  font-family: "IBM Plex Sans Condensed", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .gh-article-meta {
-    font-weight: 400;
-    font-size: 1.35rem;
+  font-weight: 400;
+  font-size: 1.35rem;
 }
 
 .gh-article-meta time {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .gh-article-meta .cdz-card-supertitle {
@@ -45,46 +45,50 @@ body {
 }
 
 .gh-article-title {
-    font-weight: 450;
+  font-weight: 450;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 450;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 450;
 }
 
 .gh-topic-name {
-    font-size: 1.7rem;
-    letter-spacing: 0;
-    font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
 .gh-tag-label {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .gh-tag-name.gh-pagehead-title {
-    font-family: "IBM Plex Serif", Charter, Times, serif;
+  font-family: "IBM Plex Serif", Charter, Times, serif;
 }
 
 .cdz-microblog-text-content {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .cdz-microblog-text-content p:first-child {
-    font-weight: 460;
+  font-weight: 460;
 }
 
 .kg-bookmark-content {
-    font-weight: 400;
-    font-family: var(--font-sans) !important;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
+  font-weight: 400;
+  font-family: var(--font-sans) !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 .kg-bookmark-card .kg-bookmark-title {
-    font-size: 1em !important;
+  font-size: 1em !important;
 }
 
 .cdz-monospace {
@@ -117,8 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .ibm-plex-sans-200 {
@@ -126,8 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .ibm-plex-sans-300 {
@@ -135,8 +137,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .ibm-plex-sans-400 {
@@ -144,8 +145,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .ibm-plex-sans-500 {
@@ -153,8 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .ibm-plex-sans-600 {
@@ -162,8 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .ibm-plex-sans-700 {
@@ -171,8 +169,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .ibm-plex-mono-thin {
