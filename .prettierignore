@@ -1,0 +1,6 @@
+assets/built/
+dist/
+gulpfile.js
+package-lock.json
+
+**/*.hbs
