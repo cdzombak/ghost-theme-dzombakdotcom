@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+      - name: Build
+        run: |
+          npm install --dev
+          npm run zip
       - name: Deploy Theme
         uses: TryGhost/action-deploy-theme@v1
         with:
