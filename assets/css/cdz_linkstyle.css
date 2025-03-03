@@ -30,3 +30,25 @@ li.nav-current a,
 li.nav-current-parent a {
   text-decoration: underline;
 }
+
+h2 .cdz-content-header-link-container {
+  position: absolute;
+}
+
+h2 a.cdz-content-header-link {
+  fill: var(--color-light-gray);
+  position: relative;
+  top: -1.5px;
+  left: -35px;
+  padding: 7px;
+}
+
+h2 a.cdz-content-header-link:hover {
+  fill: var(--color-secondary-text);
+}
+
+@media (max-width: 767px) {
+  h2 .cdz-content-header-link-container {
+    display: none;
+  }
+}
