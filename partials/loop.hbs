@@ -22,7 +22,7 @@
             <h2 class="gh-card-title">{{title}}</h2>
         </header>
 
-        <div class="gh-card-excerpt">{{excerpt}}</div>
+        <div class="gh-card-excerpt">{{excerpt}}{{^if custom_excerpt}} …{{/if}}</div>
 
         <footer class="gh-card-meta">
             <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
