@@ -71,13 +71,13 @@
                             {{#foreach topic}}
                                 <a class="gh-topic-item" href="{{url}}">
                                     <h3 class="gh-topic-name" id="-cdz-topic-name-{{slug}}">{{name}}</h3>
+                                    <script type="text/javascript">
+                                        document.getElementById("-cdz-topic-name-{{slug}}").textContent = "{{name}}".slice("Project: ".length);
+                                    </script>
                                     <span class="gh-topic-count">
                                         {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
                                     </span>
                                 </a>
-                                <script type="text/javascript">
-                                    document.getElementById("-cdz-topic-name-{{slug}}").textContent = "{{name}}".slice("Project: ".length);
-                                </script>
                             {{/foreach}}
                         </div>
                     </section>
@@ -91,13 +91,13 @@
                             {{#foreach topic}}
                                 <a class="gh-topic-item" href="{{url}}">
                                     <h3 class="gh-topic-name" id="-cdz-topic-name-{{slug}}">{{name}}</h3>
+                                    <script type="text/javascript">
+                                        document.getElementById("-cdz-topic-name-{{slug}}").textContent = "{{name}}".slice("Series: ".length);
+                                    </script>
                                     <span class="gh-topic-count">
                                         {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
                                     </span>
                                 </a>
-                                <script type="text/javascript">
-                                    document.getElementById("-cdz-topic-name-{{slug}}").textContent = "{{name}}".slice("Series: ".length);
-                                </script>
                             {{/foreach}}
                         </div>
                     </section>
