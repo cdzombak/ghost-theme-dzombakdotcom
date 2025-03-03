@@ -120,26 +120,33 @@
   display: flex;
   flex-flow: row wrap;
   align-content: stretch;
-  gap: 1.5rem;
+  column-gap: 1.5%;
+  row-gap: 1.5rem;
 }
 
 .gh-feed.cdz-cards .cdz-card {
-  flex-basis: 32%;
+  flex-basis: 31.8%;
 }
 
 .gh-feed.cdz-cards .gh-card,
 .gh-feed.cdz-cards .kg-card {
-  flex-basis: 48.74%;
+  flex-basis: 49.25%;
 }
 
 .gh-feed.cdz-cards .gh-card.cdz-card-xs,
 .gh-feed.cdz-cards .kg-card.cdz-card-xs {
-  flex-basis: 32%;
+  flex-basis: 32.3%;
+}
+
+@media (max-width: 863px) {
+  .gh-feed.cdz-cards.cdz-homepage-featured-cards {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 767px) {
   .gh-feed.cdz-cards {
-    flex-flow: column;
+    flex-direction: column;
   }
   .gh-feed.cdz-cards.cdz-cards-xs {
     flex-direction: row wrap !important;
