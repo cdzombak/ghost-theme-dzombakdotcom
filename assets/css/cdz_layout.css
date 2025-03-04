@@ -167,7 +167,7 @@
   }
 }
 
-.gh-feed.cdz-cards .gh-card .gh-card-link {
+.gh-feed.cdz-cards .gh-card a.gh-card-link, .gh-feed.cdz-cards .gh-card div.gh-card-link:not(:has(* > .kg-bookmark-card)) {
   border: 1px solid var(--color-light-gray);
   border-radius: 0.25em;
   padding: 1.15em;
@@ -180,6 +180,10 @@
 
 .gh-feed.cdz-cards .gh-card .gh-card-link:not(:has(> header)) .gh-card-excerpt {
   margin-top: 0;
+}
+
+.gh-feed.cdz-cards .gh-card div.gh-card-link footer .gh-card-date {
+  text-align: right;
 }
 
 .cdz-pictures-feed {
