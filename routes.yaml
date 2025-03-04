@@ -7,7 +7,7 @@ routes:
   /blog/all/:
     controller: channel
     template: all_posts
-    filter: "tags:-hash-tag-content+tags:-hash-tag-micropost"
+    filter: "tags:-hash-tag-content"
 
   /blog/tags/:
     template: list_topics
