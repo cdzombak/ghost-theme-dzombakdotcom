@@ -66,26 +66,6 @@
             </div>
 
             <aside class="gh-sidebar">
-                {{#get "tags" include="count.posts" limit="all" filter="name:~^'Project: '" as |topic|}}
-                    <section class="gh-section">
-                        <h3 class="gh-section-title"><a href="/blog/projects/">Projects</a></h3>
-
-                        <div class="gh-topic">
-                            {{#foreach topic}}
-                                <a class="gh-topic-item" href="{{url}}">
-                                    <h3 class="gh-topic-name" id="-cdz-topic-name-{{slug}}">{{name}}</h3>
-                                    <script type="text/javascript">
-                                        document.getElementById("-cdz-topic-name-{{slug}}").textContent = "{{name}}".slice("Project: ".length);
-                                    </script>
-                                    <span class="gh-topic-count">
-                                        {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
-                                    </span>
-                                </a>
-                            {{/foreach}}
-                        </div>
-                    </section>
-                {{/get}}
-
                 {{#get "tags" include="count.posts" limit="all" filter="name:~^'Series: '" as |topic|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title"><a href="/blog/series/">Series</a></h3>
@@ -96,6 +76,26 @@
                                     <h3 class="gh-topic-name" id="-cdz-topic-name-{{slug}}">{{name}}</h3>
                                     <script type="text/javascript">
                                         document.getElementById("-cdz-topic-name-{{slug}}").textContent = "{{name}}".slice("Series: ".length);
+                                    </script>
+                                    <span class="gh-topic-count">
+                                        {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
+                                    </span>
+                                </a>
+                            {{/foreach}}
+                        </div>
+                    </section>
+                {{/get}}
+
+                {{#get "tags" include="count.posts" limit="all" filter="name:~^'Project: '" as |topic|}}
+                    <section class="gh-section">
+                        <h3 class="gh-section-title"><a href="/blog/projects/">Projects</a></h3>
+
+                        <div class="gh-topic">
+                            {{#foreach topic}}
+                                <a class="gh-topic-item" href="{{url}}">
+                                    <h3 class="gh-topic-name" id="-cdz-topic-name-{{slug}}">{{name}}</h3>
+                                    <script type="text/javascript">
+                                        document.getElementById("-cdz-topic-name-{{slug}}").textContent = "{{name}}".slice("Project: ".length);
                                     </script>
                                     <span class="gh-topic-count">
                                         {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
