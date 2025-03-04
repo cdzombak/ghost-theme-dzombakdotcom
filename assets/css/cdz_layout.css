@@ -24,6 +24,14 @@
   margin-bottom: 1rem;
 }
 
+.gh-article.tag-hash-micropost .gh-article-header > * {
+  grid-column: wide-start / wide-end;
+}
+
+.gh-article.tag-hash-micropost .kg-image-card {
+  grid-column: wide;
+}
+
 .cdz-microblog-content {
   display: flex;
   flex-direction: row;
