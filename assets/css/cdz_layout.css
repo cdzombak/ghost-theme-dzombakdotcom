@@ -153,9 +153,6 @@
 }
 
 @media (max-width: 767px) {
-  .gh-feed.cdz-cards {
-    flex-direction: column;
-  }
   .gh-feed.cdz-cards.cdz-cards-xs {
     flex-direction: row wrap !important;
   }
