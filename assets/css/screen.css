@@ -159,6 +159,10 @@
   color: var(--ghost-accent-color);
 }
 
+.gh-latest .gh-card-date a {
+  color: var(--ghost-accent-color);
+}
+
 .gh-card-meta svg {
   position: relative;
   top: -1px;
