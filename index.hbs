@@ -14,7 +14,7 @@
                             <h2 class="gh-article-title gh-card-title">{{title}}</h2>
                         </header>
 
-                        {{^has tag="#micropost"}}<p class="gh-article-excerpt">{{excerpt}}</p>{{/has}}
+                        {{^has tag="#micropost"}}<p class="gh-article-excerpt">{{excerpt}}{{^if custom_excerpt}} …{{/if}}</p>{{/has}}
                         {{#has tag="#micropost"}}<p class="gh-article-excerpt">{{#if custom_excerpt}}{{custom_excerpt}}{{/if}}{{content}}</p>{{/has}}
 
                         {{^has tag="#micropost"}}
