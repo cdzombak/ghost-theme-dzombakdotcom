@@ -82,7 +82,7 @@
                     </div>
                 </section>
 
-                {{#get "posts" limit="3" filter="tags:-hash-tag-content" as |recent|}}
+                {{#get "posts" limit="3" filter="tags:-hash-tag-content+tags:-hash-micropost" as |recent|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title"><a href="/blog/">Recent Posts</a></h3>
 
