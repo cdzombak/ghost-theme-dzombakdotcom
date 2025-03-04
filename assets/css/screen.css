@@ -44,7 +44,8 @@
     --ghost-accent-color: #809fcc !important;
   }
 
-  .cdz-darkmode-invert, a[href^='https://github.com/'] .kg-bookmark-icon, a[href^='https://www.github.com/'] .kg-bookmark-icon {
+  .cdz-darkmode-invert, a[href^='https://github.com/'] .kg-bookmark-icon, a[href^='https://www.github.com/'] .kg-bookmark-icon
+  {
     -webkit-filter: invert(100%);
     filter: invert(100%);
   }

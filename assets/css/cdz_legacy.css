@@ -11,35 +11,37 @@ div.aside p:last-child {
 
 div.aside.info {
   border-left: solid 3px #17a2b8;
-  background-color: #E3FFFF;
+  background-color: #e3ffff;
 }
 div.aside.info p:first-child:before {
-  content: 'ℹ️ ';
+  content: "ℹ️ ";
 }
 div.aside.success {
   border-left: solid 3px #28a745;
-  background-color: #DBFFF8;
+  background-color: #dbfff8;
 }
 div.aside.success p:first-child:before {
-  content: '✅ ';
+  content: "✅ ";
 }
 div.aside.warning {
   border-left: solid 3px #ffc107;
-  background-color: #FFFFD3;
+  background-color: #ffffd3;
 }
 div.aside.warning p:first-child:before {
-  content: '⚠️ ';
+  content: "⚠️ ";
 }
-div.aside.danger, div.aside.critical {
+div.aside.danger,
+div.aside.critical {
   border-left: solid 3px #dc3545;
-  background-color: #FFE8F8;
+  background-color: #ffe8f8;
 }
-div.aside.danger p:first-child:before, div.aside.critical p:first-child:before {
-  content: '⛔️ ';
+div.aside.danger p:first-child:before,
+div.aside.critical p:first-child:before {
+  content: "⛔️ ";
 }
 
 p.info {
-    background-color: #f7f7f7;
-    padding: 8px 16px;
-    border: 1px solid #e2e2e2;
+  background-color: #f7f7f7;
+  padding: 8px 16px;
+  border: 1px solid #e2e2e2;
 }

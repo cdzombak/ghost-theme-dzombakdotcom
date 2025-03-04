@@ -164,7 +164,8 @@
   }
 }
 
-.gh-feed.cdz-cards .gh-card a.gh-card-link, .gh-feed.cdz-cards .gh-card div.gh-card-link:not(:has(* > .kg-bookmark-card)) {
+.gh-feed.cdz-cards .gh-card a.gh-card-link,
+.gh-feed.cdz-cards .gh-card div.gh-card-link:not(:has(* > .kg-bookmark-card)) {
   border: 1px solid var(--color-light-gray);
   border-radius: 0.25em;
   padding: 1.15em;
