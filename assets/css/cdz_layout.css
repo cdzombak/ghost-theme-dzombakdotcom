@@ -167,11 +167,19 @@
   }
 }
 
-.gh-feed.cdz-cards .gh-card a.gh-card-link {
+.gh-feed.cdz-cards .gh-card .gh-card-link {
   border: 1px solid var(--color-light-gray);
   border-radius: 0.25em;
   padding: 1.15em;
   height: 100%;
+}
+
+.gh-feed.cdz-cards .gh-card .gh-card-link p {
+  margin-bottom: 0.8rem;
+}
+
+.gh-feed.cdz-cards .gh-card .gh-card-link:not(:has(> header)) .gh-card-excerpt {
+  margin-top: 0;
 }
 
 .cdz-pictures-feed {

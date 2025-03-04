@@ -42,7 +42,7 @@
                     <h2 class="gh-section-title">Interesting or Otherwise Notable</h2>
 
                     <div class="gh-featured gh-feed cdz-cards cdz-homepage-featured-cards">
-                        {{#get "posts" filter="featured:true" limit="2" as |featured|}}
+                        {{#get "posts" filter="featured:true" limit="2" include="tags" as |featured|}}
                             {{#foreach featured}}
                                 {{> loop}}
                             {{/foreach}}
