@@ -57,3 +57,7 @@
   color: var(--color-tertiary-text);
   font-style: italic;
 }
+
+.gh-card.post.tag-hash-micropost .gh-card-title {
+  font-size: 3.3rem;
+}

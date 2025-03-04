@@ -2,19 +2,24 @@
     {{#has tag="#micropost"}}
 
     <div class="gh-card-link">
-    <div class="gh-card-excerpt">
-        {{#if custom_excerpt}}
-            <p class="cdz-micropost-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-        {{content}}
-    </div>
-    <footer class="gh-card-meta">
-        <a href="{{url}}"><time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time></a>
-        <span class="gh-card-duration">{{title}}</span>
-        {{^has visibility="public"}}
-            {{> icons/star}}
-        {{/has}}
-    </footer>
+        <header class="gh-card-header">
+            <h2 class="gh-card-title">{{title}}</h2>
+        </header>
+
+        <div class="gh-card-excerpt">
+            {{#if custom_excerpt}}
+                <p class="cdz-micropost-excerpt">{{custom_excerpt}}</p>
+            {{/if}}
+            {{content}}
+        </div>
+
+        <footer class="gh-card-meta">
+            <a href="{{url}}"><time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time></a>
+            <span class="gh-card-duration">{{#primary_tag}}<a href="{{url}}">{{name}}</a>{{/primary_tag}}</span>
+            {{^has visibility="public"}}
+                {{> icons/star}}
+            {{/has}}
+        </footer>
     </div>
 
     {{else}}
