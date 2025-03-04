@@ -39,7 +39,7 @@
                     <h2 class="gh-section-title">Featured Posts</h2>
 
                     <div class="gh-featured gh-feed cdz-cards cdz-homepage-featured-cards">
-                        {{#get "posts" filter="featured:true" limit="4" include="tags" as |featured|}}
+                        {{#get "posts" filter="featured:true" limit="6" include="tags" as |featured|}}
                             {{#foreach featured}}
                                 {{> loop}}
                             {{/foreach}}
