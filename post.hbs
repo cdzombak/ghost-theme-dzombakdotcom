@@ -43,23 +43,27 @@
         <footer class="gh-article-footer gh-canvas{{#if @site.comments_enabled}}{{#unless @member}} no-border{{/unless}}{{#unless access}} no-border{{/unless}}{{/if}}">
             <nav class="gh-navigation">
                 <div class="gh-navigation-previous">
-                    {{#prev_post}}
-                        <a class="gh-navigation-link" href="{{url}}">
-                            <span class="gh-navigation-label">{{> icons/arrow-left}} Previous post</span>
-                            <h4 class="gh-navigation-title">{{title}}</h4>
-                        </a>
-                    {{/prev_post}}
+                    {{#get "posts" filter="id:<{{id}}+tags:-hash-tag-content" limit="1" order="id desc" as |prev_p|}}
+                    {{#foreach prev_p}}
+                      <a class="gh-navigation-link" href="{{url}}">
+                          <span class="gh-navigation-label">{{> icons/arrow-left}} Previous post</span>
+                          <h4 class="gh-navigation-title">{{title}}</h4>
+                      </a>
+                    {{/foreach}}
+                    {{/get}}
                 </div>
 
                 <div class="gh-navigation-middle"></div>
 
                 <div class="gh-navigation-next">
-                    {{#next_post}}
+                  {{#get "posts" filter="id:>{{id}}+tags:-hash-tag-content" limit="1" order="id asc" as |next_p|}}
+                  {{#foreach next_p}}
                         <a class="gh-navigation-link" href="{{url}}">
                             <span class="gh-navigation-label">Next post {{> icons/arrow-right}}</span>
                             <h4 class="gh-navigation-title">{{title}}</h4>
                         </a>
-                    {{/next_post}}
+                  {{/foreach}}
+                  {{/get}}
                 </div>
             </nav>
         </footer>
