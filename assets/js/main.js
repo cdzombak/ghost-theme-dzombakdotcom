@@ -36,7 +36,6 @@ window.addEventListener("DOMContentLoaded", function () {
       const a = document.createElement("a");
       a.setAttribute("class", "gh-card-link");
       a.setAttribute("href", item.link);
-      a.setAttribute("target", "_blank");
       article.appendChild(a);
 
       const containerDiv = document.createElement("div");
@@ -149,7 +148,6 @@ window.addEventListener("DOMContentLoaded", function () {
       const a = document.createElement("a");
       a.setAttribute("class", "gh-card-link");
       a.setAttribute("href", item.link);
-      a.setAttribute("target", "_blank");
       a.setAttribute("title", altTxt);
 
       a.appendChild(img);
