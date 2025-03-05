@@ -65,3 +65,9 @@
 .gh-featured .gh-card.tag-hash-micropost .gh-card-title {
   font-size: 1.8rem;
 }
+
+.gh-sidebar .gh-topic-count {
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
