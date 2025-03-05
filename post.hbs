@@ -4,7 +4,7 @@
 {{#contentFor "title"}}{{title}} • {{@site.title}}{{/contentFor}}
 
 <main id="gh-main" class="gh-main cdz-is-blog">
-    <article class="gh-article {{post_class}} {{#has tag="#hide-feature-image"}}no-image{{/has}}">
+    <article class="gh-article {{post_class}} {{#has tag="#hide-feature-image"}}no-image{{/has}} {{#has tag="#needs-import-review"}}no-image{{/has}}">
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta">
@@ -21,12 +21,16 @@
                 <p class="gh-article-excerpt">{{custom_excerpt}}</p>
             {{/if}}
 
-            {{^has tag="#hide-feature-image"}}
+            {{^has tag="#hide-feature-image"}}{{^has tag="#needs-import-review"}}
             {{> "feature-image"}}
-            {{/has}}
+            {{/has}}{{/has}}
         </header>
 
         <div class="gh-content gh-canvas">
+            {{#has tag="#needs-import-review"}}
+            <div class="kg-card kg-callout-card kg-callout-card-purple"><div class="kg-callout-emoji">⚠️</div><div class="kg-callout-text">This post was automatically migrated from my old blogging software, and I have not reviewed it for problems yet. Please <a href="mailto:chris@dzombak.com">contact me</a> if you notice any important issues.</div></div>
+            {{/has}}
+
             {{#has tag="License: CC BY-NC-SA 4.0"}}
             <div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">©️</div><div class="kg-callout-text">Creative works shared in this post are, unless otherwise noted, licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=localhost" rel="noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 license</a>.</div></div>
             {{/has}}
