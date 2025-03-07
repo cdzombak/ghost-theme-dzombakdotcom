@@ -1,6 +1,5 @@
 div.aside, p.info {
   box-sizing: border-box;
-  display: flex;
   padding: 1.2em 1.6em;
   border-radius: .25em;
 }
