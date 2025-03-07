@@ -11,6 +11,9 @@ div.aside p, p.info {
 div.aside + div.aside {
   margin-top: 1em;
 }
+div.aside p + p {
+  margin-top: 0.5em;
+}
 
 div.aside.info {
   background: rgba(33,172,232,.12);
