@@ -33,6 +33,7 @@ collections:
     permalink: /blog/{year}/{month}/{slug}/
     template: index
     filter: "tags:-hash-tag-content"
+    rss: true
 
   /_stub/:
     permalink: /_stub/{slug}/
