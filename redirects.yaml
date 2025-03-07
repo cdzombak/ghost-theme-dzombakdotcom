@@ -1,7 +1,14 @@
 ---
 301:
   /home-featured-links: /
-  /blog/2015/05/null.html: /
+  /blog/series/project-announcements.html: /blog/tag/series-project-announcements/
+  /blog/series/project-logs.html: /blog/tag/series-project-logs/
+  /blog/series/pi-reliability.html: /blog/tag/series-pi-reliability/
+  /blog/series/esp8266-getting-started.html: /blog/tag/series-esp8266-getting-started/
+  /blog/series/ios-15-bugs.html: /blog/tag/series-ios-15-bugs/
+  /blog/singletons.html: /blog/tag/singletons/
+  /blog/series/home-energy-env.html: /blog/tag/series-home-energy-env/
+  /blog/series/ad-networks.html: /blog/tag/series-ad-networks/
   /blog/2009/01/very-simple-dynamic-dns-client.html: /blog/2009/01/very-simple-dynamic-dns-client/
   /blog/2009/06/university-of-michigan-google-calendar.html: /blog/2009/06/university-of-michigan-google-calendar/
   /blog/2009/07/perfect-viewvc-on-dreamhost.html: /blog/2009/07/perfect-viewvc-on-dreamhost/
@@ -374,3 +381,4 @@
   local/2022-03-22-New-IDs-resulted-in-many-new-posts-in-Ann-Arbor-FOIA-RSS-feed.html: /blog/2022/03/new-ids-resulted-in-many-new-posts-in-ann-arbor-foia-rss-feed/
 
 302:
+  /blog/2015/05/null.html: /
