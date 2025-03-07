@@ -379,6 +379,43 @@
   /talks/2016-01-14-App-Transport-Security--What--Why--How-.html: /blog/2016/01/app-transport-security-what-why-how/
   local/2022-03-22-New-IDs-resulted-in-many-new-posts-in-Ann-Arbor-FOIA-RSS-feed: /blog/2022/03/new-ids-resulted-in-many-new-posts-in-ann-arbor-foia-rss-feed/
   local/2022-03-22-New-IDs-resulted-in-many-new-posts-in-Ann-Arbor-FOIA-RSS-feed.html: /blog/2022/03/new-ids-resulted-in-many-new-posts-in-ann-arbor-foia-rss-feed/
+  /2016/09/Fixing-Storyboard-Segues--Only-Apple-Can-Do-This.html: /blog/2016/09/Fixing-Storyboard-Segues-Only-Apple-Can-Do-This.html
+  /blog/2014/08/Benefits-of-Cocoa--Still-here-in-Swift.html: /blog/2014/08/Benefits-of-Cocoa-Still-here-in-Swift.html
+  /blog/2015/01/Why-non-engineers-should-care-about--Technical-Debt-.html: /blog/2015/01/Why-non-engineers-should-care-about-Technical-Debt.html
+  /blog/2015/03/Subjective-C--I-use-property--dot--syntax-liberally.html: /blog/2015/03/Subjective-C-I-use-property-dot-syntax-liberally.html
+  /blog/2015/03/Why-use-GitHub-Wikis-.html: /blog/2015/03/Why-use-GitHub-Wikis.html
+  /blog/2015/09/Ad-blockers-aren-t-killing-the-web--ad-networks-are-killing-the-web.html: /blog/2015/09/Ad-blockers-aren-t-killing-the-web-ad-networks-are-killing-the-web.html
+  /blog/2015/09/Nobody-is-using-App-Transport-Security--what-s-next-.html: /blog/2015/09/Nobody-is-using-App-Transport-Security-what-s-next.html
+  /blog/2016/01/Ad-light--malware-heavy.html: /blog/2016/01/Ad-light-malware-heavy.html
+  /blog/2016/01/Does-everything-need-to-be-HTTPS-.html: /blog/2016/01/Does-everything-need-to-be-HTTPS.html
+  /blog/2016/09/Fixing-Storyboard-Segues--Only-Apple-Can-Do-This.html: /blog/2016/09/Fixing-Storyboard-Segues-Only-Apple-Can-Do-This.html
+  /blog/2016/11/How-to-kill-a-news-organization--as-head-of-state-in-a-reasonably-free-and-democratic-country.html: /blog/2016/11/How-to-kill-a-news-organization-as-head-of-state-in-a-reasonably-free-and-democratic-country.html
+  /blog/2021/03/Deferred-Tasks--Project-Templates--and-More--Customizing-Things-with-AppleScript.html: /blog/2021/03/Deferred-Tasks-Project-Templates-and-More-Customizing-Things-with-AppleScript.html
+  /photo/clips/2012-06_Apocalyptour-Boston_Globe.pdf: https://dist.cdzombak.net/files/clips/2012-06_Apocalyptour-Boston_Globe.pdf
+  /umich-calendar: /blog/2009/06/university-of-michigan-google-calendar.html
+  /blog/2023/12/Considerations-for-a-long-running-Raspber: /blog/2023/12/Considerations-for-a-long-running-Raspberry-Pi.html
+  /blog/2021/02/Now--Feb--2021.html: /blog/2021/02/Now-Feb-2021.html
+  /blog/tag/Koyaanisqatsi/: /blog/tag/koyaanisqatsi/
+  /blog/tag/Koyaanisqatsi/index.xml: /blog/tag/koyaanisqatsi/index.xml
+  /blog/2017/01/Fatal-Error--Season-2.html: /blog/2017/01/Fatal-Error-Season-2.html
+  /blog/2021/02/Letters-of-Recommendation--Where-to-start-with-Peter-F--Hamilton--Mastodon-iPhone-apps--and-Domain-Registrars.html: /blog/2021/02/Letters-of-Recommendation-Where-to-start-with-Peter-F-Hamilton-Mastodon-iPhone-apps-and-Domain-Registrars.html
+  /blog/2015/09/Nobody-is-using-: /blog/2015/09/Nobody-is-using-App-Transport-Security-what-s-next.html
+  /blog/2016/03/Ad-networks-in-their-current-incarnation-are-too-dangerous-to-be-allowed-to-exist-.html: /blog/2016/03/Ad-networks-in-their-current-incarnation-are-too-dangerous-to-be-allowed-to-exist.html
+  /blog/2018/01/Reading-List--Meltdown-and-Spectre.html: /blog/2018/01/Reading-List-Meltdown-and-Spectre.html
+  /blog/2020/12/Introducing-Runner--a-lightweight-wrapper-for-cron-jobs.html: /blog/2020/12/Introducing-Runner-a-lightweight-wrapper-for-cron-jobs.html
+  /blog/2015/06/Multiple-Inheritance-vs--Traits-or-Protocol-Extensions.html: /blog/2015/06/Multiple-Inheritance-vs-Traits-or-Protocol-Extensions.html
+  /blog/2017/01/Monitoring-aircraft-via-ADS-B-on-OS-X.htm: /blog/2017/01/Monitoring-aircraft-via-ADS-B-on-OS-X.html
+  /blog/2021/11/Embracing-a-ruthless-approach-to-ema: /blog/2021/11/Embracing-a-ruthless-approach-to-email-spam.html
+  /blog/2014/03/include-pods-in-source-control.html: /blog/2014/03/including-pods-in-source-control.html
+  /blog/2016/03/Modeling-polymorphic-relationships-in-Swift--spoiler--enums-seem-pretty-cool-.html: /blog/2016/03/Modeling-polymorphic-relationships-in-Swift-spoiler-enums-seem-pretty-cool.html
+  /blog/2021/02/Replacing-iTunes--Music-app--and-iTunes-Match--and-iCloud-Music-Library.html: /blog/2021/02/Replacing-iTunes-Music-app-and-iTunes-Match-and-iCloud-Music-Library.html
+  /blog/2015/02/A-list-of-Auto-Layout-DSLs--Categories--Etc-.html: /blog/2015/02/A-list-of-Auto-Layout-DSLs-Categories-Etc.html
+  /blog/2016/04/Over-Reactive-.html: /blog/2016/04/Over-Reactive.html
+  /blog/2015/03/Casting-in-Swift-1-2--a-brief-summary.html: /blog/2015/03/Casting-in-Swift-1-2-a-brief-summary.html
+  /blog/2016/11/Let-s-Encrypt-vs--iTunes--anatomy-of-an-error-delivering-Fatal-Error.html: /blog/2016/11/Let-s-Encrypt-vs-iTunes-anatomy-of-an-error-delivering-Fatal-Error.html
+  /blog/2015/12/-Obviously-super-complex---evaluating-software-architecture-as-simple-vs--easy-.html: /blog/2015/12/Obviously-super-complex-evaluating-software-architecture-as-simple-vs-easy.html
+  /blog/2016/11/Why-Comcast-injecting-messages-into-web-traffic-is-dangerous.html%23: /blog/2016/11/Why-Comcast-injecting-messages-into-web-traffic-is-dangerous.html
+  /Ad-networks-in-their-current-incarnation-are-too-dangerous-to-be-allowed-to-exist-.html: /blog/2016/03/Ad-networks-in-their-current-incarnation-are-too-dangerous-to-be-allowed-to-exist.html
 
 302:
   /blog/2015/05/null.html: /
