@@ -1,10 +1,12 @@
-div.aside, p.info {
+div.aside,
+p.info {
   box-sizing: border-box;
   padding: 1.2em 1.6em;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
-div.aside p, p.info {
-  font-size: .95em;
+div.aside p,
+p.info {
+  font-size: 0.95em;
   line-height: 1.5em;
   box-sizing: border-box;
 }
@@ -16,7 +18,7 @@ div.aside p + p {
 }
 
 div.aside.info {
-  background: rgba(33,172,232,.12);
+  background: rgba(33, 172, 232, 0.12);
 }
 div.aside.info p:first-child:before {
   content: "ℹ️ ";
@@ -28,11 +30,11 @@ div.aside.info p:first-child {
   text-indent: 1.925em hanging;
 }
 p.info {
-  background: rgba(124,139,154,.13);
+  background: rgba(124, 139, 154, 0.13);
 }
 
 div.aside.success {
-  background: rgba(52,183,67,.12);
+  background: rgba(52, 183, 67, 0.12);
 }
 div.aside.success p:first-child:before {
   content: "✅ ";
@@ -45,7 +47,7 @@ div.aside.success p:first-child {
 }
 
 div.aside.warning {
-  background: rgba(240,165,15,.13);
+  background: rgba(240, 165, 15, 0.13);
 }
 div.aside.warning p:first-child:before {
   content: "⚠️ ";
@@ -59,7 +61,7 @@ div.aside.warning p:first-child {
 
 div.aside.danger,
 div.aside.critical {
-  background: rgba(209,46,46,.11);
+  background: rgba(209, 46, 46, 0.11);
 }
 div.aside.danger p:first-child:before,
 div.aside.critical p:first-child:before {
@@ -67,6 +69,7 @@ div.aside.critical p:first-child:before {
   padding-right: 0.5em;
   font-size: 1.1em;
 }
-div.aside.danger p:first-child, div.aside.critical p:first-child {
+div.aside.danger p:first-child,
+div.aside.critical p:first-child {
   text-indent: 1.925em hanging;
 }
