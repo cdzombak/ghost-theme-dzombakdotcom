@@ -1,5 +1,6 @@
 ---
 301:
+  /local/: /etc/local/
   /home-featured-links: /
   /blog/series/project-announcements.html: /blog/tag/series-project-announcements/
   /blog/series/project-logs.html: /blog/tag/series-project-logs/

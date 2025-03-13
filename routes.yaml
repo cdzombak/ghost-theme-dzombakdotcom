@@ -24,6 +24,9 @@ routes:
   /etc/clips/:
     data: page.etc-clips
     template: page
+  /etc/local/:
+    data: page.etc-local
+    template: page
   /etc/published-elsewhere/:
     data: page.published-elsewhere
     template: page
