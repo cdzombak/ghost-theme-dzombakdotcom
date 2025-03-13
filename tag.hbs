@@ -21,6 +21,8 @@
                     } else if ("{{name}}".startsWith(cdzLicenseStr)) {
                         document.getElementById("-cdz-target-tag-label").textContent = "License:";
                         document.getElementById("-cdz-target-tag-name").textContent = "{{name}}".slice(cdzLicenseStr.length);
+                    } else if ("{{name}}" === "Talks" || "{{name}}" === "Project Logs" || "{{name}}" === "Project Announcements") {
+                        document.getElementById("-cdz-target-tag-label").textContent = "Tag:";
                     }
                 </script>
 

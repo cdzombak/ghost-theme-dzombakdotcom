@@ -106,7 +106,7 @@
                     </section>
                 {{/get}}
 
-                {{#get "tags" include="count.posts" limit="all" filter="name:'Talks'" as |topic|}}
+                {{#get "tags" include="count.posts" limit="all" filter="name:'Talks',name:'Project Logs',name:'Project Announcements'" as |topic|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title">Featured Tags ★</h3>
 
@@ -123,7 +123,7 @@
                     </section>
                 {{/get}}
 
-                {{#get "tags" include="count.posts" limit="all" filter="name:-~^'Project: '+name:-~^'Series: '+name:-~^'License: '+name:-'Talks'" as |topic|}}
+                {{#get "tags" include="count.posts" limit="all" filter="name:-~^'Project: '+name:-~^'Series: '+name:-~^'License: '+name:-'Talks'+name:-'Project Logs'+name:-'Project Announcements'" as |topic|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title"><a href="/blog/tags/">Topics</a></h3>
 
