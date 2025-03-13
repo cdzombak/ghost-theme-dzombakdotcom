@@ -17,7 +17,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{#get "tags" include="count.posts" limit="all" filter="name:-~^'Project: '+name:-~^'Series: '+name:-~^'License: '" as |topic|}}
+                    {{#get "tags" include="count.posts" limit="all" filter="name:-~^'License: '" as |topic|}}
                         {{#foreach topic}}
                         <tr>
                             <td class="gh-topic-count">

@@ -36,7 +36,7 @@
         <div class="gh-wrapper">
             <div>
                 <section class="gh-section">
-                    <h2 class="gh-section-title">Featured Posts</h2>
+                    <h2 class="gh-section-title">Featured Posts ★</h2>
 
                     <div class="gh-featured cdz-cards cdz-homepage-featured-cards">
                         {{#get "posts" filter="featured:true" limit="6" include="tags" as |featured|}}
@@ -106,7 +106,24 @@
                     </section>
                 {{/get}}
 
-                {{#get "tags" include="count.posts" limit="all" filter="name:-~^'Project: '+name:-~^'Series: '+name:-~^'License: '" as |topic|}}
+                {{#get "tags" include="count.posts" limit="all" filter="name:'Talks'" as |topic|}}
+                    <section class="gh-section">
+                        <h3 class="gh-section-title">Featured Tags ★</h3>
+
+                        <div class="gh-topic">
+                            {{#foreach topic}}
+                                <a class="gh-topic-item" href="{{url}}">
+                                    <h3 class="gh-topic-name">{{name}}</h3>
+                                    <span class="gh-topic-count">
+                                        {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
+                                    </span>
+                                </a>
+                            {{/foreach}}
+                        </div>
+                    </section>
+                {{/get}}
+
+                {{#get "tags" include="count.posts" limit="all" filter="name:-~^'Project: '+name:-~^'Series: '+name:-~^'License: '+name:-'Talks'" as |topic|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title"><a href="/blog/tags/">Topics</a></h3>
 
