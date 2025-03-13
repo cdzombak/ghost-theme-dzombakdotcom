@@ -345,4 +345,7 @@
   .cdz-foot-nav ul.nav {
     margin-top: 1rem;
   }
+  .gh-foot-inner .cdz-foot-nav {
+    text-align: left;
+  }
 }
