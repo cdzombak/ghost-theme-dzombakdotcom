@@ -331,6 +331,8 @@
     grid-template-rows: auto;
     column-gap: 2rem;
     row-gap: 3rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
   }
   .cdz-foot-nav .gh-section-title,
   .cdz-foot-nav ul.nav {
