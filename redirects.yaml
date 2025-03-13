@@ -1,5 +1,6 @@
 ---
 301:
+  /local: /etc/local/
   /home-featured-links: /
   /blog/series/project-announcements.html: /blog/tag/series-project-announcements/
   /blog/series/project-logs.html: /blog/tag/series-project-logs/
@@ -377,8 +378,8 @@
   /talks/2015-12-10-String-is-not-a-sufficient-type--how-using-your-type-system-can-help-you-make-better-software.html: /blog/2015/12/string-is-not-a-sufficient-type-how-using-your-type-system-can-help-you-make-better-software/
   /talks/2016-01-14-App-Transport-Security--What--Why--How-: /blog/2016/01/app-transport-security-what-why-how/
   /talks/2016-01-14-App-Transport-Security--What--Why--How-.html: /blog/2016/01/app-transport-security-what-why-how/
-  local/2022-03-22-New-IDs-resulted-in-many-new-posts-in-Ann-Arbor-FOIA-RSS-feed: /blog/2022/03/new-ids-resulted-in-many-new-posts-in-ann-arbor-foia-rss-feed/
-  local/2022-03-22-New-IDs-resulted-in-many-new-posts-in-Ann-Arbor-FOIA-RSS-feed.html: /blog/2022/03/new-ids-resulted-in-many-new-posts-in-ann-arbor-foia-rss-feed/
+  /local/2022-03-22-New-IDs-resulted-in-many-new-posts-in-Ann-Arbor-FOIA-RSS-feed: /blog/2022/03/new-ids-resulted-in-many-new-posts-in-ann-arbor-foia-rss-feed/
+  /local/2022-03-22-New-IDs-resulted-in-many-new-posts-in-Ann-Arbor-FOIA-RSS-feed.html: /blog/2022/03/new-ids-resulted-in-many-new-posts-in-ann-arbor-foia-rss-feed/
   /2016/09/Fixing-Storyboard-Segues--Only-Apple-Can-Do-This.html: /blog/2016/09/Fixing-Storyboard-Segues-Only-Apple-Can-Do-This.html
   /blog/2014/08/Benefits-of-Cocoa--Still-here-in-Swift.html: /blog/2014/08/Benefits-of-Cocoa-Still-here-in-Swift.html
   /blog/2015/01/Why-non-engineers-should-care-about--Technical-Debt-.html: /blog/2015/01/Why-non-engineers-should-care-about-Technical-Debt.html
