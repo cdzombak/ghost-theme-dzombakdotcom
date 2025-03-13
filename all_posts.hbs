@@ -17,6 +17,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {{#get "posts" limit="all" filter="tags:-hash-tag-content" order="published_at desc"}}
                     {{#foreach posts}}
                         <tr>
                             <td class="gh-card-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time></td>
@@ -32,6 +33,7 @@
                             </td>
                         </tr>
                     {{/foreach}}
+                    {{/get}}
                 </tbody>
             </table>
         </div>

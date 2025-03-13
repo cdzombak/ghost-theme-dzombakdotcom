@@ -5,10 +5,7 @@ routes:
     template: home
 
   /blog/all/:
-    controller: channel
     template: all_posts
-    filter: "tags:-hash-tag-content"
-
   /blog/tags/:
     template: list_topics
   /blog/projects/:
@@ -42,6 +39,8 @@ collections:
     permalink: /_stub/{slug}/
     template: post
     filter: "tags:hash-tag-content"
+    rss: false
 
 taxonomies:
   tag: /blog/tag/{slug}/
+  rss: true
