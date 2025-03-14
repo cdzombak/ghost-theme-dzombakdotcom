@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   if (refreshCache) {
     const parser = new RSSParser();
-    parser.parseURL("https://www2025.dzombak.com/rss/microblog.rss", function (err, feed) {
+    parser.parseURL("https://www2025.dzombak.com/feeds/microblog.rss.xml", function (err, feed) {
       if (err) {
         console.error(err);
         return;
@@ -171,7 +171,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   if (refreshCache) {
     const parser = new RSSParser();
-    parser.parseURL("https://www2025.dzombak.com/rss/pictures.rss", function (err, feed) {
+    parser.parseURL("https://www2025.dzombak.com/feeds/pictures-all.rss.xml", function (err, feed) {
       if (err) {
         console.error(err);
         return;
