@@ -98,7 +98,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
       var items = [];
       feedItems.forEach(function (entry) {
-        if (items.length >= 3) {
+        if (items.length >= 4) {
           return;
         }
 
