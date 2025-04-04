@@ -19,7 +19,7 @@ jobs:
           npm install --include=dev
           npm run zip
       - name: Deploy Theme
-        uses: TryGhost/action-deploy-theme@v1
+        uses: TryGhost/action-deploy-theme@a0ee1147d15641db25681e54549c4db9a53c2629
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}

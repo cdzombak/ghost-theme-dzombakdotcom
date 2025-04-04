@@ -69,3 +69,8 @@
 .gh-sidebar .gh-topic-count {
   text-align: center;
 }
+
+.cdz-icon-btn-sm svg {
+  height: 16px;
+  width: 16px;
+}
