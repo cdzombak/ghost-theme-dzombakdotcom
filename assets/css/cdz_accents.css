@@ -70,12 +70,12 @@
   text-align: center;
 }
 
-.cdz-inline-icon-btn svg {
+.cdz-inline-icon-btn-sm svg {
   height: 16px;
   width: 16px;
 }
 
-.cdz-inline-icon-btn {
+.cdz-inline-icon-btn-sm {
   color: var(--color-secondary-text);
   align-items: center;
   background-color: transparent;
