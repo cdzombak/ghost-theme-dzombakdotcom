@@ -286,7 +286,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
   if (refreshCache) {
     try {
-      const response = await fetch("http://www2025.dzombak.com/feeds/rd-homepage.json");
+      const response = await fetch("https://www2025.dzombak.com/feeds/rd-homepage.json");
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
