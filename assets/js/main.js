@@ -233,8 +233,8 @@ window.addEventListener("DOMContentLoaded", async function () {
       const eltTmpl = `
         <a class="kg-bookmark-container" href="${item.link}" target="_blank">
           <div class="kg-bookmark-content">
-            <div class="kg-bookmark-title"></div> #TODO
-            <div class="kg-bookmark-description"></div> #TODO
+            <div class="kg-bookmark-title"></div>
+            <div class="kg-bookmark-description"></div>
             <div class="kg-bookmark-metadata">
               <span class="accent">
                 ↗ ${item.domain}
