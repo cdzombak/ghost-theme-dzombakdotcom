@@ -224,10 +224,6 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-(function () {
-  pagination(false);
-})();
-
 window.addEventListener("DOMContentLoaded", async function () {
   const populateBookmarksFeed = function () {
     const microblogItems = JSON.parse(window.localStorage.getItem("cdz_bookmarks_feed")).items;
@@ -325,3 +321,10 @@ window.addEventListener("DOMContentLoaded", async function () {
     populateBookmarksFeed();
   }
 });
+
+
+
+
+(function () {
+  pagination(false);
+})();
