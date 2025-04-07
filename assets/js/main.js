@@ -226,54 +226,38 @@ window.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("DOMContentLoaded", async function () {
   const populateBookmarksFeed = function () {
-    const microblogItems = JSON.parse(window.localStorage.getItem("cdz_bookmarks_feed")).items;
-    const microblogFeed = document.getElementById("-cdz-microblog-feed");
+    const bookmarkItems = JSON.parse(window.localStorage.getItem("cdz_bookmarks_feed")).items;
+    const bookmarksFeed = document.getElementById("-cdz-bookmarks-feed");
 
-    microblogItems.forEach(function (item) {
-      console.log(item);
-      // const article = document.createElement("article");
-      // article.setAttribute("class", "gh-card post");
+    bookmarkItems.forEach(function (item) {
+      const eltTmpl = `
+        <a class="kg-bookmark-container" href="${item.link}" target="_blank">
+          <div class="kg-bookmark-content">
+            <div class="kg-bookmark-title"></div> #TODO
+            <div class="kg-bookmark-description"></div> #TODO
+            <div class="kg-bookmark-metadata">
+              <span class="accent">
+                ↗ ${item.domain}
+              </span>
+            </div>
+          </div>
+        </a>`
 
-      // const a = document.createElement("a");
-      // a.setAttribute("class", "gh-card-link");
-      // a.setAttribute("href", item.link);
-      // article.appendChild(a);
+      const elt = document.createElement('div')
+      elt.setAttribute("class", "cdz-card kg-card kg-bookmark-card");
+      elt.innerHTML = eltTmpl;
+      elt.querySelector('.kg-bookmark-title').textContent = item.title;
+      elt.querySelector('.kg-bookmark-description').textContent = item.description;
 
-      // const containerDiv = document.createElement("div");
-      // containerDiv.setAttribute("class", "gh-card-excerpt cdz-microblog-container");
-      // a.appendChild(containerDiv);
+      if (item.image && item.image !== "") {
+        const imgTmpl = `<img src="${item.image}" alt="" onerror="this.style.display = 'none'">`
+        const imgElt = document.createElement("div");
+        imgElt.setAttribute("class", "kg-bookmark-thumbnail");
+        imgElt.innerHTML = imgTmpl;
+        elt.querySelector("kg-bookmark-container").appendChild(imgElt);
+      }
 
-      // const contentDiv = document.createElement("div");
-      // contentDiv.setAttribute("class", "cdz-microblog-content");
-      // containerDiv.appendChild(contentDiv);
-
-      // const textContentDiv = document.createElement("div");
-      // textContentDiv.setAttribute("class", "cdz-microblog-text-content");
-      // textContentDiv.innerHTML = item.content;
-      // contentDiv.appendChild(textContentDiv);
-
-      // if (item.encType) {
-      //   if (item.encType.startsWith("image/") && !!item.encURL) {
-      //     const img = document.createElement("img");
-      //     img.setAttribute("src", item.encURL);
-      //     contentDiv.appendChild(img);
-      //   } else {
-      //     console.warn("microblog item has unsuported enclosure type:", item);
-      //   }
-      // }
-
-      // const footer = document.createElement("footer");
-      // footer.setAttribute("class", "gh-card-meta");
-      // textContentDiv.appendChild(footer);
-
-      // const itemTs = new Date(Date.parse(item.pubDate));
-      // const time = document.createElement("time");
-      // time.setAttribute("class", "gh-card-date");
-      // time.setAttribute("datetime", item.pubDate);
-      // time.appendChild(document.createTextNode(itemTs.toLocaleString()));
-      // footer.appendChild(time);
-
-      // microblogFeed.appendChild(article);
+      bookmarksFeed.appendChild(elt);
     });
   };
 
@@ -288,7 +272,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     try {
       const response = await fetch("https://www2025.dzombak.com/feeds/rd-homepage.json");
       if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
+        throw new Error(`bookmarks feed fetch failed: ${response}`);
       }
 
       const json = await response.json();
@@ -299,7 +283,7 @@ window.addEventListener("DOMContentLoaded", async function () {
       });
 
       var items = [];
-      feedItems.forEach(function (entry) {
+      feedItems.forEach(function (item) {
         if (items.length >= 4) {
           return;
         }
