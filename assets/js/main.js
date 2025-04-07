@@ -289,16 +289,15 @@ window.addEventListener("DOMContentLoaded", async function () {
   }
 
   if (refreshCache) {
-    const url = "http://www2025.dzombak.com/feeds/rd-homepage.json";
     try {
-      const response = await fetch(url);
+      const response = await fetch("http://www2025.dzombak.com/feeds/rd-homepage.json");
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
 
       const json = await response.json();
 
-      const feedItems = feed.items;
+      const feedItems = json.items;
       feedItems.sort(function (a, b) {
         return new Date(Date.parse(b.at)) - new Date(Date.parse(a.at));
       });
