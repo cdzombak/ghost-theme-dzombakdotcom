@@ -228,7 +228,7 @@ window.addEventListener("DOMContentLoaded", function () {
   pagination(false);
 })();
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", async function () {
   const populateBookmarksFeed = function () {
     const microblogItems = JSON.parse(window.localStorage.getItem("cdz_bookmarks_feed")).items;
     const microblogFeed = document.getElementById("-cdz-microblog-feed");
@@ -319,7 +319,6 @@ window.addEventListener("DOMContentLoaded", function () {
         }),
       );
       populateBookmarksFeed();
-
     } catch (error) {
       console.error(error.message);
     }
