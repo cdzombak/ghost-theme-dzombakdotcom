@@ -227,3 +227,103 @@ window.addEventListener("DOMContentLoaded", function () {
 (function () {
   pagination(false);
 })();
+
+window.addEventListener("DOMContentLoaded", function () {
+  const populateBookmarksFeed = function () {
+    const microblogItems = JSON.parse(window.localStorage.getItem("cdz_bookmarks_feed")).items;
+    const microblogFeed = document.getElementById("-cdz-microblog-feed");
+
+    microblogItems.forEach(function (item) {
+      console.log(item);
+      // const article = document.createElement("article");
+      // article.setAttribute("class", "gh-card post");
+
+      // const a = document.createElement("a");
+      // a.setAttribute("class", "gh-card-link");
+      // a.setAttribute("href", item.link);
+      // article.appendChild(a);
+
+      // const containerDiv = document.createElement("div");
+      // containerDiv.setAttribute("class", "gh-card-excerpt cdz-microblog-container");
+      // a.appendChild(containerDiv);
+
+      // const contentDiv = document.createElement("div");
+      // contentDiv.setAttribute("class", "cdz-microblog-content");
+      // containerDiv.appendChild(contentDiv);
+
+      // const textContentDiv = document.createElement("div");
+      // textContentDiv.setAttribute("class", "cdz-microblog-text-content");
+      // textContentDiv.innerHTML = item.content;
+      // contentDiv.appendChild(textContentDiv);
+
+      // if (item.encType) {
+      //   if (item.encType.startsWith("image/") && !!item.encURL) {
+      //     const img = document.createElement("img");
+      //     img.setAttribute("src", item.encURL);
+      //     contentDiv.appendChild(img);
+      //   } else {
+      //     console.warn("microblog item has unsuported enclosure type:", item);
+      //   }
+      // }
+
+      // const footer = document.createElement("footer");
+      // footer.setAttribute("class", "gh-card-meta");
+      // textContentDiv.appendChild(footer);
+
+      // const itemTs = new Date(Date.parse(item.pubDate));
+      // const time = document.createElement("time");
+      // time.setAttribute("class", "gh-card-date");
+      // time.setAttribute("datetime", item.pubDate);
+      // time.appendChild(document.createTextNode(itemTs.toLocaleString()));
+      // footer.appendChild(time);
+
+      // microblogFeed.appendChild(article);
+    });
+  };
+
+  const cached = window.localStorage.getItem("cdz_bookmarks_feed");
+  let refreshCache = true;
+  if (cached) {
+    const cacheExp = new Date(Date.parse(JSON.parse(cached).exp));
+    refreshCache = new Date().getTime() >= cacheExp.getTime();
+  }
+
+  if (refreshCache) {
+    const url = "http://www2025.dzombak.com/feeds/rd-homepage.json";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+
+      const json = await response.json();
+
+      const feedItems = feed.items;
+      feedItems.sort(function (a, b) {
+        return new Date(Date.parse(b.at)) - new Date(Date.parse(a.at));
+      });
+
+      var items = [];
+      feedItems.forEach(function (entry) {
+        if (items.length >= 4) {
+          return;
+        }
+        items.push(item);
+      });
+
+      window.localStorage.setItem(
+        "cdz_bookmarks_feed",
+        JSON.stringify({
+          exp: new Date(new Date().getTime() + 5 * 60 * 1000),
+          items: items,
+        }),
+      );
+      populateBookmarksFeed();
+
+    } catch (error) {
+      console.error(error.message);
+    }
+  } else {
+    populateBookmarksFeed();
+  }
+});
