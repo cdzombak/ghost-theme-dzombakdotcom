@@ -322,9 +322,12 @@ window.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-
-
-
-(function () {
-  pagination(false);
-})();
+window.addEventListener("load", function () {
+  (function () {
+    try {
+      pagination(false);
+    } catch (error) {
+      console.error("Ghost pagination JS error:", error.message);
+    }
+  })();
+});
