@@ -254,7 +254,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         const imgElt = document.createElement("div");
         imgElt.setAttribute("class", "kg-bookmark-thumbnail");
         imgElt.innerHTML = imgTmpl;
-        elt.querySelector("kg-bookmark-container").appendChild(imgElt);
+        elt.querySelector(".kg-bookmark-container").appendChild(imgElt);
       }
 
       bookmarksFeed.appendChild(elt);
