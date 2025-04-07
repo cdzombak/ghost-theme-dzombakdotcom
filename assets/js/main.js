@@ -241,16 +241,16 @@ window.addEventListener("DOMContentLoaded", async function () {
               </span>
             </div>
           </div>
-        </a>`
+        </a>`;
 
-      const elt = document.createElement('div')
+      const elt = document.createElement("div");
       elt.setAttribute("class", "cdz-card kg-card kg-bookmark-card");
       elt.innerHTML = eltTmpl;
-      elt.querySelector('.kg-bookmark-title').textContent = item.title;
-      elt.querySelector('.kg-bookmark-description').textContent = item.description;
+      elt.querySelector(".kg-bookmark-title").textContent = item.title;
+      elt.querySelector(".kg-bookmark-description").textContent = item.description;
 
       if (item.image && item.image !== "") {
-        const imgTmpl = `<img src="${item.image}" alt="" onerror="this.style.display = 'none'">`
+        const imgTmpl = `<img src="${item.image}" alt="" onerror="this.style.display = 'none'">`;
         const imgElt = document.createElement("div");
         imgElt.setAttribute("class", "kg-bookmark-thumbnail");
         imgElt.innerHTML = imgTmpl;
@@ -286,6 +286,9 @@ window.addEventListener("DOMContentLoaded", async function () {
       feedItems.forEach(function (item) {
         if (items.length >= 4) {
           return;
+        }
+        if (item.description && item.description.length > 119) {
+          item.description = item.description.slice(0, 120) + "…";
         }
         items.push(item);
       });
