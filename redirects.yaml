@@ -421,3 +421,4 @@
   /blog/2015/05/null.html: /
   /photo/clips/: /etc/clips/
   /photo/clips/index.html: /etc/clips/
+  /atom.xml: /blog/rss/
