@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   if (refreshCache) {
     const parser = new RSSParser();
-    parser.parseURL("https://www2025.dzombak.com/feeds/microblog.rss.xml", function (err, feed) {
+    parser.parseURL("https://www.dzombak.com/feeds/microblog.rss.xml", function (err, feed) {
       if (err) {
         console.error(err);
         return;
@@ -171,7 +171,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   if (refreshCache) {
     const parser = new RSSParser();
-    parser.parseURL("https://www2025.dzombak.com/feeds/pictures-all.rss.xml", function (err, feed) {
+    parser.parseURL("https://www.dzombak.com/feeds/pictures-all.rss.xml", function (err, feed) {
       if (err) {
         console.error(err);
         return;
@@ -270,7 +270,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
   if (refreshCache) {
     try {
-      const response = await fetch("https://www2025.dzombak.com/feeds/rd-homepage.json");
+      const response = await fetch("https://www.dzombak.com/feeds/rd-homepage.json");
       if (!response.ok) {
         throw new Error(`bookmarks feed fetch failed: ${response}`);
       }
