@@ -147,8 +147,11 @@
 }
 
 @media (max-width: 863px) {
-  .cdz-cards.cdz-homepage-featured-cards {
+  .cdz-cards {
     flex-direction: column;
+  }
+  .cdz-cards.cdz-cards-xs {
+    flex-direction: row wrap;
   }
 }
 
