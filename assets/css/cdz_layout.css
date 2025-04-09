@@ -147,10 +147,10 @@
   flex-basis: 32.3%;
 }
 
-.cdz-cards .cdz-card a,
-.cdz-cards .cdz-card-xs a,
-.cdz-cards-xs .cdz-card-xs a,
-.cdz-cards-xs .cdz-card a {
+.cdz-cards .cdz-card a.kg-bookmark-container,
+.cdz-cards .cdz-card-xs a.kg-bookmark-container,
+.cdz-cards-xs .cdz-card-xs a.kg-bookmark-container,
+.cdz-cards-xs .cdz-card a.kg-bookmark-container {
   height: 100%;
 }
 
