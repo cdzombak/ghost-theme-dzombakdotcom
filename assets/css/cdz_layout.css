@@ -141,6 +141,7 @@
   flex-basis: 49.25%;
 }
 
+.cdz-cards .cdz-card-xs,
 .cdz-cards .gh-card.cdz-card-xs,
 .cdz-cards .kg-card.cdz-card-xs {
   flex-basis: 32.3%;
@@ -153,6 +154,17 @@
   .gh-wrapper {
     grid-template-columns: 3fr 2fr !important;
     column-gap: 1.8rem !important;
+  }
+  .gh-featured .gh-card + .gh-card {
+    margin-top: 1.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .cdz-cards .cdz-card-xs,
+  .cdz-cards .gh-card.cdz-card-xs,
+  .cdz-cards .kg-card.cdz-card-xs {
+    flex-basis: 49.25%;
   }
 }
 
