@@ -153,9 +153,9 @@
   }
   .gh-wrapper {
     grid-template-columns: 3fr 2fr !important;
-    column-gap: 1.8rem !important;
+    column-gap: 1.7rem !important;
   }
-  .gh-featured .gh-card + .gh-card {
+  #-cdz-microblog-feed.gh-featured .gh-card + .gh-card {
     margin-top: 1.8rem;
   }
 }
