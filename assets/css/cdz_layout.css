@@ -161,7 +161,7 @@
     grid-template-columns: 1fr !important;
   }
   .cdz-cards {
-    flex-direction: column;
+    flex-flow: column;
     row-gap: 1rem;
   }
   .cdz-cards.cdz-cards-xs {
