@@ -151,6 +151,12 @@
   height: 100%;
 }
 
+@media (max-width: 1160px) {
+  .gh-wrapper {
+    column-gap: 2rem !important;
+  }
+}
+
 @media (max-width: 863px) {
   .cdz-cards.cdz-homepage-featured-cards {
     flex-direction: column;

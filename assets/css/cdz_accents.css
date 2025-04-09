@@ -45,7 +45,7 @@
 
 #-cdz-pictures-feed a:hover img,
 #-cdz-birdbuddy-feed a:hover img,
-.gh-featured .gh-card-link:hover .kg-image {
+.gh-featured .gh-card-link .kg-image:hover {
   filter: drop-shadow(0 3px 6px var(--color-cdz-dropshadow));
   transition: 0.05s;
 }
