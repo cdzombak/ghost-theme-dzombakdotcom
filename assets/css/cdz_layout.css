@@ -124,7 +124,7 @@
   }
 }
 
-.cdz-cards {
+.cdz-cards, .cdz-cards-xs {
   display: flex;
   flex-flow: row wrap;
   align-content: stretch;
@@ -132,25 +132,24 @@
   row-gap: 1.2rem;
 }
 
-.cdz-cards .cdz-card {
+/*.cdz-cards .cdz-card {
   flex-basis: 31.8%;
-}
+}*/
 
+.cdz-cards .cdz-card,
 .cdz-cards .gh-card,
 .cdz-cards .kg-card {
   flex-basis: 49.25%;
 }
 
-.cdz-cards .cdz-card-xs,
-.cdz-cards .gh-card.cdz-card-xs,
-.cdz-cards .kg-card.cdz-card-xs {
+.cdz-cards-xs .cdz-card-xs,
+.cdz-cards-xs .gh-card.cdz-card-xs,
+.cdz-cards-xs .kg-card.cdz-card-xs {
   flex-basis: 32.3%;
 }
 
 .cdz-cards .cdz-card a.kg-bookmark-container,
-.cdz-cards .cdz-card-xs a.kg-bookmark-container,
-.cdz-cards-xs .cdz-card-xs a.kg-bookmark-container,
-.cdz-cards-xs .cdz-card a.kg-bookmark-container {
+.cdz-cards-xs .cdz-card-xs a.kg-bookmark-container {
   height: 100%;
 }
 
@@ -168,9 +167,9 @@
 }
 
 @media (max-width: 800px) {
-  .cdz-cards .cdz-card-xs,
-  .cdz-cards .gh-card.cdz-card-xs,
-  .cdz-cards .kg-card.cdz-card-xs {
+  .cdz-cards-xs .cdz-card-xs,
+  .cdz-cards-xs .gh-card.cdz-card-xs,
+  .cdz-cards-xs .kg-card.cdz-card-xs {
     flex-basis: 49.25%;
   }
 }
@@ -183,34 +182,40 @@
     flex-flow: column;
     row-gap: 1rem;
   }
-  .cdz-cards.cdz-cards-xs {
-    flex-flow: row wrap !important;
+  .cdz-cards-xs {
+    flex-flow: row wrap;
+    row-gap: 1rem;
   }
 }
 
 @media (max-width: 600px) {
-  .cdz-cards.cdz-cards-xs {
+  .cdz-cards-xs {
     flex-flow: column;
   }
 }
 
 .cdz-cards .gh-card a.gh-card-link,
-.cdz-cards .gh-card div.gh-card-link:not(:has(* > .kg-bookmark-card)) {
+.cdz-cards .gh-card div.gh-card-link:not(:has(* > .kg-bookmark-card)),
+.cdz-cards-xs .gh-card a.gh-card-link,
+.cdz-cards-xs .gh-card div.gh-card-link:not(:has(* > .kg-bookmark-card)) {
   border: 1px solid var(--color-light-gray);
   border-radius: 0.25em;
   padding: 1.15em;
   height: 100%;
 }
 
-.cdz-cards .gh-card .gh-card-link p {
+.cdz-cards .gh-card .gh-card-link p,
+.cdz-cards-xs .gh-card .gh-card-link p {
   margin-bottom: 0.8rem;
 }
 
-.cdz-cards .gh-card .gh-card-link:not(:has(> header)) .gh-card-excerpt {
+.cdz-cards .gh-card .gh-card-link:not(:has(> header)) .gh-card-excerpt,
+.cdz-cards-xs .gh-card .gh-card-link:not(:has(> header)) .gh-card-excerpt {
   margin-top: 0;
 }
 
-.cdz-cards .gh-card div.gh-card-link footer .gh-card-date {
+.cdz-cards .gh-card div.gh-card-link footer .gh-card-date,
+.cdz-cards-xs .gh-card div.gh-card-link footer .gh-card-date {
   text-align: right;
 }
 
