@@ -1,11 +1,13 @@
-.cdz-card.kg-bookmark-card .kg-bookmark-title {
+.cdz-card.kg-bookmark-card .kg-bookmark-title,
+.cdz-card-xs.kg-bookmark-card .kg-bookmark-title {
   word-break: break-word;
   font-size: 1.8rem !important;
   font-weight: 600;
   line-height: 1.25;
 }
 
-.cdz-card.kg-bookmark-card .kg-bookmark-description {
+.cdz-card.kg-bookmark-card .kg-bookmark-description,
+.cdz-card-xs.kg-bookmark-card .kg-bookmark-description {
   color: var(--color-secondary-text);
   font-family: var(--font-sans);
   font-size: 0.95em;
@@ -17,22 +19,27 @@
   -webkit-line-clamp: none;
 }
 
-.cdz-card.kg-bookmark-card .kg-bookmark-metadata > :not(img) {
+.cdz-card.kg-bookmark-card .kg-bookmark-metadata > :not(img),
+.cdz-card-xs.kg-bookmark-card .kg-bookmark-metadata > :not(img) {
   opacity: 0.9;
 }
 
-.cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-content {
+.cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-content,
+.cdz-card-xs.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-content {
   padding-top: 0.9em;
 }
-.cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-description {
+.cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-description,
+.cdz-card-xs.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-description {
   margin-top: 0;
 }
 
-.cdz-card.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(1) {
+.cdz-card.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(1),
+.cdz-card-xs.kg-bookmark-card a.kg-bookmark-container:hover .kg-bookmark-metadata > span:nth-of-type(1) {
   text-decoration: underline;
 }
 
-.cdz-card.kg-bookmark-card .kg-bookmark-thumbnail {
+.cdz-card.kg-bookmark-card .kg-bookmark-thumbnail,
+.cdz-card-xs.kg-bookmark-card .kg-bookmark-thumbnail {
   min-width: 32%;
   max-width: 36%;
 }
