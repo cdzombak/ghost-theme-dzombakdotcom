@@ -184,7 +184,7 @@
     row-gap: 1rem;
   }
   .cdz-cards.cdz-cards-xs {
-    flex-direction: row wrap !important;
+    flex-flow: row wrap !important;
   }
 }
 
