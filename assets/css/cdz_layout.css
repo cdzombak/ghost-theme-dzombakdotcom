@@ -147,6 +147,13 @@
   flex-basis: 32.3%;
 }
 
+.cdz-cards .cdz-card a,
+.cdz-cards .cdz-card-xs a,
+.cdz-cards-xs .cdz-card-xs a,
+.cdz-cards-xs .cdz-card a {
+  height: 100%;
+}
+
 @media (max-width: 863px) {
   .cdz-cards.cdz-homepage-featured-cards {
     flex-direction: column;
