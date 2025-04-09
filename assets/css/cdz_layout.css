@@ -151,13 +151,8 @@
     flex-direction: column;
   }
   .gh-wrapper {
-    grid-template-columns: 3fr 2fr;
-  }
-}
-
-@media (max-width: 800px) {
-  .gh-wrapper {
-    column-gap: 1.8rem;
+    grid-template-columns: 3fr 2fr !important;
+    column-gap: 1.8rem !important;
   }
 }
 
