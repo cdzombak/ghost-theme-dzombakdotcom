@@ -11,7 +11,6 @@
   margin-bottom: 6rem;
 }
 
-/* TODO(cdzombak): does this break anything?? */
 .gh-wrapper .gh-section + .gh-section {
   margin-top: 8rem;
 }
@@ -132,19 +131,18 @@
   row-gap: 1.2rem;
 }
 
-/*.cdz-cards .cdz-card {
-  flex-basis: 31.8%;
-}*/
-
 .cdz-cards .cdz-card,
 .cdz-cards .gh-card,
-.cdz-cards .kg-card {
+.cdz-cards .kg-card,
+.cdz-cards-xs:not(.kg-width-wide) .cdz-card-xs,
+.cdz-cards-xs:not(.kg-width-wide) .gh-card.cdz-card-xs,
+.cdz-cards-xs:not(.kg-width-wide) .kg-card.cdz-card-xs {
   flex-basis: 49.25%;
 }
 
-.cdz-cards-xs .cdz-card-xs,
-.cdz-cards-xs .gh-card.cdz-card-xs,
-.cdz-cards-xs .kg-card.cdz-card-xs {
+.cdz-cards-xs.kg-width-wide .cdz-card-xs,
+.cdz-cards-xs.kg-width-wide .gh-card.cdz-card-xs,
+.cdz-cards-xs.kg-width-wide .kg-card.cdz-card-xs {
   flex-basis: 32.3%;
 }
 

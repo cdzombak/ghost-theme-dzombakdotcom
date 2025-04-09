@@ -27,6 +27,7 @@
 .cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-content,
 .cdz-card-xs.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-content {
   padding-top: 0.9em;
+  color: var(--color-primary-text);
 }
 .cdz-card.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-description,
 .cdz-card-xs.kg-bookmark-card:not(:has(* > .kg-bookmark-title)) .kg-bookmark-description {
