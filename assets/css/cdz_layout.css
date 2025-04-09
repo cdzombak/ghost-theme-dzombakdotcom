@@ -171,9 +171,9 @@
 }
 
 @media (max-width: 800px) {
-  .cdz-cards-xs .cdz-card-xs,
-  .cdz-cards-xs .gh-card.cdz-card-xs,
-  .cdz-cards-xs .kg-card.cdz-card-xs {
+  .cdz-cards-xs.kg-width-wide .cdz-card-xs,
+  .cdz-cards-xs.kg-width-wide .gh-card.cdz-card-xs,
+  .cdz-cards-xs.kg-width-wide .kg-card.cdz-card-xs {
     flex-basis: 49.25%;
   }
 }
