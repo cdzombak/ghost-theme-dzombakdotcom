@@ -67,7 +67,7 @@
                 <section class="gh-section">
                     <h2 class="gh-section-title"><a href="https://raindrop.io/cdzombak_public/chris-dzombak-public-bookmarks-53460076">Recently Bookmarked</a></h2>
 
-                    <div class="gh-feed cdz-cards" id="-cdz-bookmarks-feed">
+                    <div class="gh-feed cdz-cards cdz-homepage-featured-cards" id="-cdz-bookmarks-feed">
                         <noscript>Embedded bookmarks feed requires JavaScript; please visit <a href="https://raindrop.io/cdzombak_public/chris-dzombak-public-bookmarks-53460076">raindrop.io/cdzombak_public/chris-dzombak-public-bookmarks-53460076</a>.</noscript>
                     </div>
                 </section>
@@ -101,17 +101,6 @@
                         </div>
                     </section>
                 {{/get}}
-
-                {{#if @site.recommendations_enabled}}
-                    <section class="gh-section">
-                        <h3 class="gh-section-title">Recommendations</h3>
-
-                        <div class="gh-recommendations">
-                            {{recommendations}}
-                            <button data-portal="recommendations">See all {{> "icons/arrow-right"}}</button>
-                        </div>
-                    </section>
-                {{/if}}
             </aside>
         </div>
     </div>
