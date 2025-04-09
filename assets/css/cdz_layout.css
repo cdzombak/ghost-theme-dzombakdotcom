@@ -160,6 +160,10 @@
   .gh-wrapper {
     grid-template-columns: 1fr !important;
   }
+  .cdz-cards {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
   .cdz-cards.cdz-cards-xs {
     flex-direction: row wrap !important;
   }
