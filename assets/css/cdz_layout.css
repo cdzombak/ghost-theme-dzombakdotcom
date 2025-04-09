@@ -157,6 +157,9 @@
 }
 
 @media (max-width: 767px) {
+  .gh-wrapper {
+    grid-template-columns: 1fr !important;
+  }
   .cdz-cards.cdz-cards-xs {
     flex-direction: row wrap !important;
   }
