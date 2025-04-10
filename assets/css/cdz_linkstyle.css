@@ -52,3 +52,12 @@ h2 a.cdz-content-header-link:hover {
     display: none;
   }
 }
+
+
+.gh-foot-inner .gh-copyright a {
+  text-decoration: underline;
+}
+
+.gh-foot-inner .gh-copyright a:hover {
+  text-decoration: none;
+}
