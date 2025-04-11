@@ -31,6 +31,10 @@
   grid-column: wide;
 }
 
+#-cdz-microblog-feed.gh-featured .gh-card + .gh-card {
+  margin-top: 2rem;
+}
+
 .cdz-microblog-content {
   display: flex;
   flex-direction: row;
