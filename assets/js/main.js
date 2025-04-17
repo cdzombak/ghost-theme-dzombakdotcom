@@ -284,7 +284,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
       var items = [];
       feedItems.forEach(function (item) {
-        if (items.length >= 4) {
+        if (items.length >= 6) {
           return;
         }
         if (item.description && item.description.length > 119) {
