@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   if (refreshCache) {
     const parser = new RSSParser();
-    parser.parseURL("https://www.dzombak.com/feeds/microblog.rss.xml", function (err, feed) {
+    parser.parseURL("https://a2mi.social/@dzombak.rss", function (err, feed) {
       if (err) {
         console.error(err);
         return;
@@ -139,7 +139,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const addImage = function (el, item) {
       const itemTs = new Date(Date.parse(item.pubDate));
-      const altTxt = item.title + " (Posted " + itemTs.toLocaleDateString() + " in “" + item.category + "”)";
+      const altTxt = item.title + " (Posted " + itemTs.toLocaleDateString() + " in " + item.category + ")";
 
       const img = document.createElement("img");
       img.setAttribute("src", item.encURL);
