@@ -200,7 +200,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         if (item.category && item.category === "Bird Buddy" && birdbuddyItems.length < 3) {
           birdbuddyItems.push(item);
-        } else if (item.category !== "Bird Buddy" && items.length < 12) {
+        } else if (item.category !== "Bird Buddy" && items.length < 15) {
           items.push(item);
         }
       });
