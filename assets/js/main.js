@@ -55,6 +55,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (item.encType.startsWith("image/") && !!item.encURL) {
           const img = document.createElement("img");
           img.setAttribute("src", item.encURL);
+          img.setAttribute("loading", "lazy");
           contentDiv.appendChild(img);
         } else {
           console.warn("microblog item has unsuported enclosure type:", item);
@@ -84,7 +85,13 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   if (refreshCache) {
-    const parser = new RSSParser();
+    const parser = new RSSParser({
+      customFields: {
+        item: [
+          ['media:content', 'media:content', {keepArray: true}],
+        ]
+      }
+    });
     parser.parseURL("https://a2mi.social/@dzombak.rss", function (err, feed) {
       if (err) {
         console.error(err);
@@ -111,6 +118,10 @@ window.addEventListener("DOMContentLoaded", function () {
         if (entry.enclosure) {
           item.encType = entry.enclosure.type;
           item.encURL = entry.enclosure.url;
+        } else if (entry['media:content'] && entry['media:content'].length > 0) {
+          const mediaContent = entry['media:content'][0];
+          item.encType = mediaContent.type;
+          item.encURL = mediaContent.url;
         }
 
         items.push(item);
@@ -251,7 +262,7 @@ window.addEventListener("DOMContentLoaded", async function () {
       elt.querySelector(".kg-bookmark-description").textContent = item.description;
 
       if (item.image && item.image !== "") {
-        const imgTmpl = `<img src="${item.image}" alt="" onerror="this.style.display = 'none'">`;
+        const imgTmpl = `<img src="${item.image}" loading="lazy" alt="" onerror="this.style.display = 'none'">`;
         const imgElt = document.createElement("div");
         imgElt.setAttribute("class", "kg-bookmark-thumbnail");
         imgElt.innerHTML = imgTmpl;
