@@ -106,7 +106,6 @@
     flex-direction: column-reverse;
     column-gap: 4rem;
     align-items: center;
-    margin-top:;
     margin-left: auto;
     margin-right: auto;
   }
@@ -244,11 +243,6 @@
   height: auto;
   object-fit: cover;
   border-radius: 0.25em;
-  transition: transform 0.2s ease-in-out;
-}
-
-.cdz-pictures-feed .masonry-item:hover img {
-  transform: scale(1.02);
 }
 
 @media (max-width: 767px) {
