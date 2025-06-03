@@ -235,7 +235,6 @@
 .cdz-pictures-feed .masonry-item {
   break-inside: avoid;
   margin-bottom: 1.5rem;
-  display: inline-block;
   width: 100%;
 }
 
@@ -257,7 +256,6 @@
     margin-top: 0;
   }
   .cdz-pictures-feed {
-    column-count: 1;
     column-gap: 1rem;
   }
 }
