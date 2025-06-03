@@ -67,3 +67,32 @@ jobs:
             -H "Accept-Version: v3.0" \
             -H "Origin: ${{ secrets.GHOST_ADMIN_API_URL }}" \
             ${{ secrets.GHOST_ADMIN_API_URL }}/ghost/api/admin/redirects/upload/
+
+  ntfy:
+    name: Ntfy
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    needs: [deploy-theme, deploy-routes, deploy-redirects]
+    steps:
+      - name: Send success notification
+        uses: niniyas/ntfy-action@9c6dc60073292f562769f83df2ace9f64ab31c78
+        if: ${{ !contains(needs.*.result, 'failure') }}
+        with:
+          url: "https://ntfy.cdzombak.net"
+          topic: "gha-builds"
+          priority: 3
+          headers: '{"authorization": "Bearer ${{ secrets.NTFY_TOKEN }}"}'
+          tags: white_check_mark
+          title: Ghost theme deployment succeeded
+          details: Successfully deployed theme, routes, and redirects to Ghost.
+      - name: Send failure notification
+        uses: niniyas/ntfy-action@9c6dc60073292f562769f83df2ace9f64ab31c78
+        if: ${{ contains(needs.*.result, 'failure') }}
+        with:
+          url: "https://ntfy.cdzombak.net"
+          topic: "gha-builds"
+          priority: 3
+          headers: '{"authorization": "Bearer ${{ secrets.NTFY_TOKEN }}"}'
+          tags: no_entry
+          title: Ghost theme deployment failed
+          details: Failed to deploy theme, routes, or redirects to Ghost.
