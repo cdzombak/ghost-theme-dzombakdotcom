@@ -65,3 +65,7 @@ h2 a.cdz-content-header-link:hover {
 #-cdz-microblog-feed a a {
   text-decoration: underline;
 }
+
+#-cdz-microblog-feed a a:hover {
+  text-decoration: dotted;
+}
