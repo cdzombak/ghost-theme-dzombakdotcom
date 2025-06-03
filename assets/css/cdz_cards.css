@@ -45,6 +45,11 @@
   max-width: 36%;
 }
 
+.cdz-card.kg-bookmark-card .kg-bookmark-description,
+.cdz-card-xs.kg-bookmark-card .kg-bookmark-description {
+  flex: 1;
+}
+
 img.kg-bookmark-icon {
   border-radius: 2px;
 }
