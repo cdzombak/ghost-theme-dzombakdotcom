@@ -75,7 +75,7 @@ h6 {
   font-size: 1.1em;
 }
 
-.cdz-microblog-text-content p:first-child {
+.cdz-microblog-text-content p:first-child:has(+ p) {
   font-weight: 460;
 }
 
