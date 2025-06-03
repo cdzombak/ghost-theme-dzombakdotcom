@@ -120,9 +120,10 @@ window.addEventListener("DOMContentLoaded", function () {
           item.encURL = entry.enclosure.url;
         } else if (entry['media:content'] && entry['media:content'].length > 0) {
           const mediaContent = entry['media:content'][0];
-          console.log(mediaContent);
-          item.encType = mediaContent.type;
-          item.encURL = mediaContent.url;
+          if (mediaContent.$) {
+            item.encType = mediaContent.$.type;
+            item.encURL = mediaContent.$.url;
+          }
         }
 
         items.push(item);
