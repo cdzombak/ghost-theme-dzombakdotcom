@@ -144,9 +144,10 @@ window.addEventListener("DOMContentLoaded", function () {
       const img = document.createElement("img");
       img.setAttribute("src", item.encURL);
       img.setAttribute("alt", altTxt);
+      img.setAttribute("loading", "lazy");
 
       const a = document.createElement("a");
-      a.setAttribute("class", "gh-card-link");
+      a.setAttribute("class", "gh-card-link masonry-item");
       a.setAttribute("href", item.link);
       a.setAttribute("title", altTxt);
 
@@ -199,7 +200,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         if (item.category && item.category === "Bird Buddy" && birdbuddyItems.length < 3) {
           birdbuddyItems.push(item);
-        } else if (item.category !== "Bird Buddy" && items.length < 3) {
+        } else if (item.category !== "Bird Buddy" && items.length < 12) {
           items.push(item);
         }
       });
