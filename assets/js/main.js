@@ -315,7 +315,7 @@ window.addEventListener("load", function () {
     try {
       pagination(false);
     } catch (error) {
-      console.error("Ghost pagination JS error:", error.message);
+      console.warn("Ghost pagination JS error:", error.message);
     }
   })();
 });
