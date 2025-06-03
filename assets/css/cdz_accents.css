@@ -47,6 +47,7 @@
 #-cdz-birdbuddy-feed a:hover,
 .gh-feed .tag-hash-micropost .gh-card-link:hover .kg-image,
 .gh-featured .tag-hash-micropost .gh-card-link:hover .kg-image {
+  transform: translateZ(0);
   filter: drop-shadow(0 3px 6px var(--color-cdz-dropshadow));
 }
 
