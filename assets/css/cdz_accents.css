@@ -43,12 +43,14 @@
   border-radius: 0.25em;
 }
 
-#cdz-pictures-feed a:hover img,
-#cdz-birdbuddy-feed a:hover img,
+#-cdz-pictures-feed a:hover img,
+#-cdz-pictures-feed a:hover .masonry-item,
+#-cdz-birdbuddy-feed a:hover img,
+#-cdz-birdbuddy-feed a:hover .masonry-item,
 .gh-feed .tag-hash-micropost .gh-card-link .kg-image:hover,
 .gh-featured .tag-hash-micropost .gh-card-link .kg-image:hover {
   filter: drop-shadow(0 3px 6px var(--color-cdz-dropshadow));
-  transition: 0.05s;
+  /* transition: 0.05s; */
 }
 
 .cdz-secondary-section-title {
