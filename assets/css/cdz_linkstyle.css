@@ -61,3 +61,7 @@ h2 a.cdz-content-header-link:hover {
 .gh-foot-inner .gh-copyright a:hover {
   text-decoration: none;
 }
+
+#-cdz-microblog-feed a a {
+  text-decoration: underline;
+}
