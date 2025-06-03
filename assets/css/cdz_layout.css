@@ -251,6 +251,7 @@
   }
   #-cdz-birdbuddy-feed.cdz-pictures-feed {
     column-gap: 1.25rem;
+    column-count: 3;
   }
 }
 
