@@ -420,6 +420,13 @@
   /local/index.atom.xml/: /blog/tag/local/feed/
   /talks/index.atom.xml/: /blog/tag/talks/feed/
   /atom.xml: /blog/rss/
+  /blog/tag/: /blog/tags/
+  /etc/index.html: /etc/
+  /talks/index.html: /blog/tag/talks/
+  /talks/: /blog/tag/talks/
+  /blog/series/esp8266-getting-started/: /blog/tag/series-esp8266-getting-started/
+  /blog/singletons/: /blog/tag/singletons/
+  /blog/series/pi-reliability/: /blog/tag/series-pi-reliability/
 
 302:
   /blog/2015/05/null.html: /
