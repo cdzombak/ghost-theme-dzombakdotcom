@@ -20,3 +20,9 @@ box-sizing: border-box!important;
 .gh-announcement-bar *:not(path) {
 all: unset;
 }
+.gh-announcement-bar a {
+  text-decoration: underline;
+}
+.gh-announcement-bar a:hover {
+  text-decoration: none;
+}
