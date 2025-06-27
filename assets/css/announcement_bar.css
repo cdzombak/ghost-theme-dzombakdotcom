@@ -1,0 +1,22 @@
+.gh-announcement-bar.accent {
+background-color: var(--ghost-accent-color);
+color: #fff;
+}
+.gh-announcement-bar {
+position: relative;
+z-index: 90;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 12px 48px;
+min-height: 48px;
+font-size: 15px;
+line-height: 23px;
+text-align: center;
+}
+.gh-announcement-bar, .gh-announcement-bar * {
+box-sizing: border-box!important;
+}
+.gh-announcement-bar *:not(path) {
+all: unset;
+}

@@ -1,4 +1,5 @@
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
+@import "announcement_bar.css";
 @import "cdz_accents.css";
 @import "cdz_cards.css";
 @import "cdz_contentlist.css";
