@@ -26,3 +26,6 @@ all: unset;
 .gh-announcement-bar a:hover {
   text-decoration: none;
 }
+.gh-announcement-bar strong {
+  font-weight: 500;
+}
