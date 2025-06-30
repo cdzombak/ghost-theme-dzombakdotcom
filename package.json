@@ -66,6 +66,6 @@
     "postcss": "8.5.3",
     "postcss-easy-import": "4.0.0",
     "prettier": "3.5.3",
-    "pump": "3.0.2"
+    "pump": "3.0.3"
   }
 }
