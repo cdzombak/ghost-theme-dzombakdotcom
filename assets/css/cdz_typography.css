@@ -118,21 +118,21 @@ h6 {
 
 .permanent-marker-regular, .in-marker {
   /* https://fonts.google.com/specimen/Permanent+Marker */
-  font-family: "Permanent Marker", cursive;
+  font-family: "Permanent Marker", cursive !important;
   font-weight: 400;
   font-style: normal;
 }
 
 .special-elite-regular, .in-typewriter {
   /* typewritten; https://fonts.google.com/specimen/Special+Elite */
-  font-family: "Special Elite", system-ui;
+  font-family: "Special Elite", system-ui !important;
   font-weight: 400;
   font-style: normal;
 }
 
 .fuzzy-bubbles-regular, .in-handwriting {
   /* handwritten; https://fonts.google.com/specimen/Fuzzy+Bubbles */
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: "Fuzzy Bubbles", sans-serif !important;
   font-weight: 400;
   font-style: normal;
 }
@@ -140,7 +140,7 @@ h6 {
 .fuzzy-bubbles-bold, .in-handwriting-bold,
 .fuzzy-bubbles-regular b, .fuzzy-bubbles-regular strong,
 .in-handwriting b, .in-handwriting strong {
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: "Fuzzy Bubbles", sans-serif !important;
   font-weight: 700;
   font-style: normal;
 }
