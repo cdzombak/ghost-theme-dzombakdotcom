@@ -117,7 +117,7 @@ h6 {
 }
 
 .in-marker p {
-  font-size: 1.6em;
+  font-size: 1.5em;
 }
 
 .special-elite-regular, .in-typewriter, .in-typewriter p {
@@ -128,7 +128,7 @@ h6 {
 }
 
 .in-typewriter p {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .fuzzy-bubbles-regular, .in-handwriting, .in-handwriting p {
@@ -139,7 +139,7 @@ h6 {
 }
 
 .in-handwriting p {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .fuzzy-bubbles-bold, .in-handwriting-bold,
@@ -152,7 +152,7 @@ h6 {
 }
 
 .in-handwriting-bold p {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .rosario-500 {
