@@ -5,7 +5,7 @@
     <div class="gh-inner">
         {{^is "paged"}}
             {{#foreach posts limit="1"}}
-                <article class="gh-latest gh-card {{post_class}}">
+                <article class="gh-latest gh-card {{post_class}} {{> micropost-classes}}">
                     {{^has tag="#micropost"}}<a class="gh-card-link" href="{{url}}">{{/has}}
                         <header class="gh-card-header {{> micropost-classes}}">
                             <div class="gh-article-meta">
