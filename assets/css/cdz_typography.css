@@ -116,11 +116,19 @@ h6 {
   font-style: normal;
 }
 
+.in-marker p {
+  font-size: 1.6em;
+}
+
 .special-elite-regular, .in-typewriter, .in-typewriter p {
   /* typewritten; https://fonts.google.com/specimen/Special+Elite */
   font-family: "Special Elite", system-ui !important;
   font-weight: 400;
   font-style: normal;
+}
+
+.in-typewriter p {
+  font-size: 1.4em;
 }
 
 .fuzzy-bubbles-regular, .in-handwriting, .in-handwriting p {
@@ -130,6 +138,10 @@ h6 {
   font-style: normal;
 }
 
+.in-handwriting p {
+  font-size: 1.4em;
+}
+
 .fuzzy-bubbles-bold, .in-handwriting-bold,
 .fuzzy-bubbles-regular b, .fuzzy-bubbles-regular strong,
 .in-handwriting b, .in-handwriting strong,
@@ -137,6 +149,10 @@ h6 {
   font-family: "Fuzzy Bubbles", sans-serif !important;
   font-weight: 700;
   font-style: normal;
+}
+
+.in-handwriting-bold p {
+  font-size: 1.4em;
 }
 
 .rosario-500 {
