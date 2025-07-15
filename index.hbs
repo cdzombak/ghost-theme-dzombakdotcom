@@ -15,7 +15,7 @@
                         </header>
 
                         {{^has tag="#micropost"}}<p class="gh-article-excerpt">{{excerpt}}{{^if custom_excerpt}} …{{/if}}</p>{{/has}}
-                        {{#has tag="#micropost"}}<p class="gh-article-excerpt">{{#if custom_excerpt}}{{custom_excerpt}}{{/if}}{{content}}</p>{{/has}}
+                        {{#has tag="#micropost"}}<p class="gh-article-excerpt {{> micropost-classes}}">{{#if custom_excerpt}}{{custom_excerpt}}{{/if}}{{content}}</p>{{/has}}
 
                         {{^has tag="#micropost"}}
                         <footer class="gh-card-meta">

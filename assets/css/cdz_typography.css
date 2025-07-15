@@ -116,28 +116,30 @@ h6 {
 /* <weight>: Use a value from 100 to 700
    <uniquifier>: Use a unique and descriptive class name */
 
-.permanent-marker-regular {
+.permanent-marker-regular, .in-marker {
   /* https://fonts.google.com/specimen/Permanent+Marker */
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-.special-elite-regular {
+.special-elite-regular, .in-typewriter {
   /* typewritten; https://fonts.google.com/specimen/Special+Elite */
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
-.fuzzy-bubbles-regular {
+.fuzzy-bubbles-regular, .in-handwriting {
   /* handwritten; https://fonts.google.com/specimen/Fuzzy+Bubbles */
   font-family: "Fuzzy Bubbles", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.fuzzy-bubbles-bold {
+.fuzzy-bubbles-bold, .in-handwriting-bold,
+.fuzzy-bubbles-regular b, .fuzzy-bubbles-regular strong,
+.in-handwriting b, .in-handwriting strong {
   font-family: "Fuzzy Bubbles", sans-serif;
   font-weight: 700;
   font-style: normal;

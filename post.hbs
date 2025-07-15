@@ -15,10 +15,10 @@
                 {{/if}}
             </span>
 
-            <h1 class="gh-article-title">{{title}}</h1>
+            <h1 class="gh-article-title {{> micropost-classes}}">{{title}}</h1>
 
             {{#if custom_excerpt}}
-                <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+                <p class="gh-article-excerpt {{> micropost-classes}}">{{custom_excerpt}}</p>
             {{/if}}
 
             {{^has tag="#hide-feature-image"}}{{^has tag="#needs-import-review"}}
@@ -26,7 +26,7 @@
             {{/has}}{{/has}}
         </header>
 
-        <div class="gh-content gh-canvas">
+        <div class="gh-content gh-canvas {{> micropost-classes}}">
             {{#has tag="#needs-import-review"}}
             <div class="kg-card kg-callout-card kg-callout-card-purple"><div class="kg-callout-emoji">⚠️</div><div class="kg-callout-text">This post was automatically migrated from my old blogging software, and I have not reviewed it for problems yet. Please <a href="mailto:chris@dzombak.com">contact me</a> if you notice any important issues.</div></div>
             {{/has}}
