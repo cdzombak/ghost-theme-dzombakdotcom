@@ -13,7 +13,7 @@
             {{content}}
         </div>
 
-        <footer class="gh-card-meta">
+        <footer class="gh-card-meta {{> micropost-classes}}">
             <a href="{{url}}"><time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time></a>
             <span class="gh-card-duration">{{#primary_tag}}<a href="{{url}}">{{name}}</a>{{/primary_tag}}</span>
             {{^has visibility="public"}}

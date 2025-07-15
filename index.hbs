@@ -7,7 +7,7 @@
             {{#foreach posts limit="1"}}
                 <article class="gh-latest gh-card {{post_class}}">
                     {{^has tag="#micropost"}}<a class="gh-card-link" href="{{url}}">{{/has}}
-                        <header class="gh-card-header">
+                        <header class="gh-card-header {{> micropost-classes}}">
                             <div class="gh-article-meta">
                                 <span class="gh-card-date">{{#has tag="#micropost"}}<a href="{{url}}">{{/has}}Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>{{#has tag="#micropost"}}</a>{{/has}}</span>
                             </div>
@@ -18,7 +18,7 @@
                         {{#has tag="#micropost"}}<p class="gh-article-excerpt {{> micropost-classes}}">{{#if custom_excerpt}}{{custom_excerpt}}{{/if}}{{content}}</p>{{/has}}
 
                         {{^has tag="#micropost"}}
-                        <footer class="gh-card-meta">
+                        <footer class="gh-card-meta {{> micropost-classes}}">
                             <span class="gh-card-duration">{{reading_time}}</span>
                             {{#if @site.comments_enabled}}
                                 {{comment_count class="gh-card-comments"}}
