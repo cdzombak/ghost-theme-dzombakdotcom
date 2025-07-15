@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap");
-/* https://fonts.google.com/share?selection.family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|IBM+Plex+Sans:ital,wght@0,100..700;1,100..700|IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700|Rosario:ital,wght@0,300..700;1,300..700 */
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Permanent+Marker&family=Special+Elite&display=swap');
 
 body {
   text-rendering: optimizeLegibility !important;
@@ -109,7 +109,35 @@ h6 {
 /* <weight>: Use a value from 100 to 700
    <uniquifier>: Use a unique and descriptive class name */
 
+.permanent-marker-regular {
+  /* https://fonts.google.com/specimen/Permanent+Marker */
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.special-elite-regular {
+  /* typewritten; https://fonts.google.com/specimen/Special+Elite */
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fuzzy-bubbles-regular {
+  /* handwritten; https://fonts.google.com/specimen/Fuzzy+Bubbles */
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fuzzy-bubbles-bold {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .rosario-500 {
+  /* elegant; logo typeface; https://fonts.google.com/specimen/Rosario */
   font-family: "Rosario", serif;
   font-optical-sizing: auto;
   font-weight: 500;
