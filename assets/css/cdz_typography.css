@@ -73,11 +73,17 @@ h6 {
 }
 
 .cdz-microblog-text-content {
+  /* Mastodon posts */
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings:
+    "wdth" 100;
+  font-weight: 370;
   font-size: 1.1em;
 }
 
 .cdz-microblog-text-content p:first-child:has(+ p) {
-  font-weight: 460;
+  font-weight: 420;
 }
 
 .kg-bookmark-content {
@@ -143,14 +149,6 @@ h6 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-#-cdz-microblog-feed .gh-card-excerpt {
-  /* Mastodon posts */
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
   font-variation-settings:
     "wdth" 100;
 }
