@@ -44,6 +44,10 @@
             {{/has}}
 
             {{content}}
+
+            {{#has tag="#has-affiliate-links"}}
+            <div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-text affiliate-callout-text">This post contains affiliate links. If you click through and make a purchase, I may receive a small commission, at no extra cost to you.</div></div>
+            {{/has}}
         </div>
 
         {{#if comments}}

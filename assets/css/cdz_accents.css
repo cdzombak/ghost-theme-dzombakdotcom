@@ -91,3 +91,8 @@
   width: 18px;
   margin-left: -1px;
 }
+
+.affiliate-callout-text {
+  font-style: italic;
+  font-size: 0.9em;
+}
