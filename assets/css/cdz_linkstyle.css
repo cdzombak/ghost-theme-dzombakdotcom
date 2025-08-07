@@ -31,11 +31,13 @@ li.nav-current-parent a {
   text-decoration: underline;
 }
 
-h2 .cdz-content-header-link-container {
+h2 .cdz-content-header-link-container,
+pre .cdz-code-copy-button-container {
   position: absolute;
 }
 
-h2 a.cdz-content-header-link {
+h2 a.cdz-content-header-link,
+pre .cdz-code-copy-button {
   fill: var(--color-light-gray);
   position: relative;
   top: -1.5px;
@@ -43,12 +45,14 @@ h2 a.cdz-content-header-link {
   padding: 7px;
 }
 
-h2 a.cdz-content-header-link:hover {
+h2 a.cdz-content-header-link:hover,
+pre .cdz-code-copy-button:hover {
   fill: var(--color-secondary-text);
 }
 
 @media (max-width: 767px) {
-  h2 .cdz-content-header-link-container {
+  h2 .cdz-content-header-link-container,
+  pre .cdz-code-copy-button-container {
     display: none;
   }
 }
