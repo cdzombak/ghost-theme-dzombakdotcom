@@ -36,8 +36,7 @@ pre .cdz-code-copy-button-container {
   position: absolute;
 }
 
-h2 a.cdz-content-header-link,
-pre .cdz-code-copy-button {
+h2 a.cdz-content-header-link {
   fill: var(--color-light-gray);
   position: relative;
   top: -1.5px;
@@ -57,6 +56,20 @@ pre .cdz-code-copy-button:hover {
   }
 }
 
+pre .cdz-code-copy-button {
+  fill: var(--color-light-gray);
+
+  position: relative;
+
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .gh-foot-inner .gh-copyright a {
   text-decoration: underline;
