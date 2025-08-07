@@ -52,7 +52,7 @@ window.addEventListener("load", function () {
     });
 
     copyContainer.appendChild(copyButton);
-    element.appendChild(copyContainer);
+    element.prepend(copyContainer);
   });
 });
 
