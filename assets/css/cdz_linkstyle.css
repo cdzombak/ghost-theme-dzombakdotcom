@@ -74,7 +74,7 @@ pre .cdz-code-copy-button {
 }
 
 pre .cdz-code-copy-button:hover {
-  fill: var(--color-secondary-text);
+  fill: var(--ghost-accent-color);
 }
 
 .gh-foot-inner .gh-copyright a {
