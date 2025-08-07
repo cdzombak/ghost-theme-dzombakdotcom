@@ -44,8 +44,7 @@ h2 a.cdz-content-header-link {
   padding: 7px;
 }
 
-h2 a.cdz-content-header-link:hover,
-pre .cdz-code-copy-button:hover {
+h2 a.cdz-content-header-link:hover {
   fill: var(--color-secondary-text);
 }
 
@@ -57,11 +56,11 @@ pre .cdz-code-copy-button:hover {
 }
 
 pre .cdz-code-copy-button {
-  fill: var(--color-light-gray);
+  fill: var(--color-secondary-text);
 
   position: relative;
   top: -1.5px;
-  left: calc(-1em - 35px);
+  left: calc(-1em - 35px + 7px);
   padding: 7px;
 
   background: none;
@@ -72,6 +71,10 @@ pre .cdz-code-copy-button {
   margin: 0;
   text-decoration: underline;
   cursor: pointer;
+}
+
+pre .cdz-code-copy-button:hover {
+  fill: var(--color-primary-text);
 }
 
 .gh-foot-inner .gh-copyright a {
