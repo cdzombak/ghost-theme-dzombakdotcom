@@ -2,6 +2,11 @@ function isOverflownX(element) {
   return element.scrollWidth > element.clientWidth;
 }
 
+// SVG icon constants
+const CLIPBOARD_ICON = "<svg viewBox='0 0 16 16' version='1.1' width='16' height='16'><path fill-rule='evenodd' d='M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z'></path></svg>";
+
+const CHECK_ICON = "<svg viewBox='0 0 16 16' version='1.1' width='16' height='16'><path fill-rule='evenodd' d='M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z'></path></svg>";
+
 window.addEventListener("load", function () {
   document.querySelectorAll(".gh-content table:not(.gist table)").forEach((element) => {
     if (!isOverflownX(element)) {
@@ -32,8 +37,7 @@ window.addEventListener("load", function () {
     copyButton.setAttribute("class", "cdz-code-copy-button");
     copyButton.setAttribute("type", "button");
     copyButton.setAttribute("title", "Copy code to clipboard");
-    copyButton.innerHTML =
-      "<svg viewBox='0 0 16 16' version='1.1' width='16' height='16'><path fill-rule='evenodd' d='M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z'></path><path fill-rule='evenodd' d='M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z'></path></svg>";
+    copyButton.innerHTML = CLIPBOARD_ICON;
 
     copyButton.addEventListener("click", async () => {
       const codeElement = element.querySelector("code");
@@ -41,11 +45,9 @@ window.addEventListener("load", function () {
 
       try {
         await navigator.clipboard.writeText(text);
-        copyButton.innerHTML =
-          "<svg viewBox='0 0 16 16' version='1.1' width='16' height='16'><path fill-rule='evenodd' d='M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z'></path><path fill-rule='evenodd' d='M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z'></path></svg>";
+        copyButton.innerHTML = CHECK_ICON;
         setTimeout(() => {
-          copyButton.innerHTML =
-            "<svg viewBox='0 0 16 16' version='1.1' width='16' height='16'><path fill-rule='evenodd' d='M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z'></path><path fill-rule='evenodd' d='M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z'></path></svg>";
+          copyButton.innerHTML = CLIPBOARD_ICON;
         }, 1000);
       } catch (err) {
         console.error("Failed to copy to clipboard:", err);
