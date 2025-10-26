@@ -268,7 +268,7 @@
     max-width: none;
   }
   /* Hide 4th photo on tablet */
-  #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-child(4) {
+  #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-of-type(4) {
     display: none;
   }
 }
@@ -287,7 +287,8 @@
     max-width: none;
   }
   /* Hide photos 3 and 4 on phones */
-  #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-child(n+3) {
+  #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-of-type(3),
+  #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-of-type(4) {
     display: none;
   }
 }
