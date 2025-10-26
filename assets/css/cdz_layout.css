@@ -286,9 +286,13 @@
     gap: 0.75rem;
     max-width: none;
   }
-  /* Hide photos 3 and 4 on phones */
+  /* Hide photos 3 and 4 on phones for Bird Buddy feed */
   #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-of-type(3),
   #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-of-type(4) {
+    display: none;
+  }
+  /* Limit homepage pictures feed to 8 photos on phones */
+  #-cdz-pictures-feed.cdz-pictures-feed .masonry-item:nth-of-type(n+9) {
     display: none;
   }
 }
