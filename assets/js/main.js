@@ -288,6 +288,7 @@ window.addEventListener("DOMContentLoaded", function () {
       window.localStorage.setItem(
         "cdz_birdbuddy_feed",
         JSON.stringify({
+          exp: new Date(new Date().getTime() + 15 * 60 * 1000),
           items: birdbuddyItems,
         }),
       );
