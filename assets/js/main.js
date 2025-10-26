@@ -271,7 +271,7 @@ window.addEventListener("DOMContentLoaded", function () {
           item.category = entry.categories[0];
         }
 
-        if (item.category && item.category === "Bird Buddy" && birdbuddyItems.length < 3) {
+        if (item.category && item.category === "Bird Buddy" && birdbuddyItems.length < 4) {
           birdbuddyItems.push(item);
         } else if (item.category !== "Bird Buddy" && items.length < 12) {
           items.push(item);
