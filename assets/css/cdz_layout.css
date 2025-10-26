@@ -250,8 +250,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  column-count: 1 !important;
-  column-gap: unset !important;
+  column-count: unset;
   max-width: 800px;
 }
 
@@ -267,7 +266,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     max-width: none;
-    column-count: 1 !important;
   }
   /* Hide 4th photo on tablet */
   #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-child(4) {
@@ -287,7 +285,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
     max-width: none;
-    column-count: 1 !important;
   }
   /* Hide photos 3 and 4 on phones */
   #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-child(n+3) {
