@@ -278,15 +278,11 @@
   #-cdz-birdbuddy-feed.cdz-pictures-feed {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
-    max-width: 400px;
+    max-width: none;
   }
-}
-
-@media (max-width: 480px) {
-  #-cdz-birdbuddy-feed.cdz-pictures-feed {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-    max-width: 300px;
+  /* Show only first 2 photos on mobile */
+  #-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item:nth-child(n+3) {
+    display: none;
   }
 }
 
