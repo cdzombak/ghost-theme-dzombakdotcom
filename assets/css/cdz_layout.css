@@ -245,13 +245,25 @@
   border-radius: 0.25em;
 }
 
+/* Bird Buddy feed uses grid instead of columns for better left-to-right flow */
+#-cdz-birdbuddy-feed.cdz-pictures-feed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  column-count: unset;
+}
+
+#-cdz-birdbuddy-feed.cdz-pictures-feed .masonry-item {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1200px) {
   .cdz-pictures-feed {
     column-count: 2;
   }
   #-cdz-birdbuddy-feed.cdz-pictures-feed {
-    column-gap: 1.25rem;
-    column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
 }
 
@@ -263,7 +275,8 @@
     column-gap: 1rem;
   }
   #-cdz-birdbuddy-feed.cdz-pictures-feed {
-    column-gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
 }
 
