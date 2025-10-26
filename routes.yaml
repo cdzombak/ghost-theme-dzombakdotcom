@@ -28,6 +28,10 @@ routes:
     data: page.published-elsewhere
     template: page
 
+  /blog/tag/birding/:
+    data: tag.birding
+    template: tag-birding
+
 collections:
   /blog/:
     permalink: /blog/{year}/{month}/{slug}/
