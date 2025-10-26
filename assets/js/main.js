@@ -60,9 +60,19 @@ window.addEventListener("load", function () {
 });
 
 window.addEventListener("DOMContentLoaded", function () {
+  // Skip microblog feed if element not present on page
+  const microblogFeed = document.getElementById("-cdz-microblog-feed");
+  if (!microblogFeed) {
+    return;
+  }
+
   const populateMicroblog = function () {
-    const microblogItems = JSON.parse(window.localStorage.getItem("cdz_microblog_feed")).items;
-    const microblogFeed = document.getElementById("-cdz-microblog-feed");
+    const cachedMicroblog = window.localStorage.getItem("cdz_microblog_feed");
+    if (!cachedMicroblog) {
+      return;
+    }
+
+    const microblogItems = JSON.parse(cachedMicroblog).items;
 
     microblogItems.forEach(function (item) {
       const article = document.createElement("article");
@@ -179,11 +189,22 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("DOMContentLoaded", function () {
+  // Skip picture feeds if elements not present on page
+  const picturesFeed = document.getElementById("-cdz-pictures-feed");
+  const bbFeed = document.getElementById("-cdz-birdbuddy-feed");
+  if (!picturesFeed && !bbFeed) {
+    return;
+  }
+
   const populatePictures = function () {
-    const pictureItems = JSON.parse(window.localStorage.getItem("cdz_pictures_feed")).items;
-    const picturesFeed = document.getElementById("-cdz-pictures-feed");
-    const bbItems = JSON.parse(window.localStorage.getItem("cdz_birdbuddy_feed")).items;
-    const bbFeed = document.getElementById("-cdz-birdbuddy-feed");
+    const cachedPictures = window.localStorage.getItem("cdz_pictures_feed");
+    const cachedBirds = window.localStorage.getItem("cdz_birdbuddy_feed");
+    if (!cachedPictures || !cachedBirds) {
+      return;
+    }
+
+    const pictureItems = JSON.parse(cachedPictures).items;
+    const bbItems = JSON.parse(cachedBirds).items;
 
     const addImage = function (el, item) {
       const itemTs = new Date(Date.parse(item.pubDate));
@@ -203,12 +224,16 @@ window.addEventListener("DOMContentLoaded", function () {
       el.appendChild(a);
     };
 
-    pictureItems.forEach(function (item) {
-      addImage(picturesFeed, item);
-    });
-    bbItems.forEach(function (item) {
-      addImage(bbFeed, item);
-    });
+    if (picturesFeed) {
+      pictureItems.forEach(function (item) {
+        addImage(picturesFeed, item);
+      });
+    }
+    if (bbFeed) {
+      bbItems.forEach(function (item) {
+        addImage(bbFeed, item);
+      });
+    }
   };
 
   const cached = window.localStorage.getItem("cdz_pictures_feed");
@@ -274,9 +299,19 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("DOMContentLoaded", async function () {
+  // Skip bookmarks feed if element not present on page
+  const bookmarksFeed = document.getElementById("-cdz-bookmarks-feed");
+  if (!bookmarksFeed) {
+    return;
+  }
+
   const populateBookmarksFeed = function () {
-    const bookmarkItems = JSON.parse(window.localStorage.getItem("cdz_bookmarks_feed")).items;
-    const bookmarksFeed = document.getElementById("-cdz-bookmarks-feed");
+    const cachedBookmarks = window.localStorage.getItem("cdz_bookmarks_feed");
+    if (!cachedBookmarks) {
+      return;
+    }
+
+    const bookmarkItems = JSON.parse(cachedBookmarks).items;
 
     bookmarkItems.forEach(function (item) {
       const eltTmpl = `
