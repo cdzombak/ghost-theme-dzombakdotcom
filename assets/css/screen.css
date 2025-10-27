@@ -681,6 +681,14 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .cdz-tag-with-links .gh-pagehead {
+    position: static;
+    grid-column: main-start / main-end;
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 991px) {
   .gh-latest {
     margin-top: 0;
