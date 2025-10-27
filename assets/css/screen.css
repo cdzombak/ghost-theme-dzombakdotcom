@@ -664,10 +664,6 @@
     padding-left: 1.6rem;
   }
 
-  .gh-pagehead {
-    margin-bottom: 8rem;
-  }
-
   .gh-author-meta {
     flex-direction: row;
     align-items: center;
@@ -680,15 +676,22 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1100px) {
+  .gh-pagehead {
+    margin-bottom: 8rem;
+  }
+}
+
 @media (max-width: 991px) {
   .gh-latest {
     margin-top: 0;
   }
+}
 
+@media (max-width:1100px) {
   .gh-pagehead {
     position: static;
     grid-column: main-start / main-end;
-    max-width: 480px;
     padding-top: 0;
   }
 }
