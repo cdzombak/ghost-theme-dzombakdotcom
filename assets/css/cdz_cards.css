@@ -101,3 +101,9 @@ img.kg-bookmark-icon {
 .cdz-card-xs .kg-bookmark-metadata {
   margin-top: 1rem;
 }
+
+@media (max-width: 1200px) {
+  .cdz-tag-with-links .gh-pagehead .cdz-cards-xs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
