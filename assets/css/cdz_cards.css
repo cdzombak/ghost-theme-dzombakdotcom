@@ -112,6 +112,11 @@ img.kg-bookmark-icon {
     row-gap: 0.8rem;
   }
 
+  .cdz-tag-with-links .gh-pagehead .cdz-cards-xs .cdz-link-card .kg-bookmark-title>span {
+    -webkit-line-clamp: none;
+    line-clamp: none;
+  }
+
   .cdz-tag-with-links .gh-pagehead .cdz-cards-xs .cdz-link-card .kg-bookmark-title>span:last-of-type {
     overflow: visible;
     text-overflow: unset;
