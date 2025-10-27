@@ -102,10 +102,18 @@ img.kg-bookmark-icon {
   margin-top: 1rem;
 }
 
+.cdz-tag-with-links .gh-pagehead .cdz-cards-xs {
+  margin-top: 2.4rem;
+}
+
 @media (min-width: 1200px) {
   .cdz-tag-with-links .gh-pagehead .cdz-cards-xs {
-    margin-top: 2.4rem;
     flex-flow: column wrap;
     row-gap: 0.8rem;
+  }
+
+  .cdz-tag-with-links .gh-pagehead .cdz-cards-xs .cdz-link-card .kg-bookmark-title>span:last-of-type {
+    overflow: visible;
+    text-overflow: unset;
   }
 }
