@@ -686,6 +686,7 @@
     position: static;
     grid-column: main-start / main-end;
     padding-top: 0;
+    margin-bottom: 8rem;
   }
 }
 

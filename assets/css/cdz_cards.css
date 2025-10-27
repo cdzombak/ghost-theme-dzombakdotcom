@@ -102,8 +102,16 @@ img.kg-bookmark-icon {
   margin-top: 1rem;
 }
 
+.cdz-tag-with-links .gh-pagehead .cdz-cards-xs {
+  margin-top: 2.4rem;
+  flex-flow: column wrap;
+  row-gap: 0.8rem;
+}
+
 @media (max-width: 1200px) {
   .cdz-tag-with-links .gh-pagehead .cdz-cards-xs {
-    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2.4rem;
+    flex-flow: column wrap;
+    row-gap: 0.8rem;
   }
 }
