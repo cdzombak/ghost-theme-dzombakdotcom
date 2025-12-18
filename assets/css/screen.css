@@ -615,6 +615,39 @@
   margin-left: 0.8rem;
 }
 
+/* tweak spacing in micropost content when it's the latest post on index */
+
+.gh-latest.tag-hash-micropost .gh-content {
+    margin-top: 2rem;
+}
+
+/* Default vertical spacing */
+.gh-latest.tag-hash-micropost .gh-content > * + * {
+    margin-top: calc(0.8em * var(--content-spacing-multiplier, 1));
+}
+
+/* Add back a top margin to all headings, unless a heading
+is the very first element in the post content */
+.gh-latest.tag-hash-micropost .gh-content > [id]:not(:first-child) {
+    margin-top: calc(0.8em * var(--content-spacing-multiplier, 1));
+}
+
+/* Add a small margin between a heading and anything after it */
+.gh-latest.tag-hash-micropost .gh-content > [id] + * {
+    margin-top: calc(0.4em * var(--content-spacing-multiplier, 1));
+}
+
+/* A larger margin before/after HRs and blockquotes */
+.gh-latest.tag-hash-micropost .gh-content > hr,
+.gh-latest.tag-hash-micropost .gh-content > blockquote {
+    margin-top: calc(1.2em * var(--content-spacing-multiplier, 1));
+}
+
+.gh-latest.tag-hash-micropost .gh-content > hr + *,
+.gh-latest.tag-hash-micropost .gh-content > blockquote + * {
+    margin-top: calc(1.2em * var(--content-spacing-multiplier, 1));
+}
+
 @media (max-width: 767px) {
   .gh-latest {
     margin-bottom: 8rem;
