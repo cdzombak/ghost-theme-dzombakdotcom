@@ -92,3 +92,12 @@ pre .cdz-code-copy-button:hover {
 #-cdz-microblog-feed a a:hover {
   text-decoration: dotted;
 }
+
+.gh-latest.tag-hash-micropost a {
+  color: var(--ghost-accent-color);
+  text-decoration: underline;
+}
+
+.gh-latest.tag-hash-micropost a:hover {
+  text-decoration: none;
+}
