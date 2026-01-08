@@ -94,12 +94,12 @@ pre .cdz-code-copy-button:hover {
 }
 
 .gh-latest.tag-hash-micropost a,
-.gh-feed.tag-hash-micropost a {
+.gh-feed .gh-card.tag-hash-micropost a {
   color: var(--ghost-accent-color);
   text-decoration: underline;
 }
 
 .gh-latest.tag-hash-micropost a:hover,
-.gh-feed.tag-hash-micropost a:hover {
+.gh-feed .gh-card.tag-hash-micropost a:hover {
   text-decoration: none;
 }
