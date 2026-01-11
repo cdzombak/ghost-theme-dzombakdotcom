@@ -93,13 +93,13 @@ pre .cdz-code-copy-button:hover {
   text-decoration: dotted;
 }
 
-.gh-latest.tag-hash-micropost a,
+.gh-latest.tag-hash-micropost .gh-content a,
 .gh-feed .gh-card.tag-hash-micropost .gh-card-excerpt a {
   color: var(--ghost-accent-color);
   text-decoration: underline;
 }
 
-.gh-latest.tag-hash-micropost a:hover,
+.gh-latest.tag-hash-micropost .gh-content a:hover,
 .gh-feed .gh-card.tag-hash-micropost .gh-card-excerpt a:hover {
   text-decoration: none;
 }
