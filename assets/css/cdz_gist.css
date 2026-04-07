@@ -1,6 +1,7 @@
 .gist .gist-data {
   font-family: var(--font-mono);
   font-size: 15px;
+  padding-bottom: 4px;
 }
 
 .gist .gist-meta {
