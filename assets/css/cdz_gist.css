@@ -4,6 +4,14 @@
 }
 
 .gist .gist-meta {
-  font-size: 1.3rem;
-  font-family: var(--gh-font-body, var(--font-sans));
+  font-size: 1.5rem !important;
+  font-family: var(--gh-font-body, var(--font-sans)) !important;
+}
+
+.gist .gist-meta a {
+  text-decoration: underline !important;
+}
+
+.gist .gist-meta a:hover {
+  text-decoration: none !important;
 }
