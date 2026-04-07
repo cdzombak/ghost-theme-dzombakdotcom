@@ -1,0 +1,9 @@
+.gist .gist-data {
+  font-family: var(--font-mono);
+  font-size: 15px;
+}
+
+.gist .gist-meta {
+  font-size: 1.3rem;
+  font-family: var(--gh-font-body, var(--font-sans));
+}
