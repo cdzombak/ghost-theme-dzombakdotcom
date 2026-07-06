@@ -340,12 +340,12 @@
 
 .gh-foot-inner {
   grid-template-columns: 0.3fr 1fr;
-  gap: 3rem;
+  gap: 6rem;
 }
 
 .cdz-foot-nav-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   margin-top: 3px;
 }
@@ -382,7 +382,7 @@
 @media (max-width: 1100px) {
   .gh-foot-inner {
     grid-template-columns: 0.2fr 1fr;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   .cdz-foot-nav-container {
@@ -393,19 +393,19 @@
 @media (max-width: 1000px) {
   .gh-foot-inner {
     grid-template-columns: 0.3fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
   }
 
   .cdz-foot-nav-container {
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 50% 50%;
     gap: 2rem;
   }
 }
 
 @media (max-width: 900px) {
   .gh-foot-inner {
-    gap: 2rem;
+    gap: 3rem;
   }
   .cdz-foot-nav-container {
     column-gap: 1rem;
