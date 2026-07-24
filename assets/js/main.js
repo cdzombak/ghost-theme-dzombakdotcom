@@ -299,7 +299,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-window.addEventListener("DOMContentLoaded", async function () {
+window.addEventListener("DOMContentLoaded", function () {
   // Skip bookmarks feed if element not present on page
   const bookmarksFeed = document.getElementById("-cdz-bookmarks-feed");
   if (!bookmarksFeed) {
@@ -354,27 +354,46 @@ window.addEventListener("DOMContentLoaded", async function () {
   }
 
   if (refreshCache) {
-    try {
-      const response = await fetch("https://www.dzombak.com/feeds/rd-homepage.json");
-      if (!response.ok) {
-        throw new Error(`bookmarks feed fetch failed: ${response}`);
+    const parser = new RSSParser();
+    parser.parseURL("https://www.dzombak.com/feeds/bookmarks.rss.xml", function (err, feed) {
+      if (err) {
+        console.error(err);
+        return;
       }
 
-      const json = await response.json();
-
-      const feedItems = json.items;
+      const feedItems = feed.items;
       feedItems.sort(function (a, b) {
-        return new Date(Date.parse(b.at)) - new Date(Date.parse(a.at));
+        return new Date(Date.parse(b.pubDate)) - new Date(Date.parse(a.pubDate));
       });
 
       var items = [];
-      feedItems.forEach(function (item) {
+      feedItems.forEach(function (entry) {
         if (items.length >= 6) {
           return;
         }
-        if (item.description && item.description.length > 119) {
+
+        var item = {
+          link: entry.link,
+          title: entry.title,
+          description: entry.contentSnippet || "",
+          domain: "",
+          image: "",
+        };
+
+        try {
+          item.domain = new URL(entry.link).hostname.replace(/^www\./, "");
+        } catch (error) {
+          console.warn("bookmark item has unparseable link:", entry.link);
+        }
+
+        if (entry.enclosure && entry.enclosure.url) {
+          item.image = entry.enclosure.url;
+        }
+
+        if (item.description.length > 119) {
           item.description = item.description.slice(0, 120) + "…";
         }
+
         items.push(item);
       });
 
@@ -386,9 +405,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         }),
       );
       populateBookmarksFeed();
-    } catch (error) {
-      console.error(error.message);
-    }
+    });
   } else {
     populateBookmarksFeed();
   }
