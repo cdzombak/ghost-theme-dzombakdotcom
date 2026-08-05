@@ -189,63 +189,62 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("DOMContentLoaded", function () {
-  // Skip picture feeds if elements not present on page
-  const picturesFeed = document.getElementById("-cdz-pictures-feed");
-  const bbFeed = document.getElementById("-cdz-birdbuddy-feed");
-  if (!picturesFeed && !bbFeed) {
-    return;
-  }
-
-  const populatePictures = function () {
-    const cachedPictures = window.localStorage.getItem("cdz_pictures_feed");
-    const cachedBirds = window.localStorage.getItem("cdz_birdbuddy_feed");
-    if (!cachedPictures || !cachedBirds) {
+  const populatePictureFeed = function (el, cacheKey) {
+    const cached = window.localStorage.getItem(cacheKey);
+    if (!cached) {
       return;
     }
 
-    const pictureItems = JSON.parse(cachedPictures).items;
-    const bbItems = JSON.parse(cachedBirds).items;
-
-    const addImage = function (el, item) {
+    JSON.parse(cached).items.forEach(function (item) {
       const itemTs = new Date(Date.parse(item.pubDate));
-      const altTxt = item.title + " (Posted " + itemTs.toLocaleDateString() + " in " + item.category + ")";
+      var altTxt = item.title + " (Posted " + itemTs.toLocaleDateString();
+      altTxt += item.category ? " in " + item.category + ")" : ")";
 
-      const img = document.createElement("img");
-      img.setAttribute("src", item.encURL);
-      img.setAttribute("alt", altTxt);
-      img.setAttribute("loading", "lazy");
+      var media;
+      if (item.encType && item.encType.startsWith("video/")) {
+        media = document.createElement("video");
+        media.setAttribute("src", item.encURL);
+        media.setAttribute("playsinline", "");
+        media.muted = true;
+        media.loop = true;
+        media.autoplay = true;
+      } else {
+        media = document.createElement("img");
+        media.setAttribute("src", item.encURL);
+        media.setAttribute("alt", altTxt);
+        media.setAttribute("loading", "lazy");
+      }
 
       const a = document.createElement("a");
       a.setAttribute("class", "gh-card-link masonry-item");
       a.setAttribute("href", item.link);
       a.setAttribute("title", altTxt);
 
-      a.appendChild(img);
+      a.appendChild(media);
       el.appendChild(a);
-    };
-
-    if (picturesFeed) {
-      pictureItems.forEach(function (item) {
-        addImage(picturesFeed, item);
-      });
-    }
-    if (bbFeed) {
-      bbItems.forEach(function (item) {
-        addImage(bbFeed, item);
-      });
-    }
+    });
   };
 
-  const cached = window.localStorage.getItem("cdz_pictures_feed");
-  let refreshCache = true;
-  if (cached) {
-    const cacheExp = new Date(Date.parse(JSON.parse(cached).exp));
-    refreshCache = new Date().getTime() >= cacheExp.getTime();
-  }
+  const loadPictureFeed = function (elementID, cacheKey, feedURL, limit) {
+    const el = document.getElementById(elementID);
+    if (!el) {
+      return;
+    }
 
-  if (refreshCache) {
+    const cached = window.localStorage.getItem(cacheKey);
+    let refreshCache = true;
+    if (cached) {
+      const cacheExp = new Date(Date.parse(JSON.parse(cached).exp));
+      refreshCache = new Date().getTime() >= cacheExp.getTime();
+    }
+
+    if (!refreshCache) {
+      populatePictureFeed(el, cacheKey);
+      return;
+    }
+
     const parser = new RSSParser();
-    parser.parseURL("https://www.dzombak.com/feeds/pictures-all.rss.xml", function (err, feed) {
+    parser.parseURL(feedURL, function (err, feed) {
       if (err) {
         console.error(err);
         return;
@@ -257,8 +256,11 @@ window.addEventListener("DOMContentLoaded", function () {
       });
 
       var items = [];
-      var birdbuddyItems = [];
       feedItems.forEach(function (entry) {
+        if (items.length >= limit || !entry.enclosure) {
+          return;
+        }
+
         var item = {
           pubDate: new Date(Date.parse(entry.pubDate)),
           link: entry.link,
@@ -271,32 +273,32 @@ window.addEventListener("DOMContentLoaded", function () {
           item.category = entry.categories[0];
         }
 
-        if (item.category && item.category === "Bird Buddy" && birdbuddyItems.length < 4) {
-          birdbuddyItems.push(item);
-        } else if (item.category !== "Bird Buddy" && items.length < 15) {
-          items.push(item);
-        }
+        items.push(item);
       });
 
       window.localStorage.setItem(
-        "cdz_pictures_feed",
+        cacheKey,
         JSON.stringify({
           exp: new Date(new Date().getTime() + 15 * 60 * 1000),
           items: items,
         }),
       );
-      window.localStorage.setItem(
-        "cdz_birdbuddy_feed",
-        JSON.stringify({
-          exp: new Date(new Date().getTime() + 15 * 60 * 1000),
-          items: birdbuddyItems,
-        }),
-      );
-      populatePictures();
+      populatePictureFeed(el, cacheKey);
     });
-  } else {
-    populatePictures();
-  }
+  };
+
+  loadPictureFeed(
+    "-cdz-pictures-feed",
+    "cdz_pictures_feed",
+    "https://www.dzombak.com/feeds/pictures.rss.xml",
+    15,
+  );
+  loadPictureFeed(
+    "-cdz-birdbuddy-feed",
+    "cdz_birdbuddy_feed",
+    "https://www.dzombak.com/feeds/pictures-birdbuddy.rss.xml",
+    4,
+  );
 });
 
 window.addEventListener("DOMContentLoaded", function () {

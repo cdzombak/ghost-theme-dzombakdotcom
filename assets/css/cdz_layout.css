@@ -238,7 +238,8 @@
   width: 100%;
 }
 
-.cdz-pictures-feed .masonry-item img {
+.cdz-pictures-feed .masonry-item img,
+.cdz-pictures-feed .masonry-item video {
   width: 100%;
   height: auto;
   object-fit: cover;
